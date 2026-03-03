@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "mcp__playwright__*",
+      "mcp__ide__getDiagnostics",
+      "Bash(open:*)",
+      "Bash(git:*)",
+      "Bash(brew install:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh run:*)",
+      "Bash(cp:*)"
+    ]
+  }
+}
