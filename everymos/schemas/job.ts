@@ -111,6 +111,33 @@ const Source = z.object({
   accessed_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
 });
 
+const RankStep = z.object({
+  paygrade: z.string().min(1),
+  rank_name: z.string().min(1),
+  rank_abbreviation: z.string().min(1),
+  typical_years_in_service: z.string().min(1),
+  typical_billets: z.array(z.string()),
+  notes: z.string().nullable(),
+});
+
+const CareerPathOption = z.object({
+  title: z.string().min(1),
+  code: z.string().nullable(),
+  description: z.string().min(1),
+  eligibility: z.string().min(1),
+  typical_timeline: z.string().nullable(),
+  duration: z.string().nullable(),
+  notes: z.string().nullable(),
+});
+
+const CareerPath = z.object({
+  standard_progression: z.array(RankStep),
+  b_billets: z.array(CareerPathOption),
+  lateral_moves: z.array(CareerPathOption),
+  reclass_options: z.array(CareerPathOption),
+  career_capstone_notes: z.string().nullable(),
+});
+
 export const JobEntry = z.object({
   id: z.string().regex(/^[a-z_]+_[a-z0-9]+$/, "id must be {branch_code}_{job_code} lowercase"),
   job_code: z.string().min(1),
@@ -142,6 +169,8 @@ export const JobEntry = z.object({
   transferable_certifications: z.array(z.string()).nullable(),
 
   branch_specific: z.record(z.string(), z.unknown()),
+
+  career_path: CareerPath.optional(),
 
   sources: z.array(Source),
   confidence: Confidence,
