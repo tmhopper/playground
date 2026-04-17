@@ -7,27 +7,22 @@
     "branch_display": "U.S. Marine Corps",
     "classification_term": "MOS",
     "personnel_category": "enlisted",
-    "occupational_field": {
-      "code": "03",
-      "name": "Infantry"
-    },
+    "occupational_field": { "code": "03", "name": "Infantry" },
     "status": "active",
     "description_official": "DRAFT — replace with verified text from NAVMC 1200.1E or current equivalent. The Rifleman is the foundation of the Marine Corps infantry squad and the basic scheme of maneuver for the ground-combat element.",
     "description_plain": "The rifleman is the Marine the rest of the Corps exists to support. You close with the enemy on foot, lead fire teams, and become an expert with the service rifle. This is ground combat — small units, long days, and the discipline that comes from doing the same hard things until they're automatic. Training pipeline runs through Parris Island or San Diego, then School of Infantry East or West. Most 0311s end up in an infantry battalion at Camp Pendleton, Camp Lejeune, or Kaneohe Bay. Expect deployments.",
     "description_tldr": "The Marine Corps rifleman is the ground-combat backbone of the USMC infantry — small-unit leader, marksman, and the Marine everything else supports.",
     "asvab": {
-      "composites": {
-        "GT": 80
-      },
+      "composites": { "GT": 80 },
       "afqt_minimum": null,
       "raw_requirement": "GT: 80 (DRAFT — verify against current Marine Corps classification directive)",
       "source_system": "marine_corps_composites",
-      "notes": "Composite requirement is historically GT 80 but verify against the current NAVMC 1200 series before publishing."
+      "notes": "Verify against the current NAVMC 1200 series before publishing."
     },
     "security_clearance": "none",
     "physical_requirements": {
       "has_additional_requirements": false,
-      "details": "Meets standard USMC physical requirements. No additional infantry-specific physical screening at MOS-assignment stage beyond normal recruit training standards.",
+      "details": "Meets standard USMC physical requirements.",
       "vision": null,
       "color_vision": null,
       "swim_qualified": true
@@ -35,71 +30,185 @@
     "citizenship_required": true,
     "eligible_genders": "all",
     "training_pipeline": [
-      {
-        "stage": "Recruit Training",
-        "school_name": "Marine Corps Recruit Depot",
-        "location": "Parris Island, SC or San Diego, CA",
-        "duration_weeks": 13,
-        "description": "Basic Marine training. All enlisted Marines complete this before MOS training.",
-        "is_required": true,
-        "prerequisite": null
-      },
-      {
-        "stage": "Infantry Training",
-        "school_name": "School of Infantry (East or West)",
-        "location": "Camp Geiger, NC or Camp Pendleton, CA",
-        "duration_weeks": 14,
-        "description": "DRAFT — verify current Infantry Marine Course (IMC) duration; the SOI pipeline was restructured in recent years and duration has shifted.",
-        "is_required": true,
-        "prerequisite": "Recruit Training"
-      }
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": "Basic Marine training.", "is_required": true, "prerequisite": null },
+      { "stage": "Infantry Training", "school_name": "School of Infantry (East or West)", "location": "Camp Geiger, NC or Camp Pendleton, CA", "duration_weeks": 14, "description": "DRAFT — verify current Infantry Marine Course duration.", "is_required": true, "prerequisite": "Recruit Training" }
     ],
     "compensation": {
-      "typical_entry_rank": "E-2 (Private First Class) on standard contract; E-1 (Private) on some",
+      "typical_entry_rank": "E-2 (Private First Class) on standard contract",
       "typical_rank_range": "E-1 through E-5",
-      "special_pay": [
-        {
-          "pay_type": "Hostile Fire / Imminent Danger Pay",
-          "amount": "$225/month",
-          "conditions": "When deployed to a designated combat zone or imminent danger area"
-        }
-      ],
+      "special_pay": [{ "pay_type": "Hostile Fire / Imminent Danger Pay", "amount": "$225/month", "conditions": "When deployed to a designated combat zone" }],
       "enlistment_bonus": null
     },
     "duty_station_types": ["base", "deployable", "conus", "oconus"],
-    "common_duty_stations": [
-      "Camp Pendleton, CA",
-      "Camp Lejeune, NC",
-      "Marine Corps Base Hawaii, Kaneohe Bay",
-      "Twentynine Palms, CA",
-      "Camp Hansen, Okinawa"
-    ],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC", "Marine Corps Base Hawaii, Kaneohe Bay", "Twentynine Palms, CA", "Camp Hansen, Okinawa"],
     "civilian_equivalents": [
-      {
-        "title": "Law Enforcement Officer",
-        "industry": "Public Safety",
-        "onet_code": "33-3051.00"
-      },
-      {
-        "title": "Security Officer",
-        "industry": "Security Services",
-        "onet_code": "33-9032.00"
-      }
+      { "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" },
+      { "title": "Security Officer", "industry": "Security Services", "onet_code": "33-9032.00" }
     ],
     "transferable_certifications": null,
-    "branch_specific": {
-      "pef_code": null,
-      "occfld_sponsor": "Infantry"
-    },
-    "sources": [
-      {
-        "name": "NAVMC 1200.1E — Military Occupational Specialties Manual (DRAFT reference, verify current revision)",
-        "url": null,
-        "accessed_date": "2026-04-17"
-      }
-    ],
+    "branch_specific": { "pef_code": null, "occfld_sponsor": "Infantry" },
+    "sources": [{ "name": "NAVMC 1200.1E — Military Occupational Specialties Manual (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
-    "notes": "DRAFT entry scaffolded from the plan. Every field must be verified against current NAVMC 1200.1E (or current equivalent) and Marines.mil before changing confidence to 'verified'. Training duration in particular has shifted with the Infantry Marine Course restructure — do not publish without verification.",
+    "notes": "DRAFT — verify every field against current NAVMC 1200 series and Marines.mil before changing confidence.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0317",
+    "job_code": "0317",
+    "job_title": "Scout Sniper",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "03", "name": "Infantry" },
+    "status": "active",
+    "description_official": "DRAFT — verify against current Marine Corps directive. Note: the Scout Sniper MOS has undergone restructuring in recent Marine Corps force design changes; verify current status before publishing.",
+    "description_plain": "Scout snipers are the infantry's long-range eyes and precision-fire specialists. You earn this MOS by passing a selection course and Scout Sniper Basic Course — the washout rate is high and the training is hard on purpose. Status and force structure of this MOS have shifted with Force Design; confirm current standing before relying on anything here.",
+    "description_tldr": "Marine Corps long-range reconnaissance and precision-fire specialist — status under review in recent Force Design changes.",
+    "asvab": {
+      "composites": { "GT": 100 },
+      "afqt_minimum": null,
+      "raw_requirement": "GT: 100 (DRAFT — verify)",
+      "source_system": "marine_corps_composites",
+      "notes": "Lateral move from 0311 after qualification."
+    },
+    "security_clearance": "secret",
+    "physical_requirements": {
+      "has_additional_requirements": true,
+      "details": "Enhanced physical screening for selection course; high-end PFT required.",
+      "vision": "20/20 correctable; uncorrected at least 20/100",
+      "color_vision": true,
+      "swim_qualified": true
+    },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Prerequisite: 0311 qualified", "school_name": "See 0311 entry", "location": "Various", "duration_weeks": 0, "description": "Must be a qualified rifleman before selection.", "is_required": true, "prerequisite": null },
+      { "stage": "Scout Sniper Basic Course", "school_name": "SSBC", "location": "Camp Lejeune, NC or Camp Pendleton, CA", "duration_weeks": 12, "description": "DRAFT — verify current course length and status.", "is_required": true, "prerequisite": "0311 qualification" }
+    ],
+    "compensation": {
+      "typical_entry_rank": "E-4 (Corporal) — typical minimum for lateral",
+      "typical_rank_range": "E-4 through E-7",
+      "special_pay": [],
+      "enlistment_bonus": null
+    },
+    "duty_station_types": ["base", "deployable"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC"],
+    "civilian_equivalents": [
+      { "title": "Law Enforcement Tactical Specialist", "industry": "Public Safety", "onet_code": null }
+    ],
+    "transferable_certifications": null,
+    "branch_specific": { "pef_code": null, "occfld_sponsor": "Infantry" },
+    "sources": [{ "name": "Marine Corps Force Design announcements (DRAFT — verify)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "MOS 0317 has been affected by Marine Corps Force Design restructuring. Current status must be verified before any public-facing claim.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0331",
+    "job_code": "0331",
+    "job_title": "Machine Gunner",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "03", "name": "Infantry" },
+    "status": "active",
+    "description_official": "DRAFT — pending verification against NAVMC 1200 series.",
+    "description_plain": "You run the platoon's heavy and medium machine guns. Think M240, M2 .50 cal, and the support-by-fire position in almost every infantry maneuver. Expect to carry weight and to be the first thing the enemy wants to silence.",
+    "description_tldr": "Marine infantry machine gunner — crew-served weapons specialist providing suppressive and sustained fire.",
+    "asvab": {
+      "composites": { "GT": 80 },
+      "afqt_minimum": null,
+      "raw_requirement": "GT: 80 (DRAFT — verify)",
+      "source_system": "marine_corps_composites",
+      "notes": null
+    },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard USMC requirements; strong emphasis on load-bearing capacity.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Infantry Training", "school_name": "School of Infantry", "location": "Camp Geiger, NC or Camp Pendleton, CA", "duration_weeks": 14, "description": "DRAFT — verify current pipeline.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC"],
+    "civilian_equivalents": [{ "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }],
+    "transferable_certifications": null,
+    "branch_specific": { "occfld_sponsor": "Infantry" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify all fields before publishing.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0369",
+    "job_code": "0369",
+    "job_title": "Infantry Unit Leader",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "03", "name": "Infantry" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "The 0369 is the senior enlisted infantry leader — platoon sergeant, company gunnery sergeant, battalion-level billets. You get here by staying in, leading well, and proving you can run complex infantry operations at the platoon and company level.",
+    "description_tldr": "Senior enlisted Marine Corps infantry leader — platoon sergeant and above; the promotion progression for career infantrymen.",
+    "asvab": { "composites": { "GT": 80 }, "afqt_minimum": null, "raw_requirement": "GT: 80 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": "Promotion-progression MOS; not an entry-level assignment." },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Infantry Unit Leaders Course", "school_name": "IULC", "location": "Camp Lejeune, NC or Camp Pendleton, CA", "duration_weeks": 8, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "Prior infantry MOS + E-5 or above" }
+    ],
+    "compensation": { "typical_entry_rank": "E-6 (Staff Sergeant)", "typical_rank_range": "E-6 through E-9", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC"],
+    "civilian_equivalents": [{ "title": "Operations Manager", "industry": "Logistics / Operations", "onet_code": "11-1021.00" }],
+    "transferable_certifications": null,
+    "branch_specific": { "occfld_sponsor": "Infantry" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0621",
+    "job_code": "0621",
+    "job_title": "Radio Operator",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "06", "name": "Communications" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Comms Marines. You set up and run the radio networks that infantry, logistics, and command elements depend on. Heavy emphasis on HF, VHF, UHF, and tactical satellite. Expect to be attached to infantry units as often as you're with a comms unit.",
+    "description_tldr": "Marine Corps tactical radio operator — builds and runs voice and data networks for operational units.",
+    "asvab": { "composites": { "EL": 90 }, "afqt_minimum": null, "raw_requirement": "EL: 90 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "MCRD", "location": "Parris Island or San Diego", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Basic Radio Operator Course", "school_name": "Marine Corps Communication-Electronics School", "location": "Twentynine Palms, CA", "duration_weeks": 9, "description": "DRAFT — verify current length.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Twentynine Palms, CA", "Camp Lejeune, NC", "Camp Pendleton, CA", "Okinawa, Japan"],
+    "civilian_equivalents": [
+      { "title": "Telecommunications Technician", "industry": "Telecommunications", "onet_code": "49-2022.00" },
+      { "title": "Network Support Specialist", "industry": "Information Technology", "onet_code": "15-1231.00" }
+    ],
+    "transferable_certifications": ["CompTIA Network+ (via DoD COOL funding)"],
+    "branch_specific": { "occfld_sponsor": "Communications" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
   }
 ]

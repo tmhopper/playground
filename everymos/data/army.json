@@ -1,0 +1,34 @@
+[
+  {
+    "id": "army_11b",
+    "job_code": "11B",
+    "job_title": "Infantryman",
+    "branch": "army",
+    "branch_display": "U.S. Army",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "11", "name": "Infantry" },
+    "status": "active",
+    "description_official": "DRAFT — verify against DA PAM 611-21 or current Army classification manual.",
+    "description_plain": "The Army's infantry backbone. Light, airborne, mountain, Stryker, or mechanized — the unit type shapes the day-to-day but the core job is close-combat ground fighting. Training runs through One Station Unit Training at Fort Moore (formerly Fort Benning).",
+    "description_tldr": "Army infantryman — close-combat ground fighter across light, airborne, mechanized, and Stryker formations.",
+    "asvab": { "composites": { "CO": 87 }, "afqt_minimum": 31, "raw_requirement": "CO: 87 (DRAFT — verify)", "source_system": "army_line_scores", "notes": null },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard Army physical requirements; ACFT required.", "vision": null, "color_vision": null, "swim_qualified": null },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "One Station Unit Training (OSUT)", "school_name": "Infantry OSUT", "location": "Fort Moore, GA", "duration_weeks": 22, "description": "DRAFT — verify current OSUT length.", "is_required": true, "prerequisite": null }
+    ],
+    "compensation": { "typical_entry_rank": "E-1 (Private)", "typical_rank_range": "E-1 through E-6", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Fort Bragg, NC", "Fort Drum, NY", "Joint Base Lewis-McChord, WA", "Fort Campbell, KY"],
+    "civilian_equivalents": [{ "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }],
+    "transferable_certifications": null,
+    "branch_specific": { "cmf": "11", "asi_codes": [] },
+    "sources": [{ "name": "DA PAM 611-21 (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "incomplete",
+    "notes": "Stub entry for cross-branch demo. All fields DRAFT.",
+    "last_updated": "2026-04-17"
+  }
+]

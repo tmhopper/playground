@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllJobParams, getJob } from "@/lib/data";
+import { Nav, Footer } from "@/components/Nav";
 
 type Params = { branch: string; jobCode: string };
 
@@ -36,11 +37,13 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
   if (!job) notFound();
 
   return (
-    <main id="main" className="mx-auto max-w-4xl px-4 py-12 md:px-8 md:py-16">
-      <nav className="mono mb-8 text-xs uppercase tracking-wide opacity-60">
-        <Link href="/">Home</Link> / <Link href="/">Jobs</Link> /{" "}
-        <span>{job.branch_display}</span> / <span>{job.job_code}</span>
-      </nav>
+    <>
+      <Nav />
+      <main id="main" className="mx-auto max-w-4xl px-4 py-12 md:px-8 md:py-16">
+        <nav className="mono mb-8 text-xs uppercase tracking-wide opacity-60">
+          <Link href="/">Home</Link> / <Link href="/jobs">Jobs</Link> /{" "}
+          <span>{job.branch_display}</span> / <span>{job.job_code}</span>
+        </nav>
 
       <header className="mb-12 border-b border-[color:var(--color-rule)] pb-8">
         <div className="flex items-center gap-3">
@@ -194,6 +197,8 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
           </p>
         )}
       </footer>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
