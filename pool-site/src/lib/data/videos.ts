@@ -28,7 +28,7 @@ export const videos: Video[] = [
     caseFile: "Ramirez family · Manteca, CA",
   },
   {
-    id: "foreclosed-mesa",
+    id: "foreclosed-stockton",
     platform: "tiktok",
     title: "The owner cried when she saw it.",
     thumbnail:
@@ -40,7 +40,7 @@ export const videos: Video[] = [
     featured: true,
   },
   {
-    id: "veteran-chandler",
+    id: "veteran-modesto",
     platform: "youtube",
     title: "Green-to-blue in one weekend — full process",
     thumbnail:
