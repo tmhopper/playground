@@ -16,8 +16,7 @@ export const posts: Post[] = [
     excerpt:
       "The full process for taking a pool that's been abandoned for years back to swimmable — chemicals, equipment, sequencing, and what to skip.",
     category: "how-to",
-    coverImage:
-      "https://images.unsplash.com/photo-1572839150175-e75a91e2ed17?w=1600&q=80",
+    coverImage: "/images/pool-green-brush-1.jpg",
     publishedAt: "2026-04-10",
     readMins: 9,
     content: [
@@ -71,8 +70,7 @@ export const posts: Post[] = [
     excerpt:
       "Nine times out of ten it's one of three things. Here's the diagnostic ladder.",
     category: "how-to",
-    coverImage:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&q=80",
+    coverImage: "/images/filter-grids.jpg",
     publishedAt: "2026-03-15",
     readMins: 6,
     content: [
@@ -112,8 +110,7 @@ export const posts: Post[] = [
     excerpt:
       "The full story behind the video that went viral. What it actually took, what I spent, and what I learned.",
     category: "case-file",
-    coverImage:
-      "https://images.unsplash.com/photo-1571269608263-14ff2ba4b7c2?w=1600&q=80",
+    coverImage: "/images/pool-green-brush-1.jpg",
     publishedAt: "2026-02-12",
     readMins: 11,
     content: [

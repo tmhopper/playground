@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FadeIn } from "@/components/motion/fade-in";
 import { brand } from "@/lib/data/brand";
+import { asset } from "@/lib/utils";
 
 export function MissionBlock() {
   return (
@@ -8,7 +9,7 @@ export function MissionBlock() {
       <div className="container-page grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-20 items-center">
         <FadeIn className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10">
           <Image
-            src={brand.founderPhoto}
+            src={asset(brand.founderPhoto)}
             alt={`${brand.founder}, founder of ${brand.companyName}`}
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"

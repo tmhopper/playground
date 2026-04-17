@@ -4,7 +4,7 @@ import Image from "next/image";
 import { posts } from "@/lib/data/posts";
 import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/card";
-import { formatDate } from "@/lib/utils";
+import { asset, formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -37,7 +37,7 @@ export default function BlogIndex() {
             <div className="grid md:grid-cols-2">
               <div className="relative aspect-[4/3] md:aspect-auto">
                 <Image
-                  src={hero.coverImage}
+                  src={asset(hero.coverImage)}
                   alt={hero.title}
                   fill
                   sizes="(min-width:768px) 50vw, 100vw"
@@ -67,7 +67,7 @@ export default function BlogIndex() {
               >
                 <div className="relative aspect-[3/2]">
                   <Image
-                    src={p.coverImage}
+                    src={asset(p.coverImage)}
                     alt={p.title}
                     fill
                     sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"

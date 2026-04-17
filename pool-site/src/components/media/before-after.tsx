@@ -2,6 +2,7 @@
 
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 import { Badge } from "@/components/ui/card";
+import { asset } from "@/lib/utils";
 
 export function BeforeAfter({
   before,
@@ -21,10 +22,10 @@ export function BeforeAfter({
       <div className="relative">
         <ReactCompareSlider
           itemOne={
-            <ReactCompareSliderImage src={before} alt={`Before: ${title}`} style={{ objectFit: "cover" }} />
+            <ReactCompareSliderImage src={asset(before)} alt={`Before: ${title}`} style={{ objectFit: "cover" }} />
           }
           itemTwo={
-            <ReactCompareSliderImage src={after} alt={`After: ${title}`} style={{ objectFit: "cover" }} />
+            <ReactCompareSliderImage src={asset(after)} alt={`After: ${title}`} style={{ objectFit: "cover" }} />
           }
           className="aspect-[4/3]"
           style={{ height: "100%" }}

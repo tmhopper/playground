@@ -3,6 +3,7 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/card";
 import { brand } from "@/lib/data/brand";
+import { asset } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -10,7 +11,7 @@ export function Hero() {
       {/* Background imagery */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1562511211-68f30ca83fa3?w=2000&q=85"
+          src={asset("/images/action-large-pool.jpg")}
           alt=""
           aria-hidden
           fill

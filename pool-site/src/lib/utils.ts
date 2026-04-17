@@ -30,3 +30,16 @@ export function slugify(s: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
+
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+/**
+ * Prefix a local public asset path with the basePath when deployed under a
+ * subpath (GitHub Pages). Leaves absolute URLs unchanged.
+ */
+export function asset(path: string): string {
+  if (!path) return path;
+  if (/^https?:\/\//.test(path)) return path;
+  if (!path.startsWith("/")) return path;
+  return `${BASE_PATH}${path}`;
+}

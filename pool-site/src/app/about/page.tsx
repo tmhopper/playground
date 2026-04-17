@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Download } from "lucide-react";
 import { brand } from "@/lib/data/brand";
+import { asset } from "@/lib/utils";
 import { PageHeader } from "@/components/page-header";
 import { StatsStrip } from "@/components/sections/stats-strip";
 import { Card } from "@/components/ui/card";
@@ -40,7 +41,7 @@ export default function AboutPage() {
 
           <Card className="aspect-[4/5] relative overflow-hidden p-0">
             <Image
-              src={brand.founderPhoto}
+              src={asset(brand.founderPhoto)}
               alt={`${brand.founder}, founder of ${brand.companyName}`}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"

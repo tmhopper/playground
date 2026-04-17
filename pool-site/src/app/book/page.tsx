@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BookingForm } from "@/components/forms/booking-form";
 import { PageHeader } from "@/components/page-header";
 import { brand } from "@/lib/data/brand";
+import { asset } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Book a Clean",
@@ -49,7 +50,7 @@ export default function BookPage() {
             <div className="glass rounded-xl p-5 flex gap-4">
               <div className="relative h-14 w-14 rounded-full overflow-hidden shrink-0 bg-white/10">
                 <Image
-                  src={brand.founderPhotoSmall}
+                  src={asset(brand.founderPhotoSmall)}
                   alt=""
                   fill
                   sizes="56px"

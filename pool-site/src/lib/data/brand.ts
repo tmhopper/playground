@@ -39,10 +39,7 @@ export const brand = {
   legalName: "Burdett Blue Pool Co. LLC",
   missionShort:
     "I clean neglected pools for free and film the work. Paying clients and affiliate partners fund the free side.",
-  // To replace with Troy's real photo: upload to pool-site/public/images/troy.jpg
-  // then change this to "/images/troy.jpg" (basePath is added automatically).
-  founderPhoto:
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=85",
-  founderPhotoSmall:
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+  // Troy's real portrait (cropped from phone screenshots, iOS UI stripped)
+  founderPhoto: "/images/troy.jpg",
+  founderPhotoSmall: "/images/troy-avatar.jpg",
 } as const;

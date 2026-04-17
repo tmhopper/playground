@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Play } from "lucide-react";
 import { Badge } from "@/components/ui/card";
-import { formatViews } from "@/lib/utils";
+import { asset, formatViews } from "@/lib/utils";
 import type { Video } from "@/lib/data/videos";
 
 const platformLabel = { tiktok: "TikTok", youtube: "YouTube", instagram: "Instagram" } as const;
@@ -16,7 +16,7 @@ export function VideoCard({ video }: { video: Video }) {
     >
       <div className="relative aspect-video overflow-hidden">
         <Image
-          src={video.thumbnail}
+          src={asset(video.thumbnail)}
           alt={video.title}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

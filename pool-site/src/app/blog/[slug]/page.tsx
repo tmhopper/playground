@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { posts } from "@/lib/data/posts";
 import { Badge } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/page-header";
-import { formatDate } from "@/lib/utils";
+import { asset, formatDate } from "@/lib/utils";
 import { brand } from "@/lib/data/brand";
 
 const categoryLabel = {
@@ -84,7 +84,7 @@ export default async function PostPage({
         <div className="container-page max-w-5xl mt-12">
           <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10">
             <Image
-              src={post.coverImage}
+              src={asset(post.coverImage)}
               alt={post.title}
               fill
               priority
