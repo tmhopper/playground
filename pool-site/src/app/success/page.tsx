@@ -1,4 +1,7 @@
+"use client";
+
 import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { brand } from "@/lib/data/brand";
@@ -38,8 +41,10 @@ const messages: Record<string, { title: string; body: string }> = {
   },
 };
 
-function SuccessInner({ from }: { from: string | null }) {
-  const msg = messages[from ?? "default"] ?? messages.default;
+function SuccessInner() {
+  const params = useSearchParams();
+  const from = params.get("from") ?? "default";
+  const msg = messages[from] ?? messages.default;
   return (
     <section className="min-h-[80vh] grid place-items-center py-24">
       <div className="container-page max-w-xl text-center">
@@ -58,15 +63,10 @@ function SuccessInner({ from }: { from: string | null }) {
   );
 }
 
-export default async function SuccessPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ from?: string }>;
-}) {
-  const sp = await searchParams;
+export default function SuccessPage() {
   return (
-    <Suspense>
-      <SuccessInner from={sp.from ?? null} />
+    <Suspense fallback={<div className="min-h-[80vh]" />}>
+      <SuccessInner />
     </Suspense>
   );
 }

@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center justify-between pt-3 border-t border-white/10">
           <span className="text-white font-bold">{product.price}</span>
           <a
-            href={`/api/out?product=${product.id}`}
+            href={product.url}
             target="_blank"
             rel="sponsored noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-ocean-950 bg-lime px-3 py-2 rounded-md hover:bg-lime-dark transition"
