@@ -2,6 +2,12 @@
 
 Demo marketing site for Troy Burdett's creator-driven pool cleaning business (**Burdett Blue Pool Co.**). Built with Next.js 15, Tailwind v4, and Motion. All content is mock data — designed to feel real, easy to swap for production content.
 
+## One-tap deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftmhopper%2Fplayground&project-name=troy-cleans&repository-name=troy-cleans&root-directory=pool-site&branch=claude%2Fpool-business-website-55KeX)
+
+Tap the button → sign in with GitHub (you already have one) → click Deploy. Vercel sets the root directory to `pool-site` and branch to `claude/pool-business-website-55KeX` automatically. You'll have a live URL in ~90 seconds.
+
 ## Quickstart
 
 ```bash
