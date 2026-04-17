@@ -21,7 +21,7 @@ export const posts: Post[] = [
     publishedAt: "2026-04-10",
     readMins: 9,
     content: [
-      { type: "p", value: "People assume a green pool is a lost cause. It almost never is. The water itself costs about $400 to replace — and in Arizona, that's 15,000 gallons of drinking water you'd be dumping down a storm drain. So the first rule of rescue is: don't drain if you can help it." },
+      { type: "p", value: "People assume a green pool is a lost cause. It almost never is. The water itself costs about $400 to replace — and in California Central Valley, that's 15,000 gallons of drinking water you'd be dumping down a storm drain. So the first rule of rescue is: don't drain if you can help it." },
       { type: "h2", value: "Day 1 — triage and filtration" },
       { type: "p", value: "Before a drop of chemical goes in, I do three things: skim the surface of debris (gross but critical), inspect the pump and filter, and backwash or clean the cartridges. A dirty filter can't clean green water. You're just circulating soup." },
       { type: "callout", value: "If the pump won't prime, stop everything and fix that first. I have a whole video on diagnosing prime issues — link below." },

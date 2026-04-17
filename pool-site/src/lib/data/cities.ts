@@ -5,58 +5,82 @@ export type City = {
   population: string;
   neighborhoods: string[];
   localNote: string;
-  monsoonSeason: string;
+  climateSeason: string;
   calciumLevel: "low" | "moderate" | "high" | "very high";
   responseTime: string;
 };
 
 export const cities: City[] = [
   {
-    slug: "phoenix",
-    name: "Phoenix",
-    state: "AZ",
-    population: "1.6M",
-    neighborhoods: ["Arcadia", "Central Phoenix", "North Central", "Ahwatukee", "Desert Ridge"],
+    slug: "manteca",
+    name: "Manteca",
+    state: "CA",
+    population: "88k",
+    neighborhoods: ["Del Webb at Woodbridge", "Oakwood Estates", "Yosemite Estates", "Union Ranch", "Mayors Park"],
     localNote:
-      "Phoenix pools deal with the classic triple threat: dust storms, 115°F summers, and hard water. Most of my week is spent here — response times are the fastest in the valley.",
-    monsoonSeason: "Jul–Sep",
-    calciumLevel: "very high",
-    responseTime: "Usually same week",
+      "Manteca is home base — I live here. Response times are same-day, and I know the water chemistry in every neighborhood. From the newer builds in Woodbridge to the older places off Louise, I've probably worked on a pool near yours.",
+    climateSeason: "Hot summers Jun–Sep",
+    calciumLevel: "high",
+    responseTime: "Same day",
   },
   {
-    slug: "tempe",
-    name: "Tempe",
-    state: "AZ",
-    population: "195k",
-    neighborhoods: ["Lakes", "Warner Ranch", "Optimist Park", "Rural/Southern"],
+    slug: "stockton",
+    name: "Stockton",
+    state: "CA",
+    population: "325k",
+    neighborhoods: ["Brookside", "Spanos Park", "Weston Ranch", "Lincoln Village", "Morada"],
     localNote:
-      "Tempe's older neighborhoods have a lot of 1970s and 80s plaster pools — Pebble Tec restorations are a big part of what I do out here.",
-    monsoonSeason: "Jul–Sep",
-    calciumLevel: "very high",
-    responseTime: "Usually same week",
+      "Stockton's older neighborhoods have lots of 1970s–80s plaster pools — Pebble Tec restorations and tile-line calcium work make up most of my runs out here. I cover all of Stockton, same-week.",
+    climateSeason: "Hot summers Jun–Sep",
+    calciumLevel: "high",
+    responseTime: "1–2 days",
   },
   {
-    slug: "mesa",
-    name: "Mesa",
-    state: "AZ",
-    population: "510k",
-    neighborhoods: ["Red Mountain Ranch", "Las Sendas", "Dobson Ranch", "Eastmark"],
+    slug: "sacramento",
+    name: "Sacramento",
+    state: "CA",
+    population: "525k",
+    neighborhoods: ["Land Park", "Natomas", "Arden-Arcade", "Elk Grove", "Roseville", "Folsom"],
     localNote:
-      "Mesa is huge — east Mesa in particular is where a lot of retirees live, and where a good chunk of my nominated cleans come from. Service area covers all of Mesa.",
-    monsoonSeason: "Jul–Sep",
-    calciumLevel: "very high",
-    responseTime: "1–3 days",
+      "Sacramento is a 45-minute drive but worth it. Hotter summers than Manteca = faster algae bloom, so weekly service makes a real difference out here. Elk Grove and Folsom are my biggest Sacramento-area routes.",
+    climateSeason: "Hot summers May–Sep",
+    calciumLevel: "moderate",
+    responseTime: "2–3 days",
   },
   {
-    slug: "chandler",
-    name: "Chandler",
-    state: "AZ",
-    population: "285k",
-    neighborhoods: ["Ocotillo", "Fulton Ranch", "Sunbird", "Sun Lakes"],
+    slug: "modesto",
+    name: "Modesto",
+    state: "CA",
+    population: "220k",
+    neighborhoods: ["Del Rio", "Village I", "La Loma", "Empire", "Hughson"],
     localNote:
-      "Chandler/Sun Lakes has a big senior community and some of the highest-quality neighborhood builds. Weekly service + quarterly equipment audits is the sweet spot here.",
-    monsoonSeason: "Jul–Sep",
+      "Modesto's the heart of the 209 — lots of shaded backyard pools under big valley oaks, which means a lot of leaf and tannin work. I run Modesto twice a week.",
+    climateSeason: "Hot summers Jun–Sep",
+    calciumLevel: "moderate",
+    responseTime: "1–2 days",
+  },
+  {
+    slug: "tracy",
+    name: "Tracy",
+    state: "CA",
+    population: "96k",
+    neighborhoods: ["Ellis", "Edgewood", "Mountain House", "Redbridge", "Kagehiro"],
+    localNote:
+      "Tracy is the first stop for Bay Area commuters — lots of newer pools in Mountain House and Ellis. Wind off the Altamont Pass means more dust and debris than inland cities. Weekly service is the move here.",
+    climateSeason: "Hot summers Jun–Sep",
+    calciumLevel: "moderate",
+    responseTime: "Same week",
+  },
+  {
+    slug: "fresno",
+    name: "Fresno",
+    state: "CA",
+    population: "545k",
+    neighborhoods: ["Clovis", "Woodward Park", "Fig Garden", "Sunnyside", "Old Fig"],
+    localNote:
+      "Fresno is my southernmost regular — I batch-schedule two days a month there for deep cleans and rescues. Longer turnaround than Manteca but same quality, same fair pricing.",
+    climateSeason: "Hot summers May–Oct",
     calciumLevel: "very high",
-    responseTime: "1–3 days",
+    responseTime: "2–3 weeks",
   },
 ];

@@ -59,7 +59,7 @@ export default function ServicesPage() {
             { k: "License", v: brand.licenseNumber },
             { k: "Insurance", v: "$2M liability" },
             { k: "Avg rating", v: "4.9 / 5" },
-            { k: "Service area", v: "Phoenix + East Valley" },
+            { k: "Service area", v: "Manteca + 209 + Sacramento + Fresno" },
           ].map((c) => (
             <div key={c.k}>
               <p className="text-xs uppercase tracking-widest text-white/50">{c.k}</p>
@@ -83,10 +83,12 @@ export default function ServicesPage() {
             </Button>
           </div>
           <p className="mt-6 text-sm text-white/50">
-            Also serving: <Link href="/areas/phoenix" className="underline hover:text-ice-300">Phoenix</Link> ·{" "}
-            <Link href="/areas/tempe" className="underline hover:text-ice-300">Tempe</Link> ·{" "}
-            <Link href="/areas/mesa" className="underline hover:text-ice-300">Mesa</Link> ·{" "}
-            <Link href="/areas/chandler" className="underline hover:text-ice-300">Chandler</Link>
+            Also serving: <Link href="/areas/manteca" className="underline hover:text-ice-300">Manteca</Link> ·{" "}
+            <Link href="/areas/stockton" className="underline hover:text-ice-300">Stockton</Link> ·{" "}
+            <Link href="/areas/sacramento" className="underline hover:text-ice-300">Sacramento</Link> ·{" "}
+            <Link href="/areas/modesto" className="underline hover:text-ice-300">Modesto</Link> ·{" "}
+            <Link href="/areas/tracy" className="underline hover:text-ice-300">Tracy</Link> ·{" "}
+            <Link href="/areas/fresno" className="underline hover:text-ice-300">Fresno</Link>
           </p>
         </div>
       </section>

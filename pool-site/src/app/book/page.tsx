@@ -49,7 +49,7 @@ export default function BookPage() {
             <div className="glass rounded-xl p-5 flex gap-4">
               <div className="relative h-14 w-14 rounded-full overflow-hidden shrink-0 bg-white/10">
                 <Image
-                  src="https://images.unsplash.com/photo-1519075677053-39a76c8519c6?w=200&q=80"
+                  src={brand.founderPhotoSmall}
                   alt=""
                   fill
                   sizes="56px"

@@ -1,18 +1,18 @@
 export type Sponsor = { name: string; city: string; amount: number; date: string };
 
 export const supporterWall: Sponsor[] = [
-  { name: "Sarah P.", city: "Chandler", amount: 50, date: "2026-04-15" },
-  { name: "Mike R.", city: "Phoenix", amount: 250, date: "2026-04-14" },
-  { name: "Anonymous", city: "Tempe", amount: 25, date: "2026-04-13" },
-  { name: "The Martinez Family", city: "Mesa", amount: 500, date: "2026-04-10" },
-  { name: "Derek P.", city: "Scottsdale", amount: 100, date: "2026-04-09" },
-  { name: "Anonymous", city: "Gilbert", amount: 50, date: "2026-04-07" },
-  { name: "Jess W.", city: "Phoenix", amount: 25, date: "2026-04-06" },
-  { name: "North Valley Plumbing", city: "Phoenix", amount: 800, date: "2026-04-03" },
-  { name: "Rachel D.", city: "Tempe", amount: 250, date: "2026-04-01" },
-  { name: "Eduardo L.", city: "Mesa", amount: 50, date: "2026-03-30" },
-  { name: "Anonymous", city: "Glendale", amount: 100, date: "2026-03-28" },
-  { name: "The Carter Family", city: "Scottsdale", amount: 500, date: "2026-03-26" },
+  { name: "Sarah P.", city: "Tracy", amount: 50, date: "2026-04-15" },
+  { name: "Mike R.", city: "Manteca", amount: 250, date: "2026-04-14" },
+  { name: "Anonymous", city: "Stockton", amount: 25, date: "2026-04-13" },
+  { name: "The Martinez Family", city: "Modesto", amount: 500, date: "2026-04-10" },
+  { name: "Derek P.", city: "Lodi", amount: 100, date: "2026-04-09" },
+  { name: "Anonymous", city: "Elk Grove", amount: 50, date: "2026-04-07" },
+  { name: "Jess W.", city: "Manteca", amount: 25, date: "2026-04-06" },
+  { name: "Valley Plumbing", city: "Stockton", amount: 800, date: "2026-04-03" },
+  { name: "Rachel D.", city: "Tracy", amount: 250, date: "2026-04-01" },
+  { name: "Eduardo L.", city: "Fresno", amount: 50, date: "2026-03-30" },
+  { name: "Anonymous", city: "Ripon", amount: 100, date: "2026-03-28" },
+  { name: "The Carter Family", city: "Lodi", amount: 500, date: "2026-03-26" },
 ];
 
 export const sponsorTiers = [

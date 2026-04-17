@@ -17,7 +17,7 @@ export function Footer() {
         <div className="space-y-5">
           <Logo animated={false} />
           <p className="text-white/65 max-w-sm leading-relaxed">
-            {brand.tagline} Founded by {brand.founder}. Serving {brand.primaryCity} and the East Valley.
+            {brand.tagline} Founded by {brand.founder}. Serving {brand.primaryCity} and the Central Valley.
           </p>
           <NewsletterForm compact />
           <div className="flex gap-4 pt-2">

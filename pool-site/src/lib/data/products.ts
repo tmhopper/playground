@@ -25,7 +25,7 @@ export const products: Product[] = [
     image:
       "https://images.unsplash.com/photo-1585687433492-9fcd8a8e7ae2?w=600&q=80",
     review:
-      "The only tabs I buy. Dissolve slowly, don't bleach plaster. Has kept 4/5 of my weekly clients stable through two Phoenix summers.",
+      "The only tabs I buy. Dissolve slowly, don't bleach plaster. Has kept 4/5 of my weekly clients stable through two Central Valley summers.",
     url: "https://www.amazon.com/dp/B000BQSOE6?tag=troycleans-20",
     featured: true,
   },

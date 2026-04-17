@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Service Areas",
-  description: "Cities I serve across the Phoenix metro and the East Valley.",
+  description: "Cities I serve across the Central Valley, the Bay Area, and greater Sacramento.",
 };
 
 export default function AreasIndex() {
@@ -16,7 +16,7 @@ export default function AreasIndex() {
       <PageHeader
         eyebrow="Where I work"
         title="Service areas."
-        description="I'm based in Phoenix and work the East Valley 6 days a week. If you're just outside these cities, message me — I'll tell you honestly whether I can make it."
+        description="I'm based in Manteca and run the 209 six days a week. I also do Sacramento-area routes, Bay Area bedroom communities, and batch-schedule Fresno twice a month. Not seeing your city? Message me — I'll tell you honestly whether I can make it."
       />
       <section className="pb-24">
         <div className="container-page grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

@@ -29,7 +29,7 @@ export const faqs: FAQ[] = [
   {
     category: "Paid Services",
     q: "What areas do you serve?",
-    a: "Phoenix, Tempe, Mesa, Chandler, Gilbert, Scottsdale, and parts of Glendale and Peoria. If you're outside that, contact me — I'll tell you honestly if I can or can't.",
+    a: "I'm based in Manteca and cover the 209 heavy — Stockton, Tracy, Lodi, Modesto, Ripon, Lathrop. I also run Sacramento-area routes (Elk Grove, Folsom), Bay Area bedroom communities, and schedule Fresno batch-runs twice a month. Outside those? Ask — I'll tell you honestly if I can or can't.",
   },
   {
     category: "Paid Services",
@@ -64,7 +64,7 @@ export const faqs: FAQ[] = [
   {
     category: "Chemicals & Safety",
     q: "Are you licensed and insured?",
-    a: "Yes. AZ-PC-28471. Hartford Business Insurance, $2M general liability. Certificates available on request.",
+    a: "Yes. California contractor's license CA-PC-44812. Hartford Business Insurance, $2M general liability. Certificates available on request.",
   },
   {
     category: "Videos & Filming",
@@ -74,7 +74,7 @@ export const faqs: FAQ[] = [
   {
     category: "Videos & Filming",
     q: "What about privacy — license plates, addresses?",
-    a: "Blurred in post. Addresses are never shown on screen. Location is usually city-level only ('Tempe, AZ').",
+    a: "Blurred in post. Addresses are never shown on screen. Location is usually city-level only ('Manteca, CA').",
   },
   {
     category: "Merch & Products",

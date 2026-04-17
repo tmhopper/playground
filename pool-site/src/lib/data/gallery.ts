@@ -10,15 +10,17 @@ export type BeforeAfter = {
   serviceDays: number;
 };
 
+// All images are Unsplash placeholders. Replace with Troy's actual photos — see CONTENT.md.
+// Target aspect ratio: 4:3 for both before and after of each pair.
 export const gallery: BeforeAfter[] = [
   {
     id: "ramirez",
-    title: "Mrs. Ramirez's pool",
+    title: "Mrs. Ramirez's backyard pool",
     beforeImg:
-      "https://images.unsplash.com/photo-1571269608263-14ff2ba4b7c2?w=1200&q=80",
+      "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=1200&q=80",
     afterImg:
       "https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=1200&q=80",
-    location: "Tempe, AZ",
+    location: "Manteca, CA",
     date: "2026-04-02",
     category: "elderly",
     story:
@@ -26,13 +28,13 @@ export const gallery: BeforeAfter[] = [
     serviceDays: 1,
   },
   {
-    id: "mesa-foreclosure",
+    id: "stockton-foreclosure",
     title: "Foreclosed property",
     beforeImg:
-      "https://images.unsplash.com/photo-1566840547093-a8e4abe9180c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1574283617292-42f7c6cdcd50?w=1200&q=80",
     afterImg:
-      "https://images.unsplash.com/photo-1572839150175-e75a91e2ed17?w=1200&q=80",
-    location: "Mesa, AZ",
+      "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=1200&q=80",
+    location: "Stockton, CA",
     date: "2026-03-26",
     category: "foreclosure",
     story:
@@ -40,13 +42,13 @@ export const gallery: BeforeAfter[] = [
     serviceDays: 3,
   },
   {
-    id: "chandler-veteran",
-    title: "Veteran homeowner · Chandler",
+    id: "modesto-veteran",
+    title: "Veteran homeowner · Modesto",
     beforeImg:
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80",
+      "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=1200&q=80",
     afterImg:
-      "https://images.unsplash.com/photo-1533094602577-198d3beab8ea?w=1200&q=80",
-    location: "Chandler, AZ",
+      "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=1200&q=80",
+    location: "Modesto, CA",
     date: "2026-03-18",
     category: "elderly",
     story:
@@ -54,41 +56,41 @@ export const gallery: BeforeAfter[] = [
     serviceDays: 2,
   },
   {
-    id: "phoenix-rental",
-    title: "Abandoned short-term rental",
+    id: "tracy-rental",
+    title: "Abandoned rental property",
     beforeImg:
-      "https://images.unsplash.com/photo-1629905607580-9d68c4f8d35f?w=1200&q=80",
+      "https://images.unsplash.com/photo-1551601651-bc60f254d532?w=1200&q=80",
     afterImg:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80",
-    location: "Phoenix, AZ",
+      "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=1200&q=80",
+    location: "Tracy, CA",
     date: "2026-03-04",
     category: "abandoned",
     story:
-      "Owner moved out of state, property manager ghosted. Neighbors had been dealing with the mosquitoes for two summers.",
+      "Owner moved out of state, property manager ghosted. Neighbors had been dealing with mosquitoes for two summers.",
     serviceDays: 2,
   },
   {
-    id: "monsoon-damage",
-    title: "Monsoon debris recovery",
+    id: "lodi-storm",
+    title: "Storm debris recovery",
     beforeImg:
-      "https://images.unsplash.com/photo-1576484100175-1977e3d0c9f1?w=1200&q=80",
+      "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=1200&q=80",
     afterImg:
-      "https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=1200&q=80",
-    location: "Scottsdale, AZ",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80",
+    location: "Lodi, CA",
     date: "2026-02-22",
     category: "storm-damage",
     story:
-      "Giant mesquite came down during monsoon season. Owner is disabled, couldn't clear it. We did tree + pool.",
+      "Giant valley oak came down during the January wind event. Owner is disabled, couldn't clear it. We did tree + pool.",
     serviceDays: 1,
   },
   {
-    id: "gilbert-widow",
+    id: "sacramento-widow",
     title: "Mrs. Nakamura's pool",
     beforeImg:
-      "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?w=1200&q=80",
+      "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&q=80",
     afterImg:
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80",
-    location: "Gilbert, AZ",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
+    location: "Elk Grove, CA",
     date: "2026-02-14",
     category: "elderly",
     story:
@@ -96,13 +98,13 @@ export const gallery: BeforeAfter[] = [
     serviceDays: 4,
   },
   {
-    id: "glendale-neglect",
+    id: "ripon-neglect",
     title: "Year-long neglect",
     beforeImg:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
-    afterImg:
       "https://images.unsplash.com/photo-1562511211-68f30ca83fa3?w=1200&q=80",
-    location: "Glendale, AZ",
+    afterImg:
+      "https://images.unsplash.com/photo-1572839150175-e75a91e2ed17?w=1200&q=80",
+    location: "Ripon, CA",
     date: "2026-01-28",
     category: "green-to-clean",
     story:
@@ -110,13 +112,13 @@ export const gallery: BeforeAfter[] = [
     serviceDays: 2,
   },
   {
-    id: "peoria-abandoned",
-    title: "Peoria · vacant 3 years",
+    id: "fresno-abandoned",
+    title: "Fresno · vacant 3 years",
     beforeImg:
       "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80",
     afterImg:
-      "https://images.unsplash.com/photo-1572839150175-e75a91e2ed17?w=1200&q=80",
-    location: "Peoria, AZ",
+      "https://images.unsplash.com/photo-1533094602577-198d3beab8ea?w=1200&q=80",
+    location: "Fresno, CA",
     date: "2026-01-10",
     category: "abandoned",
     story:

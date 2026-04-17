@@ -40,7 +40,7 @@ export default function AboutPage() {
 
           <Card className="aspect-[4/5] relative overflow-hidden p-0">
             <Image
-              src="https://images.unsplash.com/photo-1519075677053-39a76c8519c6?w=1200&q=85"
+              src={brand.founderPhoto}
               alt={`${brand.founder}, founder of ${brand.companyName}`}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"

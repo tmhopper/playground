@@ -71,8 +71,8 @@ export default async function CityPage({
               <h2 className="text-2xl">Local conditions</h2>
               <dl className="mt-4 grid sm:grid-cols-3 gap-4 text-sm">
                 <div>
-                  <dt className="text-white/50 uppercase tracking-widest text-xs">Monsoon</dt>
-                  <dd className="mt-1 text-white font-semibold">{data.monsoonSeason}</dd>
+                  <dt className="text-white/50 uppercase tracking-widest text-xs">Peak season</dt>
+                  <dd className="mt-1 text-white font-semibold">{data.climateSeason}</dd>
                 </div>
                 <div>
                   <dt className="text-white/50 uppercase tracking-widest text-xs">Calcium</dt>

@@ -37,7 +37,7 @@ export default function TermsPage() {
             Standard service-business limitation language. In no event will our liability exceed the amount paid for the service in question. We carry $2M general liability insurance.
           </p>
           <h2>Governing law</h2>
-          <p>State of Arizona.</p>
+          <p>State of California.</p>
           <h2>Contact</h2>
           <p>{brand.legalName} · {brand.email}</p>
         </div>

@@ -25,7 +25,7 @@ export const videos: Video[] = [
     durationSec: 1042,
     publishedAt: "2026-04-02",
     featured: true,
-    caseFile: "Ramirez family · Tempe, AZ",
+    caseFile: "Ramirez family · Manteca, CA",
   },
   {
     id: "foreclosed-mesa",

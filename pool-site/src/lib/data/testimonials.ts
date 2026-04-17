@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
     id: "t1",
     name: "Elena Ramirez",
     role: "Homeowner (nominated)",
-    location: "Tempe, AZ",
+    location: "Manteca, CA",
     rating: 5,
     quote:
       "I didn't think my pool could be saved. My husband used to take care of it. Troy showed up, explained everything, and filmed it all. My grandkids swam in it last weekend. I cried.",
@@ -28,7 +28,7 @@ export const testimonials: Testimonial[] = [
     id: "t2",
     name: "Marcus Chen",
     role: "Weekly client",
-    location: "Chandler, AZ",
+    location: "Tracy, CA",
     rating: 5,
     quote:
       "I switched from the big chain service after one month. Troy texts me a video report every Monday. I always know what's going on with my pool. No contract, no upsells.",
@@ -41,10 +41,10 @@ export const testimonials: Testimonial[] = [
     id: "t3",
     name: "Sarah Ballard",
     role: "Homeowner",
-    location: "Mesa, AZ",
+    location: "Stockton, CA",
     rating: 5,
     quote:
-      "Quoted me $1,200 by another company for a 'pump replacement.' Troy came out for the $85 consult, showed me the actual problem was a $14 gasket, and fixed it in 20 minutes. Credited the consult fee against the gasket. The most honest pool guy in the valley.",
+      "Quoted me $1,200 by another company for a 'pump replacement.' Troy came out for the $85 consult, showed me the actual problem was a $14 gasket, and fixed it in 20 minutes. Credited the consult fee against the gasket. The most honest pool guy in the 209.",
     serviceId: "repair-consult",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
@@ -54,7 +54,7 @@ export const testimonials: Testimonial[] = [
     id: "t4",
     name: "Derek Park",
     role: "Green-to-Clean Rescue",
-    location: "Phoenix, AZ",
+    location: "Modesto, CA",
     rating: 5,
     quote:
       "House sat vacant for 10 months during my mom's surgery. I came back to a swamp. Troy had it swimmable in 4 days. Sent me photos daily since I was still out of state.",
@@ -67,7 +67,7 @@ export const testimonials: Testimonial[] = [
     id: "t5",
     name: "Joanne & Bill Carter",
     role: "Weekly clients",
-    location: "Scottsdale, AZ",
+    location: "Lodi, CA",
     rating: 5,
     quote:
       "We're in our seventies. Bill couldn't keep up with the brushing anymore. Troy took it over and never made us feel dumb about what we didn't know. That matters more than he probably realizes.",
@@ -80,7 +80,7 @@ export const testimonials: Testimonial[] = [
     id: "t6",
     name: "Nicole Adebayo",
     role: "Deep Clean client",
-    location: "Gilbert, AZ",
+    location: "Elk Grove, CA",
     rating: 5,
     quote:
       "Moved into a new build, no idea what I was doing. Booked a Deep Clean + consult. Left with a balanced pool and a checklist I'm still using six months later.",

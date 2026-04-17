@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 const waitlistFaqs = [
   {
     q: "Why build your own line?",
-    a: "Because I'm tired of recommending other people's chemistry and having clients pay retail markup on the same stuff I buy in bulk. I want a line priced fairly for actual pool owners — not for distributor margins. And I want formulations tuned for Arizona conditions (calcium-heavy, hot, dusty).",
+    a: "Because I'm tired of recommending other people's chemistry and having clients pay retail markup on the same stuff I buy in bulk. I want a line priced fairly for actual pool owners — not for distributor margins. And I want formulations tuned for Central Valley conditions (hot summers, hard water, lots of tree debris).",
   },
   {
     q: "Where will it be sold?",
-    a: "Direct online at burdettblue.com (launches alongside). Select local pool stores in the Phoenix metro. Not Amazon for year one — I want to control the customer experience before scaling.",
+    a: "Direct online at burdettblue.com (launches alongside). Select local pool stores across the 209 (Manteca, Stockton, Modesto). Not Amazon for year one — I want to control the customer experience before scaling.",
   },
   {
     q: "Will it be cheaper than the big brands?",
@@ -54,7 +54,7 @@ export default function MerchPage() {
         <div className="container-page grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {[
             { label: "Chlorine", sub: "Slow-dissolve tabs" },
-            { label: "Shock", sub: "Cal-hypo, AZ-tuned" },
+            { label: "Shock", sub: "Cal-hypo, valley-tuned" },
             { label: "Algaecide", sub: "60% copper-free" },
           ].map((m) => (
             <Card key={m.label} className="aspect-[3/4] flex flex-col justify-end items-center text-center">

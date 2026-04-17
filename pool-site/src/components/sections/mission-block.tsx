@@ -8,7 +8,7 @@ export function MissionBlock() {
       <div className="container-page grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-20 items-center">
         <FadeIn className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10">
           <Image
-            src="https://images.unsplash.com/photo-1519075677053-39a76c8519c6?w=1200&q=85"
+            src={brand.founderPhoto}
             alt={`${brand.founder}, founder of ${brand.companyName}`}
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
