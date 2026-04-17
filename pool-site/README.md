@@ -1,5 +1,6 @@
 # Troy Cleans · Pool Site
 
+
 Demo marketing site for Troy Burdett's creator-driven pool cleaning business (**Burdett Blue Pool Co.**). Built with Next.js 15, Tailwind v4, and Motion. All content is mock data — designed to feel real, easy to swap for production content.
 
 ## One-tap deploy
