@@ -1,0 +1,105 @@
+[
+  {
+    "id": "marine_corps_0311",
+    "job_code": "0311",
+    "job_title": "Rifleman",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": {
+      "code": "03",
+      "name": "Infantry"
+    },
+    "status": "active",
+    "description_official": "DRAFT — replace with verified text from NAVMC 1200.1E or current equivalent. The Rifleman is the foundation of the Marine Corps infantry squad and the basic scheme of maneuver for the ground-combat element.",
+    "description_plain": "The rifleman is the Marine the rest of the Corps exists to support. You close with the enemy on foot, lead fire teams, and become an expert with the service rifle. This is ground combat — small units, long days, and the discipline that comes from doing the same hard things until they're automatic. Training pipeline runs through Parris Island or San Diego, then School of Infantry East or West. Most 0311s end up in an infantry battalion at Camp Pendleton, Camp Lejeune, or Kaneohe Bay. Expect deployments.",
+    "description_tldr": "The Marine Corps rifleman is the ground-combat backbone of the USMC infantry — small-unit leader, marksman, and the Marine everything else supports.",
+    "asvab": {
+      "composites": {
+        "GT": 80
+      },
+      "afqt_minimum": null,
+      "raw_requirement": "GT: 80 (DRAFT — verify against current Marine Corps classification directive)",
+      "source_system": "marine_corps_composites",
+      "notes": "Composite requirement is historically GT 80 but verify against the current NAVMC 1200 series before publishing."
+    },
+    "security_clearance": "none",
+    "physical_requirements": {
+      "has_additional_requirements": false,
+      "details": "Meets standard USMC physical requirements. No additional infantry-specific physical screening at MOS-assignment stage beyond normal recruit training standards.",
+      "vision": null,
+      "color_vision": null,
+      "swim_qualified": true
+    },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      {
+        "stage": "Recruit Training",
+        "school_name": "Marine Corps Recruit Depot",
+        "location": "Parris Island, SC or San Diego, CA",
+        "duration_weeks": 13,
+        "description": "Basic Marine training. All enlisted Marines complete this before MOS training.",
+        "is_required": true,
+        "prerequisite": null
+      },
+      {
+        "stage": "Infantry Training",
+        "school_name": "School of Infantry (East or West)",
+        "location": "Camp Geiger, NC or Camp Pendleton, CA",
+        "duration_weeks": 14,
+        "description": "DRAFT — verify current Infantry Marine Course (IMC) duration; the SOI pipeline was restructured in recent years and duration has shifted.",
+        "is_required": true,
+        "prerequisite": "Recruit Training"
+      }
+    ],
+    "compensation": {
+      "typical_entry_rank": "E-2 (Private First Class) on standard contract; E-1 (Private) on some",
+      "typical_rank_range": "E-1 through E-5",
+      "special_pay": [
+        {
+          "pay_type": "Hostile Fire / Imminent Danger Pay",
+          "amount": "$225/month",
+          "conditions": "When deployed to a designated combat zone or imminent danger area"
+        }
+      ],
+      "enlistment_bonus": null
+    },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": [
+      "Camp Pendleton, CA",
+      "Camp Lejeune, NC",
+      "Marine Corps Base Hawaii, Kaneohe Bay",
+      "Twentynine Palms, CA",
+      "Camp Hansen, Okinawa"
+    ],
+    "civilian_equivalents": [
+      {
+        "title": "Law Enforcement Officer",
+        "industry": "Public Safety",
+        "onet_code": "33-3051.00"
+      },
+      {
+        "title": "Security Officer",
+        "industry": "Security Services",
+        "onet_code": "33-9032.00"
+      }
+    ],
+    "transferable_certifications": null,
+    "branch_specific": {
+      "pef_code": null,
+      "occfld_sponsor": "Infantry"
+    },
+    "sources": [
+      {
+        "name": "NAVMC 1200.1E — Military Occupational Specialties Manual (DRAFT reference, verify current revision)",
+        "url": null,
+        "accessed_date": "2026-04-17"
+      }
+    ],
+    "confidence": "uncertain",
+    "notes": "DRAFT entry scaffolded from the plan. Every field must be verified against current NAVMC 1200.1E (or current equivalent) and Marines.mil before changing confidence to 'verified'. Training duration in particular has shifted with the Infantry Marine Course restructure — do not publish without verification.",
+    "last_updated": "2026-04-17"
+  }
+]
