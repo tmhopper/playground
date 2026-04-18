@@ -56,5 +56,67 @@
     "confidence": "uncertain",
     "notes": "DRAFT — verify all fields against current DA PAM 611-21 and Army promotion MilPers.",
     "last_updated": "2026-04-17"
+  },
+  {
+    "id": "army_68w",
+    "job_code": "68W",
+    "job_title": "Combat Medic Specialist",
+    "branch": "army",
+    "branch_display": "U.S. Army",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "68", "name": "Medical" },
+    "status": "active",
+    "description_official": "DRAFT — verify against DA PAM 611-21.",
+    "description_plain": "The Army's enlisted medic. You train in trauma care at Fort Sam Houston, attach to an infantry squad or aviation unit, and are the first responder for everything from training injuries to combat casualties. One of the few MOSs where civilian translation is immediate — NREMT-certified on graduation.",
+    "description_tldr": "Army combat medic — trauma care, troop medical clinic work, and first-responder for infantry and aviation units.",
+    "asvab": { "composites": { "GT": 101, "ST": 101 }, "afqt_minimum": 31, "raw_requirement": "GT: 101, ST: 101 (DRAFT — verify)", "source_system": "army_line_scores", "notes": null },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard Army physical requirements.", "vision": "Corrected 20/20 near", "color_vision": true, "swim_qualified": null },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Basic Combat Training", "school_name": "BCT", "location": "Fort Jackson, SC / Fort Moore, GA / Fort Sill, OK / Fort Leonard Wood, MO", "duration_weeks": 10, "description": "Army boot camp.", "is_required": true, "prerequisite": null },
+      { "stage": "68W AIT", "school_name": "Medical Education & Training Campus (METC)", "location": "Fort Sam Houston, TX", "duration_weeks": 16, "description": "DRAFT — verify current AIT length.", "is_required": true, "prerequisite": "BCT" }
+    ],
+    "compensation": { "typical_entry_rank": "E-1 (Private)", "typical_rank_range": "E-1 through E-9", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Fort Bragg, NC", "Fort Campbell, KY", "Fort Drum, NY", "Joint Base Lewis-McChord, WA"],
+    "civilian_equivalents": [
+      { "title": "Emergency Medical Technician (EMT)", "industry": "Healthcare", "onet_code": "29-2041.00" },
+      { "title": "Paramedic", "industry": "Healthcare", "onet_code": "29-2041.00" },
+      { "title": "Registered Nurse (via bridge program)", "industry": "Healthcare", "onet_code": "29-1141.00" }
+    ],
+    "transferable_certifications": ["NREMT (earned during AIT)", "RN bridge programs"],
+    "branch_specific": { "cmf": "68", "asi_codes": ["W1 — Special Operations Combat Medic", "M6 — Practical Nurse"] },
+    "career_path": {
+      "standard_progression": [
+        { "paygrade": "E-1", "rank_name": "Private", "rank_abbreviation": "PV1", "typical_years_in_service": "0–6 months", "typical_billets": ["Combat Medic"], "notes": null },
+        { "paygrade": "E-3", "rank_name": "Private First Class", "rank_abbreviation": "PFC", "typical_years_in_service": "1–2 years", "typical_billets": ["Line Medic"], "notes": null },
+        { "paygrade": "E-4", "rank_name": "Specialist", "rank_abbreviation": "SPC", "typical_years_in_service": "2–4 years", "typical_billets": ["Line Medic", "Treatment Team"], "notes": null },
+        { "paygrade": "E-5", "rank_name": "Sergeant", "rank_abbreviation": "SGT", "typical_years_in_service": "4–7 years", "typical_billets": ["Senior line medic, squad medic lead"], "notes": null },
+        { "paygrade": "E-6", "rank_name": "Staff Sergeant", "rank_abbreviation": "SSG", "typical_years_in_service": "6–10 years", "typical_billets": ["Platoon Sergeant (medical platoon), Treatment NCO"], "notes": null },
+        { "paygrade": "E-7", "rank_name": "Sergeant First Class", "rank_abbreviation": "SFC", "typical_years_in_service": "10–16 years", "typical_billets": ["Medical Platoon Sergeant, Battalion medical NCO"], "notes": null },
+        { "paygrade": "E-8", "rank_name": "First Sergeant / Master Sergeant", "rank_abbreviation": "1SG / MSG", "typical_years_in_service": "14–20 years", "typical_billets": ["First Sergeant of a medical company"], "notes": null },
+        { "paygrade": "E-9", "rank_name": "Command Sergeant Major / Sergeant Major", "rank_abbreviation": "CSM / SGM", "typical_years_in_service": "18–30 years", "typical_billets": ["Medical battalion/brigade CSM"], "notes": null }
+      ],
+      "b_billets": [
+        { "title": "Drill Sergeant", "code": null, "description": "Train Army recruits.", "eligibility": "E-5 to E-7, Drill Sergeant Academy.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Instructor at METC", "code": null, "description": "Teach 68W AIT at Fort Sam Houston.", "eligibility": "E-5+, strong record.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null }
+      ],
+      "lateral_moves": [
+        { "title": "Special Forces Medical Sergeant (18D)", "code": "18D", "description": "SF medic via selection and the Q-Course.", "eligibility": "Passes SFAS and Q-Course.", "typical_timeline": null, "duration": null, "notes": "High attrition." },
+        { "title": "Practical Nurse (M6 ASI)", "code": "68W-M6", "description": "Additional Skill Identifier for LPN-equivalent training.", "eligibility": "Complete the Practical Nurse Course.", "typical_timeline": null, "duration": null, "notes": null }
+      ],
+      "reclass_options": [
+        { "title": "Inter-service Physician Assistant Program (IPAP)", "code": null, "description": "Path to commissioning as a Physician Assistant officer.", "eligibility": "Bachelor's-level prerequisites, board selection.", "typical_timeline": "Mid-career.", "duration": "~29 months", "notes": "Highly competitive." },
+        { "title": "Officer commissioning", "code": null, "description": "OCS, Green-to-Gold, or direct commission into AMEDD for clinical degrees.", "eligibility": "Varies.", "typical_timeline": null, "duration": null, "notes": null }
+      ],
+      "career_capstone_notes": "Career 68Ws often advance into 68W-W1 (SOCM), 18D (Special Forces Medic via reclass), or commission into AMEDD via IPAP or direct programs."
+    },
+    "sources": [{ "name": "DA PAM 611-21 (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify current AIT structure, NREMT timing, and ASI codes.",
+    "last_updated": "2026-04-17"
   }
 ]

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllJobParams, getJob } from "@/lib/data";
+import { getAllJobParams, getAllJobs, getJob } from "@/lib/data";
 import { Nav, Footer } from "@/components/Nav";
 import { TrainingTimeline } from "@/components/TrainingTimeline";
+import { JobCard } from "@/components/JobCard";
 
 type Params = { branch: string; jobCode: string };
 
@@ -401,6 +402,32 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
                 </>
               )}
             </section>
+
+            {/* RELATED */}
+            {(() => {
+              const all = getAllJobs();
+              const related = all
+                .filter((j) => j.id !== job.id)
+                .filter(
+                  (j) =>
+                    j.branch === job.branch &&
+                    j.occupational_field.code === job.occupational_field.code,
+                )
+                .slice(0, 4);
+              if (related.length === 0) return null;
+              return (
+                <section className="scroll-mt-8">
+                  <h2>Related in {job.occupational_field.name}</h2>
+                  <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                    {related.map((j) => (
+                      <li key={j.id}>
+                        <JobCard job={j} />
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              );
+            })()}
 
             {/* SOURCES */}
             <section id="sources" className="scroll-mt-8 border-t border-[color:var(--color-rule)] pt-8">
