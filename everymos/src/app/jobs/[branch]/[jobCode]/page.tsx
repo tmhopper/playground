@@ -6,6 +6,8 @@ import { Nav, Footer } from "@/components/Nav";
 import { TrainingTimeline } from "@/components/TrainingTimeline";
 import { JobCard } from "@/components/JobCard";
 import { themeFor } from "@/lib/branch-theme";
+import { PayChart } from "@/components/PayChart";
+import { payForRange, paygradesForCategory, payTableMeta } from "@/lib/pay";
 
 type Params = { branch: string; jobCode: string };
 
@@ -352,6 +354,21 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
                 <Req label="Typical entry rank">{job.compensation.typical_entry_rank}</Req>
                 <Req label="Typical range">{job.compensation.typical_rank_range}</Req>
               </dl>
+              {(() => {
+                const meta = payTableMeta();
+                const grades = paygradesForCategory(job.personnel_category);
+                const rows = payForRange(job.personnel_category, grades);
+                return (
+                  <div className="mt-8">
+                    <p className="mono text-xs uppercase tracking-wide opacity-60">
+                      Base pay by paygrade (monthly)
+                    </p>
+                    <div className="mt-3">
+                      <PayChart rows={rows} accent={theme.accent} effectiveDate={meta.effective_date} />
+                    </div>
+                  </div>
+                );
+              })()}
               {job.compensation.special_pay.length > 0 && (
                 <>
                   <p className="mono mt-8 text-xs uppercase tracking-wide opacity-60">Special pay</p>
