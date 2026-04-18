@@ -12,7 +12,10 @@ export function Nav() {
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link href="/jobs" className="text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)]">
-            Jobs
+            All Jobs
+          </Link>
+          <Link href="/jobs/marine-corps" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] md:inline">
+            Marine Corps
           </Link>
           <Link href="/about" className="text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)]">
             About

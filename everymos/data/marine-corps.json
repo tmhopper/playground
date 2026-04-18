@@ -170,6 +170,33 @@
     "civilian_equivalents": [{ "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }],
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Infantry" },
+    "career_path": {
+      "standard_progression": [
+        { "paygrade": "E-1", "rank_name": "Private", "rank_abbreviation": "Pvt", "typical_years_in_service": "0–6 months", "typical_billets": ["Assistant Gunner / Ammo Carrier"], "notes": null },
+        { "paygrade": "E-2", "rank_name": "Private First Class", "rank_abbreviation": "PFC", "typical_years_in_service": "6 months–2 years", "typical_billets": ["Machine Gunner"], "notes": null },
+        { "paygrade": "E-3", "rank_name": "Lance Corporal", "rank_abbreviation": "LCpl", "typical_years_in_service": "1–3 years", "typical_billets": ["Machine Gunner", "Team Leader (2-Marine gun team)"], "notes": null },
+        { "paygrade": "E-4", "rank_name": "Corporal", "rank_abbreviation": "Cpl", "typical_years_in_service": "2–5 years", "typical_billets": ["Section Leader"], "notes": "Runs a pair of gun teams (M240 or M2) in the platoon's weapons section." },
+        { "paygrade": "E-5", "rank_name": "Sergeant", "rank_abbreviation": "Sgt", "typical_years_in_service": "4–8 years", "typical_billets": ["Squad Leader — Weapons Squad"], "notes": "Leads the weapons squad: multiple gun teams plus rockets and assault assets depending on T/O." },
+        { "paygrade": "E-6", "rank_name": "Staff Sergeant", "rank_abbreviation": "SSgt", "typical_years_in_service": "7–12 years", "typical_billets": ["Platoon Sergeant"], "notes": "Most 0331s lateral to 0369 at or before E-6 to continue in the infantry field." }
+      ],
+      "b_billets": [
+        { "title": "Recruiter", "code": "8411", "description": "3-year tour enlisting new Marines.", "eligibility": "E-5 to E-7, Recruiter School graduate.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Drill Instructor", "code": "8511", "description": "Train recruits at Parris Island or San Diego.", "eligibility": "E-5 to E-7, DI School graduate.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Marine Combat Instructor (SOI)", "code": "0933", "description": "Teach Infantry Marine Course at SOI East or West.", "eligibility": "E-4 to E-7, SOI-approved record.", "typical_timeline": "Mid-first to second enlistment.", "duration": "3 years", "notes": null },
+        { "title": "Marine Security Guard", "code": "8151 / 8152", "description": "Embassy duty worldwide.", "eligibility": "E-3 to E-7 depending on posting.", "typical_timeline": "After first term.", "duration": "3 years", "notes": null }
+      ],
+      "lateral_moves": [
+        { "title": "Rifleman", "code": "0311", "description": "Other primary infantry MOS — some Marines lateral between 0311 and 0331 at unit discretion.", "eligibility": "0331 qualified; usually unit-level decision.", "typical_timeline": null, "duration": null, "notes": null },
+        { "title": "Mortarman", "code": "0341", "description": "60mm / 81mm indirect fire.", "eligibility": "Typically assigned from SOI, but field transfers happen.", "typical_timeline": null, "duration": null, "notes": null },
+        { "title": "Antitank Missileman", "code": "0352", "description": "TOW, Javelin, antitank systems.", "eligibility": "Same occupational field; verify current policy.", "typical_timeline": null, "duration": null, "notes": null },
+        { "title": "Scout Sniper", "code": "0317", "description": "High-value lateral via selection and SSBC. Verify current MOS status under Force Design.", "eligibility": "High GT, passes selection.", "typical_timeline": null, "duration": null, "notes": "Status under review." },
+        { "title": "Reconnaissance Marine", "code": "0321", "description": "Ground recon via RTAP and BRC.", "eligibility": "Passes RTAP and BRC.", "typical_timeline": null, "duration": null, "notes": "High attrition." }
+      ],
+      "reclass_options": [
+        { "title": "Out-of-field reclassification", "code": null, "description": "At re-enlistment, with classification package approval, to another MOS field for which the Marine meets ASVAB line scores.", "eligibility": "Re-enlistment eligible; meets target MOS composite; needs-of-the-Marine-Corps approval.", "typical_timeline": "End of first or second term.", "duration": "Varies", "notes": "Not guaranteed." }
+      ],
+      "career_capstone_notes": "Career infantry machine gunners lateral to 0369 Infantry Unit Leader at or before E-6 to continue in the field. Commissioning via LDO, MCP, or ECP available to qualified Marines."
+    },
     "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify all fields before publishing.",
@@ -202,6 +229,26 @@
     "civilian_equivalents": [{ "title": "Operations Manager", "industry": "Logistics / Operations", "onet_code": "11-1021.00" }],
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Infantry" },
+    "career_path": {
+      "standard_progression": [
+        { "paygrade": "E-6", "rank_name": "Staff Sergeant", "rank_abbreviation": "SSgt", "typical_years_in_service": "7–12 years", "typical_billets": ["Platoon Sergeant"], "notes": "Entry rank for the MOS via IULC lateral." },
+        { "paygrade": "E-7", "rank_name": "Gunnery Sergeant", "rank_abbreviation": "GySgt", "typical_years_in_service": "10–16 years", "typical_billets": ["Company Gunnery Sergeant", "Operations chief billets"], "notes": null },
+        { "paygrade": "E-8", "rank_name": "Master Sergeant / First Sergeant", "rank_abbreviation": "MSgt / 1stSgt", "typical_years_in_service": "14–20 years", "typical_billets": ["First Sergeant (infantry company)", "Master Sergeant (S-3 Operations Chief)"], "notes": "1stSgt and MSgt are parallel tracks at this paygrade." },
+        { "paygrade": "E-9", "rank_name": "Master Gunnery Sergeant / Sergeant Major", "rank_abbreviation": "MGySgt / SgtMaj", "typical_years_in_service": "18–30 years", "typical_billets": ["Sergeant Major (battalion, regiment, division, higher)", "Master Gunnery Sergeant (senior operations chief)"], "notes": "Career capstone." }
+      ],
+      "b_billets": [
+        { "title": "Senior Drill Instructor / Chief Drill Instructor", "code": "8512 / 8513", "description": "Senior roles on the recruit training field.", "eligibility": "Prior DI tour, strong record.", "typical_timeline": "Mid-to-late career.", "duration": "3 years", "notes": null },
+        { "title": "Marine Corps Recruiter — Leadership billets", "code": "8412", "description": "Recruiting Substation leadership.", "eligibility": "Prior recruiter tour.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "First Sergeant / Sergeant Major assignment", "code": "9999", "description": "SNCO leadership billets at company, battalion, and higher.", "eligibility": "E-8 or E-9 selection.", "typical_timeline": "Senior career.", "duration": "Typically 2–3 years per billet.", "notes": null }
+      ],
+      "lateral_moves": [
+        { "title": "Marine Raider (MARSOC CSO)", "code": "0372", "description": "MARSOC Critical Skills Operator via A&S + ITC.", "eligibility": "Passes MARSOC selection.", "typical_timeline": "Earlier in career; less common at senior E-levels.", "duration": "Permanent reclassification.", "notes": null }
+      ],
+      "reclass_options": [
+        { "title": "Officer commissioning", "code": null, "description": "Limited Duty Officer (LDO), Meritorious Commissioning Program (MCP), Enlisted Commissioning Program (ECP), or Warrant Officer programs.", "eligibility": "Varies by program; degree typically required for ECP/MCP.", "typical_timeline": "Typically E-5 to E-8.", "duration": null, "notes": "Verify current program eligibility and boards schedule." }
+      ],
+      "career_capstone_notes": "0369 is the senior enlisted infantry track. Top billets are Battalion / Regimental / Division Sergeant Major and Marine Corps-level senior enlisted billets."
+    },
     "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
@@ -238,6 +285,214 @@
     ],
     "transferable_certifications": ["CompTIA Network+ (via DoD COOL funding)"],
     "branch_specific": { "occfld_sponsor": "Communications" },
+    "career_path": {
+      "standard_progression": [
+        { "paygrade": "E-1", "rank_name": "Private", "rank_abbreviation": "Pvt", "typical_years_in_service": "0–6 months", "typical_billets": ["Radio Operator"], "notes": null },
+        { "paygrade": "E-2", "rank_name": "Private First Class", "rank_abbreviation": "PFC", "typical_years_in_service": "6 months–2 years", "typical_billets": ["Radio Operator"], "notes": null },
+        { "paygrade": "E-3", "rank_name": "Lance Corporal", "rank_abbreviation": "LCpl", "typical_years_in_service": "1–3 years", "typical_billets": ["Radio Operator", "Team Leader"], "notes": null },
+        { "paygrade": "E-4", "rank_name": "Corporal", "rank_abbreviation": "Cpl", "typical_years_in_service": "2–5 years", "typical_billets": ["Section Leader", "RTO for an infantry company"], "notes": null },
+        { "paygrade": "E-5", "rank_name": "Sergeant", "rank_abbreviation": "Sgt", "typical_years_in_service": "4–8 years", "typical_billets": ["Communications Chief (small unit)", "S-6 shop NCO"], "notes": null },
+        { "paygrade": "E-6", "rank_name": "Staff Sergeant", "rank_abbreviation": "SSgt", "typical_years_in_service": "7–12 years", "typical_billets": ["Company Communications Chief", "Platoon Sergeant"], "notes": "Career path diverges: continue as SME, or lateral to 0699 Telecommunications Chief." },
+        { "paygrade": "E-7", "rank_name": "Gunnery Sergeant", "rank_abbreviation": "GySgt", "typical_years_in_service": "10–16 years", "typical_billets": ["Battalion S-6 chief", "Regimental comms billets"], "notes": null },
+        { "paygrade": "E-8", "rank_name": "Master Sergeant / First Sergeant", "rank_abbreviation": "MSgt / 1stSgt", "typical_years_in_service": "14–20 years", "typical_billets": ["Comms shop MSgt", "1stSgt of a comms company"], "notes": null },
+        { "paygrade": "E-9", "rank_name": "Master Gunnery Sergeant / Sergeant Major", "rank_abbreviation": "MGySgt / SgtMaj", "typical_years_in_service": "18–30 years", "typical_billets": ["Communications MGySgt at higher headquarters"], "notes": null }
+      ],
+      "b_billets": [
+        { "title": "Recruiter", "code": "8411", "description": "Enlist new Marines.", "eligibility": "E-5 to E-7.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Drill Instructor", "code": "8511", "description": "Train recruits at MCRD.", "eligibility": "E-5 to E-7.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Formal School Instructor (MCCES)", "code": "0933 family", "description": "Teach at the Marine Corps Communication-Electronics School.", "eligibility": "E-4 to E-7, FSIC graduate.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Marine Security Guard", "code": "8151 / 8152", "description": "Embassy duty worldwide.", "eligibility": "E-3 to E-7, MSG School graduate.", "typical_timeline": "After first term.", "duration": "3 years", "notes": null }
+      ],
+      "lateral_moves": [
+        { "title": "Field Radio Operator / Transmission Systems Operator", "code": "0627 / 0629", "description": "Related 06xx comms MOSs — specialty in specific radio or transmission systems.", "eligibility": "Needs-of-the-Corps lateral within comms field.", "typical_timeline": null, "duration": null, "notes": "Verify specific MOS codes and current structure." },
+        { "title": "Data Systems Administrator", "code": "0659", "description": "Server / network administration specialty.", "eligibility": "Within 06 field with additional training.", "typical_timeline": null, "duration": null, "notes": null },
+        { "title": "Cyberspace Warfare Operator", "code": "1721 family (Cyberspace)", "description": "The 17xx cyber field — related skill set, formal reclass path.", "eligibility": "Meets cyber-field ASVAB and screening.", "typical_timeline": null, "duration": null, "notes": "Growing field; verify current structure." }
+      ],
+      "reclass_options": [
+        { "title": "Out-of-field reclassification", "code": null, "description": "At re-enlistment, to any MOS field for which the Marine qualifies.", "eligibility": "Re-enlistment approval + target MOS ASVAB composites.", "typical_timeline": "End of first or second term.", "duration": "Varies", "notes": null }
+      ],
+      "career_capstone_notes": "Senior comms Marines can serve at the Service-level staff. Civilian transition is strong — DoD COOL funds CompTIA A+, Network+, Security+, and Cisco certs, all of which translate directly to IT/telecom civilian roles."
+    },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0811",
+    "job_code": "0811",
+    "job_title": "Field Artillery Cannoneer",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "08", "name": "Field Artillery" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Artillery cannoneers man the M777 howitzer and related fire-support systems. You're part of a gun crew that puts rounds downrange in support of maneuver units. Physical job with crew drills you'll run thousands of times.",
+    "description_tldr": "Marine Corps artillery crew member — operates howitzers to provide indirect fire support for ground combat.",
+    "asvab": { "composites": { "GT": 90 }, "afqt_minimum": null, "raw_requirement": "GT: 90 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard USMC physical requirements; gun-crew work is physically demanding.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Field Artillery Cannoneer Course", "school_name": "Fort Sill (joint with Army)", "location": "Fort Sill, OK", "duration_weeks": 7, "description": "DRAFT — verify current course length.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [{ "pay_type": "Hostile Fire / Imminent Danger Pay", "amount": "$225/month", "conditions": "When deployed to a designated combat zone" }], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC", "Marine Corps Base Hawaii"],
+    "civilian_equivalents": [
+      { "title": "Heavy Equipment Operator", "industry": "Construction", "onet_code": "47-2073.00" }
+    ],
+    "transferable_certifications": null,
+    "branch_specific": { "occfld_sponsor": "Field Artillery" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — field artillery structure has shifted under Force Design; verify before publishing.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_5811",
+    "job_code": "5811",
+    "job_title": "Military Police",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "58", "name": "Military Police & Corrections" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Marine MP. You work base security, traffic enforcement, criminal investigation at the entry level, and can deploy for detainee operations or force protection. Strong translation to civilian law enforcement.",
+    "description_tldr": "Marine Corps military police — base law enforcement, force protection, and deployed security operations.",
+    "asvab": { "composites": { "GT": 100 }, "afqt_minimum": null, "raw_requirement": "GT: 100 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": true, "details": "Must pass MP-specific physical standards and psychological screening.", "vision": "Corrected 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Military Police Basic Course", "school_name": "USMC Military Police Basic Course", "location": "Fort Leonard Wood, MO", "duration_weeks": 12, "description": "DRAFT — verify current course length and location.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-7", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC", "Quantico, VA", "Okinawa, Japan"],
+    "civilian_equivalents": [
+      { "title": "Police Officer", "industry": "Public Safety", "onet_code": "33-3051.00" },
+      { "title": "Corrections Officer", "industry": "Public Safety", "onet_code": "33-3012.00" },
+      { "title": "Private Security Supervisor", "industry": "Security", "onet_code": "33-9032.00" }
+    ],
+    "transferable_certifications": ["POST certification (state-by-state; varies)", "Taser / OC spray instructor certs"],
+    "branch_specific": { "occfld_sponsor": "Military Police" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify current POST reciprocity; many states partially recognize MP training.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_3531",
+    "job_code": "3531",
+    "job_title": "Motor Vehicle Operator",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "35", "name": "Motor Transport" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "You drive the Marine Corps. MRAPs, 7-tons, MTVRs, HMMWVs, buses — convoy ops, logistics runs, troop movement. The skills transfer directly to a CDL in the civilian world, and the Marine Corps typically pays for the test through SkillBridge or DoD COOL.",
+    "description_tldr": "Marine Corps motor vehicle operator — drives tactical and support vehicles; strong civilian CDL translation.",
+    "asvab": { "composites": { "MM": 85 }, "afqt_minimum": null, "raw_requirement": "MM: 85 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard; must be medically qualified to operate military vehicles.", "vision": "Corrected 20/20 for operating class-specific vehicles", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Motor Transport Operator Course", "school_name": "Marine Corps Combat Service Support Schools", "location": "Camp Johnson, NC (Camp Lejeune)", "duration_weeks": 4, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC", "Twentynine Palms, CA"],
+    "civilian_equivalents": [
+      { "title": "Commercial Truck Driver (CDL)", "industry": "Trucking / Logistics", "onet_code": "53-3032.00" },
+      { "title": "Bus Driver", "industry": "Transit", "onet_code": "53-3051.00" }
+    ],
+    "transferable_certifications": ["Commercial Driver's License (CDL) via SkillBridge or DoD COOL"],
+    "branch_specific": { "occfld_sponsor": "Motor Transport" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0231",
+    "job_code": "0231",
+    "job_title": "Intelligence Specialist",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "02", "name": "Intelligence" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Intelligence analyst at the tactical and operational level. You produce intel products, analyze enemy capabilities, and brief commanders. Desk-heavy compared to combat arms but you deploy with infantry and MARSOC units as the intel support element.",
+    "description_tldr": "Marine Corps all-source intelligence analyst — supports tactical and operational commanders with intel products.",
+    "asvab": { "composites": { "GT": 100 }, "afqt_minimum": null, "raw_requirement": "GT: 100 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "top_secret",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Intelligence Basic Course", "school_name": "Navy Marine Corps Intelligence Training Center", "location": "Virginia Beach, VA (Dam Neck)", "duration_weeks": 12, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Lejeune, NC", "Camp Pendleton, CA", "Quantico, VA", "Oahu, HI"],
+    "civilian_equivalents": [
+      { "title": "Intelligence Analyst (Federal / Contractor)", "industry": "Government / Defense", "onet_code": "33-3021.06" },
+      { "title": "Business Intelligence Analyst", "industry": "Corporate", "onet_code": "15-2051.01" }
+    ],
+    "transferable_certifications": ["TS/SCI clearance is a major civilian asset; maintain eligibility"],
+    "branch_specific": { "occfld_sponsor": "Intelligence" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify clearance requirements, school length, and current location.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_6672",
+    "job_code": "6672",
+    "job_title": "Aviation Supply Specialist",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "66", "name": "Aviation Logistics" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "You manage aviation parts and supply for a Marine aircraft wing. Inventory systems, parts ordering, receipt and issue, and the administrative side of keeping jets and helos flying. Office environment with squadron and hangar-deck work.",
+    "description_tldr": "Marine Corps aviation supply specialist — manages parts and consumables for Marine aircraft squadrons.",
+    "asvab": { "composites": { "CL": 100 }, "afqt_minimum": null, "raw_requirement": "CL: 100 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Aviation Supply Specialist Course", "school_name": "Navy supply school (joint training)", "location": "NAS Meridian, MS or Navy Supply Corps School", "duration_weeks": 8, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "airfield", "conus", "oconus"],
+    "common_duty_stations": ["MCAS Miramar, CA", "MCAS Cherry Point, NC", "MCAS Yuma, AZ", "MCAS Iwakuni, Japan"],
+    "civilian_equivalents": [
+      { "title": "Logistician", "industry": "Aviation / Logistics", "onet_code": "13-1081.00" },
+      { "title": "Supply Chain Analyst", "industry": "Corporate Logistics", "onet_code": "13-1081.02" }
+    ],
+    "transferable_certifications": ["APICS CPIM / CSCP (via DoD COOL)"],
+    "branch_specific": { "occfld_sponsor": "Aviation Logistics" },
     "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
