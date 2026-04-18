@@ -102,6 +102,83 @@ If you want technical skills that make you rich on the outside, 0311 is the wron
 There's no third reason.`,
   },
   {
+    slug: "four-asvab-mistakes",
+    title: "The four ASVAB mistakes almost everyone makes",
+    date: "2026-04-17",
+    category: "ASVAB",
+    read_time: "5 min",
+    excerpt:
+      "The test is easier than the study materials make it look. Here's where time gets wasted.",
+    body: `The ASVAB is a timed, multiple-choice, adaptive-ish battery that decides what jobs you qualify for. Most of the people I know who bombed it didn't bomb the content — they bombed the prep.
+
+## 1. Studying every section equally
+
+The AFQT (the overall score) is computed from four subtests: Arithmetic Reasoning, Word Knowledge, Paragraph Comprehension, and Mathematics Knowledge. That's it. The other subtests (General Science, Auto and Shop Info, Mechanical Comprehension, Electronics, Assembling Objects) only matter for specific composite line scores.
+
+If you don't have a target MOS that needs those line scores, ignore them during prep. Most 400-page study books are optimized for the wrong goal.
+
+## 2. Not taking a practice test first
+
+You should never start studying without knowing where you actually stand. Take a timed practice test the first day. It tells you which of the four AFQT subtests is your weakest — that's where the study hours should go.
+
+## 3. Ignoring the math
+
+Half of the AFQT is math. The math is not hard — it's middle-school and early high-school level — but the test doesn't give you a calculator, and the time pressure hits people who haven't done long division by hand since 8th grade.
+
+Drill it. Twenty problems a day for two weeks closes most of the gap.
+
+## 4. Skipping the follow-up if you score low
+
+You can retake the ASVAB. First retake is a month after the first test; second is a month after the first retake; third is six months later. If your first score doesn't qualify you for the MOS you want, take the month and test again.
+
+Also — already-serving Marines and soldiers can retake via the in-service testing program. Your ASVAB is not permanent.
+
+---
+
+The test is a gate, not a verdict. People who treat it like a gate pass it with the score they need.`,
+  },
+  {
+    slug: "b-billet-strategy",
+    title: "The quiet logic of the B-billet tour",
+    date: "2026-04-17",
+    category: "Transition",
+    read_time: "7 min",
+    excerpt:
+      "Recruiter, drill instructor, MSG, SOI instructor. Three years outside your unit. Here's why the career Marines pick them.",
+    body: `The Marine Corps calls them B-billets — special-duty assignments outside your operational unit. Recruiter, drill instructor, Marine Security Guard at an embassy, Combat Instructor at the School of Infantry. Three years each, sometimes extended. Every other service has its own version: Army drill sergeant, Navy RDC, Air Force MTI.
+
+Most junior Marines hear "B-billet" and picture three years of screaming at recruits. That's the stereotype, and it's not wrong for DI duty. But B-billets are also a quiet career accelerator, and the career Marines know it.
+
+## Why they help
+
+**Promotion.** Marines with successful B-billet tours consistently advance faster than Marines who spend their entire career in operational units. Boards reward the evaluated leadership in a hard, high-visibility job. You get noticed. Your fitness reports run through a chain that actually reads them.
+
+**Perspective.** You spend three years seeing the service from a different angle. Recruiters see the civilian side — what 18-year-olds think the Marine Corps is, what their parents are afraid of, what the local economy is doing. DIs see how Marines are made, which changes what you expect from your own junior Marines when you get back to the fleet. MSG duty means you run security at embassies and work alongside State Department and the intelligence community.
+
+**Relationships.** You leave with a network outside your MOS community. Recruiters end up with contacts across every district. DIs cross paths with senior enlisted from every specialty. MSG stands you up alongside Marines from every MOS who also got picked.
+
+## Why people avoid them
+
+They're hard. Long hours. High standards. Constant scrutiny. You get moved to a new city for three years, often away from your operational community and friends. The workload on recruiter duty is famously brutal; DI duty is a full-time physical and psychological grind.
+
+Also — B-billets interrupt your operational clock. If you're trying to deploy every two years or you love what your unit does, three years at a recruiting substation in Ohio feels like exile.
+
+## How to pick
+
+Line up your B-billet against your career goal.
+
+- **If you want to make Gunnery Sergeant and beyond:** take the B-billet. Any of them. Make it count.
+- **If you want to stay operational and lateral to something hard (recon, MARSOC, scout sniper):** go before the B-billet. You can B-billet after.
+- **If you want to get out at 4 or 8:** skip. It only matters if you're staying in.
+- **If you have family considerations (single parent, military spouse, chronically ill dependent):** talk honestly with your career counselor about which B-billet is workable. MSG with dependents is complicated; recruiter near family is usually doable.
+
+## The pattern I saw
+
+The Marines who ended up at E-8 and E-9 almost all had a B-billet on their record. Not because B-billet was magic — because it's a filter. The Corps is telling you it trusts you with a hard job outside your comfort zone, and the people who pass through it are the ones who get evaluated for the next hard job.
+
+If you're planning on a 20-year career, the question isn't whether to do a B-billet. It's which one and when.`,
+  },
+  {
     slug: "lateral-vs-reclass",
     title: "Lateral moves vs. reclass: what actually happens when you want to change jobs",
     date: "2026-04-17",

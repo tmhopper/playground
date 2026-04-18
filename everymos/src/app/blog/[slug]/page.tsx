@@ -128,6 +128,30 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
           </div>
         </article>
 
+        {(() => {
+          const related = POSTS.filter(
+            (p) => p.slug !== post.slug && p.category === post.category,
+          ).slice(0, 3);
+          if (related.length === 0) return null;
+          return (
+            <section className="mt-16 border-t border-[color:var(--color-rule)] pt-8">
+              <p className="mono text-xs uppercase tracking-wide opacity-60">
+                More in {post.category}
+              </p>
+              <ul className="mt-4 space-y-3">
+                {related.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/blog/${p.slug}`} className="no-underline">
+                      <strong className="text-[color:var(--color-ink-900)]">{p.title}</strong>
+                    </Link>
+                    <p className="mt-1 text-sm opacity-70">{p.excerpt}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })()}
+
         <footer className="mt-16 border-t border-[color:var(--color-rule)] pt-8">
           <Link href="/blog" className="text-sm">
             ← All posts

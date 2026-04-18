@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllJobs } from "@/lib/data";
 import { JobCard } from "@/components/JobCard";
 import { Nav, Footer } from "@/components/Nav";
+import { POSTS } from "../../data/posts";
 
 export default function HomePage() {
   const jobs = getAllJobs();
@@ -188,6 +189,40 @@ export default function HomePage() {
                   </li>
                 );
               })}
+            </ul>
+          </div>
+        </section>
+
+        {/* FROM THE BLOG */}
+        <section className="border-b border-[color:var(--color-rule)] bg-white">
+          <div className="mx-auto max-w-6xl px-4 py-16 md:px-8">
+            <div className="flex items-baseline justify-between">
+              <h2>From the log</h2>
+              <Link href="/blog" className="text-sm">
+                All posts →
+              </Link>
+            </div>
+            <ul className="mt-6 grid gap-4 md:grid-cols-3">
+              {[...POSTS]
+                .sort((a, b) => b.date.localeCompare(a.date))
+                .slice(0, 3)
+                .map((p) => (
+                  <li
+                    key={p.slug}
+                    className="rounded-lg border border-[color:var(--color-rule)] bg-white p-5"
+                  >
+                    <p className="mono text-xs uppercase tracking-wide opacity-60">
+                      {p.category}
+                    </p>
+                    <h3 className="mt-2 text-lg">
+                      <Link href={`/blog/${p.slug}`} className="no-underline">
+                        {p.title}
+                      </Link>
+                    </h3>
+                    <p className="mono mt-1 text-xs opacity-60">{p.read_time}</p>
+                    <p className="mt-3 text-sm opacity-80">{p.excerpt}</p>
+                  </li>
+                ))}
             </ul>
           </div>
         </section>
