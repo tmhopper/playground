@@ -34,5 +34,42 @@
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
+  },
+  {
+    "id": "coast_guard_ast",
+    "job_code": "AST",
+    "job_title": "Aviation Survival Technician (Rescue Swimmer)",
+    "branch": "coast_guard",
+    "branch_display": "U.S. Coast Guard",
+    "classification_term": "Rating",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "AST", "name": "Aviation / Rescue" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Coast Guard rescue swimmers. ASTs jump out of helicopters into whatever the Atlantic, Pacific, or Gulf of Mexico is doing that day to pull people out of the water. Brutal selection pipeline — one of the highest attrition rates in the U.S. military — and one of the most immediately meaningful missions in the service.",
+    "description_tldr": "U.S. Coast Guard Aviation Survival Technician — the rescue swimmer; deploys from helicopters to recover people from the water.",
+    "asvab": { "composites": {}, "afqt_minimum": 50, "raw_requirement": "AFQT minimum 50 + AST-specific water and physical screening (DRAFT)", "source_system": "coast_guard_afqt", "notes": null },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": true, "details": "Extreme water-confidence and fitness standards. AST candidate physical includes 500-yard swim, push-ups, sit-ups, pull-ups, and underwater events.", "vision": "Corrected 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "CGTC Cape May", "location": "Cape May, NJ", "duration_weeks": 8, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Airman Program (apprenticeship)", "school_name": "Assigned Air Station", "location": "Various", "duration_weeks": 12, "description": "Airman-level apprenticeship at an air station.", "is_required": true, "prerequisite": "Recruit Training" },
+      { "stage": "AST A-School", "school_name": "Aviation Survival Technician School", "location": "USCG Training Center Elizabeth City, NC", "duration_weeks": 24, "description": "DRAFT — verify. Pipeline includes EMT certification, rescue-swimmer school, and survival-technician training. High attrition.", "is_required": true, "prerequisite": "Airman Program" }
+    ],
+    "compensation": { "typical_entry_rank": "E-3", "typical_rank_range": "E-1 through E-9", "special_pay": [{ "pay_type": "Flight Pay / Aviation Career Incentive Pay", "amount": "Varies", "conditions": "When on flight status" }], "enlistment_bonus": null },
+    "duty_station_types": ["airfield", "shore", "conus", "oconus"],
+    "common_duty_stations": ["Elizabeth City, NC", "Cape Cod, MA", "Kodiak, AK", "Port Angeles, WA", "Clearwater, FL"],
+    "civilian_equivalents": [
+      { "title": "Paramedic", "industry": "Healthcare", "onet_code": "29-2041.00" },
+      { "title": "Rescue Technician (fire/HAZMAT)", "industry": "Public Safety", "onet_code": "33-2011.00" }
+    ],
+    "transferable_certifications": ["NREMT (earned during A-School)"],
+    "branch_specific": { "cutter_types": ["Air stations only — AST is an aviation-specific rating"] },
+    "sources": [{ "name": "Coast Guard AST Rating documentation (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify pipeline lengths and attrition.",
+    "last_updated": "2026-04-17"
   }
 ]

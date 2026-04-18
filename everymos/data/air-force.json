@@ -34,5 +34,41 @@
     "confidence": "uncertain",
     "notes": "DRAFT — verify current AFSC structure, shredouts, and tech school length.",
     "last_updated": "2026-04-17"
+  },
+  {
+    "id": "air_force_1c4x1",
+    "job_code": "1C4X1",
+    "job_title": "Tactical Air Control Party (TACP)",
+    "branch": "air_force",
+    "branch_display": "U.S. Air Force",
+    "classification_term": "AFSC",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "1C", "name": "Command and Control" },
+    "status": "active",
+    "description_official": "DRAFT — verify. TACP airmen are Air Force ground warfare specialists who embed with Army and Marine units to coordinate close air support.",
+    "description_plain": "TACP. Air Force ground warfare. You embed with Army or Marine infantry units and call in close air support when they're in a fight. High-attrition pipeline, infantry-adjacent physical standards, and a tight community. Often conflated with Combat Controllers (different AFSC, even harder pipeline) — TACP is the most common ground-embed AFSC.",
+    "description_tldr": "Air Force Tactical Air Control Party — embeds with ground units to call in and coordinate close air support.",
+    "asvab": { "composites": { "G": 49 }, "afqt_minimum": null, "raw_requirement": "G: 49 (DRAFT — verify)", "source_system": "air_force_aptitude", "notes": null },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": true, "details": "Passes TACP selection including PAST (Physical Ability and Stamina Test).", "vision": "Corrected 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "BMT", "school_name": "Basic Military Training", "location": "JBSA-Lackland, TX", "duration_weeks": 8, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "TACP Apprentice Course", "school_name": "TACP Schoolhouse", "location": "JBSA-Lackland, TX", "duration_weeks": 15, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "BMT" },
+      { "stage": "Joint Terminal Attack Controller (JTAC) qualification", "school_name": "JTAC QC", "location": "Various", "duration_weeks": 8, "description": "Follow-on qualification for many TACP billets.", "is_required": false, "prerequisite": "TACP Apprentice" }
+    ],
+    "compensation": { "typical_entry_rank": "E-3", "typical_rank_range": "E-1 through E-7", "special_pay": [{ "pay_type": "Hostile Fire Pay", "amount": "$225/month", "conditions": "When deployed to designated combat zones" }], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Fort Bragg, NC (with Army)", "Fort Lewis, WA", "Nellis AFB, NV", "Ramstein AB, Germany"],
+    "civilian_equivalents": [
+      { "title": "Federal Tactical Officer", "industry": "Public Safety", "onet_code": null }
+    ],
+    "transferable_certifications": null,
+    "branch_specific": { "shredouts": ["1C4X1X (generalist)"] },
+    "sources": [{ "name": "AFECD (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify TACP pipeline and JTAC qualification currency.",
+    "last_updated": "2026-04-17"
   }
 ]

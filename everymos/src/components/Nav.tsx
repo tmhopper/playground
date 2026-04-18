@@ -64,6 +64,7 @@ export function Footer() {
             <li><Link href="/about" className="no-underline hover:underline">About</Link></li>
             <li><Link href="/newsletter" className="no-underline hover:underline">Newsletter</Link></li>
             <li><Link href="/contact" className="no-underline hover:underline">Contact</Link></li>
+            <li><Link href="/stats" className="no-underline hover:underline">Database stats</Link></li>
           </ul>
         </div>
         <div>
