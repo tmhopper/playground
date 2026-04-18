@@ -615,6 +615,25 @@
     "civilian_equivalents": [{ "title": "Federal Tactical Officer", "industry": "Public Safety", "onet_code": null }],
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Reconnaissance" },
+    "career_path": {
+      "standard_progression": [
+        { "paygrade": "E-3", "rank_name": "Lance Corporal", "rank_abbreviation": "LCpl", "typical_years_in_service": "1–3 years", "typical_billets": ["Recon Team Member"], "notes": "Entry to the fleet after BRC." },
+        { "paygrade": "E-4", "rank_name": "Corporal", "rank_abbreviation": "Cpl", "typical_years_in_service": "2–5 years", "typical_billets": ["Team Leader"], "notes": null },
+        { "paygrade": "E-5", "rank_name": "Sergeant", "rank_abbreviation": "Sgt", "typical_years_in_service": "4–8 years", "typical_billets": ["Assistant Team Leader", "Senior Team Leader"], "notes": null },
+        { "paygrade": "E-6", "rank_name": "Staff Sergeant", "rank_abbreviation": "SSgt", "typical_years_in_service": "7–12 years", "typical_billets": ["Platoon Sergeant"], "notes": null }
+      ],
+      "b_billets": [
+        { "title": "MARSOC Critical Skills Operator", "code": "0372", "description": "MARSOC via A&S + ITC.", "eligibility": "Passes MARSOC selection.", "typical_timeline": null, "duration": "Permanent reclassification.", "notes": null },
+        { "title": "Recon School Instructor", "code": "0933 family", "description": "Teach at BRC / RTAP.", "eligibility": "E-5+, strong record.", "typical_timeline": null, "duration": "3 years", "notes": null }
+      ],
+      "lateral_moves": [
+        { "title": "Scout Sniper", "code": "0317", "description": "Lateral via SSBC (verify current status).", "eligibility": "SSBC graduate.", "typical_timeline": null, "duration": null, "notes": null }
+      ],
+      "reclass_options": [
+        { "title": "Officer commissioning", "code": null, "description": "LDO, MCP, or ECP commissioning.", "eligibility": "Varies.", "typical_timeline": null, "duration": null, "notes": null }
+      ],
+      "career_capstone_notes": "Senior recon Marines often transition to 0369 Infantry Unit Leader or pursue MARSOC selection. Officer commissioning paths also common."
+    },
     "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify RTAP and BRC current lengths, attrition rates, and any Force Design changes.",

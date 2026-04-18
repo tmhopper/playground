@@ -18,8 +18,8 @@ export default function NewsletterPage() {
 
         <form
           className="mt-10 space-y-4"
-          action="/newsletter/thanks"
-          method="get"
+          action="/api/newsletter"
+          method="post"
           aria-label="Newsletter signup"
         >
           <div>
@@ -44,7 +44,8 @@ export default function NewsletterPage() {
         </form>
 
         <p className="mono mt-6 text-xs opacity-60">
-          Form is a stub. Wire to ConvertKit or Beehiiv in <code>/api/newsletter</code>.
+          Submissions go to <code>/api/newsletter</code>, which currently logs
+          server-side. Wire to ConvertKit or Beehiiv when going live.
         </p>
       </main>
       <Footer />
