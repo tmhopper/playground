@@ -1,0 +1,38 @@
+[
+  {
+    "id": "coast_guard_me",
+    "job_code": "ME",
+    "job_title": "Maritime Enforcement Specialist",
+    "branch": "coast_guard",
+    "branch_display": "U.S. Coast Guard",
+    "classification_term": "Rating",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "ME", "name": "Law Enforcement / Maritime Security" },
+    "status": "active",
+    "description_official": "DRAFT — verify against current Coast Guard Rating manuals. Maritime Enforcement Specialists conduct law enforcement, counterterrorism, port security, and anti-terrorism force protection missions.",
+    "description_plain": "Coast Guard law enforcement. You run boardings, enforce maritime law, support counter-drug operations, and do port security. Strong civilian translation to federal, state, and local law enforcement — CG MEs are often recruited heavily by Border Patrol and other federal agencies.",
+    "description_tldr": "U.S. Coast Guard law-enforcement rating — boardings, maritime security, counter-drug, and port protection.",
+    "asvab": { "composites": {}, "afqt_minimum": 40, "raw_requirement": "AFQT minimum 40 (DRAFT — verify)", "source_system": "coast_guard_afqt", "notes": "Coast Guard primarily uses minimum AFQT rather than composite line scores for most ratings." },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": true, "details": "Must pass ME-specific physical screening and psych evaluation; firearms and use-of-force requirements.", "vision": "Corrected 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Coast Guard Training Center", "location": "Cape May, NJ", "duration_weeks": 8, "description": "Coast Guard boot camp.", "is_required": true, "prerequisite": null },
+      { "stage": "ME A-School", "school_name": "Maritime Enforcement Specialist School", "location": "Charleston, SC (FLETC)", "duration_weeks": 16, "description": "DRAFT — verify current A-School length.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-3 (Seaman) — some programs promote to E-4 after A-School", "typical_rank_range": "E-1 through E-9", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["ship", "shore", "afloat", "conus"],
+    "common_duty_stations": ["Cape May, NJ", "Charleston, SC", "Honolulu, HI", "San Diego, CA", "Key West, FL"],
+    "civilian_equivalents": [
+      { "title": "Federal Law Enforcement Officer (CBP, HSI, DEA, etc.)", "industry": "Public Safety", "onet_code": "33-3021.00" },
+      { "title": "Police Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }
+    ],
+    "transferable_certifications": ["FLETC certification (federal law enforcement preparation)"],
+    "branch_specific": { "cutter_types": ["WMEC", "WHEC", "FRC", "Sector shore stations"] },
+    "sources": [{ "name": "Coast Guard Rating Information Cards (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
+    "last_updated": "2026-04-17"
+  }
+]

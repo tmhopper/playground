@@ -1,0 +1,38 @@
+[
+  {
+    "id": "navy_bm",
+    "job_code": "BM",
+    "job_title": "Boatswain's Mate",
+    "branch": "navy",
+    "branch_display": "U.S. Navy",
+    "classification_term": "Rating",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "BM", "name": "Deck" },
+    "status": "active",
+    "description_official": "DRAFT — verify against current Navy Enlisted Classification Manual. Boatswain's Mates are the deck-side foundation of the Navy — ship handling, line handling, anchoring, small-boat operations, and underway replenishment.",
+    "description_plain": "If a ship is a city, the BM is the infrastructure crew. You run deck evolutions: underway replenishments, anchor detail, small-boat ops, line handling during pier work. Physical job, lots of time outdoors, and you earn surface warfare qualifications as you advance. Traditional rating with a long history in the fleet.",
+    "description_tldr": "U.S. Navy deck seaman — runs shipboard deck operations including underway replenishment, anchoring, and small-boat handling.",
+    "asvab": { "composites": { "VE_AR_MK_AS": 170 }, "afqt_minimum": null, "raw_requirement": "VE+AR+MK+AS: 170 (DRAFT — verify)", "source_system": "navy_line_scores", "notes": "Navy combines ASVAB line scores; BM typically requires a lower composite than electronics/nuclear ratings." },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard Navy physical requirements; deck work is physical.", "vision": "Corrected 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Recruit Training Command", "location": "Great Lakes, IL", "duration_weeks": 10, "description": "Navy boot camp.", "is_required": true, "prerequisite": null },
+      { "stage": "Apprenticeship / A-School", "school_name": "Boatswain's Mate A-School or direct-to-fleet", "location": "Great Lakes, IL (A-School) or assigned ship", "duration_weeks": 5, "description": "BM is one of several ratings that historically accepted direct-to-fleet assignments — verify current pipeline.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-1 through E-3 depending on advancement programs", "typical_rank_range": "E-1 through E-9", "special_pay": [{ "pay_type": "Sea Pay", "amount": "Varies by rank and months at sea", "conditions": "When assigned to a sea-duty ship" }], "enlistment_bonus": null },
+    "duty_station_types": ["ship", "shore", "afloat", "conus", "oconus"],
+    "common_duty_stations": ["Norfolk, VA", "San Diego, CA", "Mayport, FL", "Yokosuka, Japan", "Pearl Harbor, HI"],
+    "civilian_equivalents": [
+      { "title": "Merchant Mariner / Able Seaman", "industry": "Maritime", "onet_code": "53-5011.00" },
+      { "title": "Dockworker / Stevedore", "industry": "Maritime Logistics", "onet_code": "53-7062.00" }
+    ],
+    "transferable_certifications": ["Merchant Mariner Credential (MMC) endorsements via sea time credit"],
+    "branch_specific": { "sea_shore_rotation": "48/36 (sea-shore rotation varies by rating and paygrade)", "community": "Surface Warfare" },
+    "sources": [{ "name": "Navy COOL and MyNavy HR (DRAFT references)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify current A-School structure, sea-shore rotation, and MMC credit policy.",
+    "last_updated": "2026-04-17"
+  }
+]

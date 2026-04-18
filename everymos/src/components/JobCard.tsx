@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { JobEntry } from "@schemas/job";
-import { BRANCH_ENUM_TO_SLUG } from "@/lib/data";
+import { BRANCH_ENUM_TO_SLUG } from "@/lib/branch";
 
 const CONFIDENCE_LABEL: Record<string, { label: string; color: string }> = {
   verified: { label: "verified", color: "var(--color-ok)" },

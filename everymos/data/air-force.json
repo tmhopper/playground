@@ -1,0 +1,38 @@
+[
+  {
+    "id": "air_force_1d7x1",
+    "job_code": "1D7X1",
+    "job_title": "Cyber Defense Operations",
+    "branch": "air_force",
+    "branch_display": "U.S. Air Force",
+    "classification_term": "AFSC",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "1D", "name": "Cyberspace Operations" },
+    "status": "active",
+    "description_official": "DRAFT — verify against current AFECD. Cyber Defense Operations airmen execute defensive cyberspace operations, analyzing cyber threats and responding to incidents on Air Force networks.",
+    "description_plain": "Defensive cyber for the Air Force. You run intrusion detection, hunt threats on Air Force networks, and respond to incidents. Classroom-heavy pipeline, fast-evolving skill set, and the clearance you earn is a career asset for decades after you separate.",
+    "description_tldr": "Air Force defensive cyber operator — monitors, hunts, and responds to threats on Air Force networks.",
+    "asvab": { "composites": { "G": 64 }, "afqt_minimum": null, "raw_requirement": "G (General): 64 (DRAFT — verify)", "source_system": "air_force_aptitude", "notes": "Air Force uses four aptitude composites: Mechanical (M), Administrative (A), General (G), Electronics (E)." },
+    "security_clearance": "top_secret",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard Air Force physical requirements.", "vision": null, "color_vision": null, "swim_qualified": false },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Basic Military Training", "school_name": "BMT", "location": "Joint Base San Antonio-Lackland, TX", "duration_weeks": 8, "description": "Air Force basic training.", "is_required": true, "prerequisite": null },
+      { "stage": "Cyber Technical Training", "school_name": "Keesler AFB", "location": "Keesler AFB, MS", "duration_weeks": 34, "description": "DRAFT — verify current course length and structure.", "is_required": true, "prerequisite": "BMT" }
+    ],
+    "compensation": { "typical_entry_rank": "E-3 (Airman First Class) on standard contract", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "conus", "oconus"],
+    "common_duty_stations": ["Joint Base San Antonio, TX", "Scott AFB, IL", "Hickam AFB, HI", "Ramstein AB, Germany"],
+    "civilian_equivalents": [
+      { "title": "Information Security Analyst", "industry": "Information Technology", "onet_code": "15-1212.00" },
+      { "title": "Cybersecurity Analyst", "industry": "Information Technology", "onet_code": "15-1299.04" }
+    ],
+    "transferable_certifications": ["CompTIA Security+", "CompTIA CySA+", "CCNA Security", "CEH", "CISSP (via DoD COOL)"],
+    "branch_specific": { "shredouts": ["1D7X1A (Network Operations)", "1D7X1B (Systems Operations)", "1D7X1X (Client Systems)"] },
+    "sources": [{ "name": "AFECD — Air Force Enlisted Classification Directory (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify current AFSC structure, shredouts, and tech school length.",
+    "last_updated": "2026-04-17"
+  }
+]

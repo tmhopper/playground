@@ -2,6 +2,9 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Branch, JobEntry } from "../../schemas/job";
 import { JobFile } from "../../schemas/job";
+import { BRANCH_ENUM_TO_SLUG, BRANCH_SLUG_TO_ENUM } from "./branch";
+
+export { BRANCH_ENUM_TO_SLUG };
 
 const DATA_DIR = join(process.cwd(), "data");
 
@@ -12,24 +15,6 @@ const BRANCH_TO_FILE: Record<Branch, string> = {
   navy: "navy.json",
   coast_guard: "coast-guard.json",
   space_force: "space-force.json",
-};
-
-const BRANCH_SLUG_TO_ENUM: Record<string, Branch> = {
-  "marine-corps": "marine_corps",
-  army: "army",
-  "air-force": "air_force",
-  navy: "navy",
-  "coast-guard": "coast_guard",
-  "space-force": "space_force",
-};
-
-export const BRANCH_ENUM_TO_SLUG: Record<Branch, string> = {
-  marine_corps: "marine-corps",
-  army: "army",
-  air_force: "air-force",
-  navy: "navy",
-  coast_guard: "coast-guard",
-  space_force: "space-force",
 };
 
 function loadBranch(branch: Branch): JobEntry[] {

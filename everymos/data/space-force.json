@@ -1,0 +1,38 @@
+[
+  {
+    "id": "space_force_5c0x1",
+    "job_code": "5C0X1",
+    "job_title": "Cyberspace Operations",
+    "branch": "space_force",
+    "branch_display": "U.S. Space Force",
+    "classification_term": "SFSC",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "5C", "name": "Cyberspace Operations" },
+    "status": "active",
+    "description_official": "DRAFT — verify against current Space Force enlisted classification. Space Force cyberspace operators execute defensive and offensive cyber missions in support of space operations.",
+    "description_plain": "Cyber for the Space Force. Closer to Air Force 1D7X1 than any pure space operations role — Space Force inherited its cyber structure from the Air Force and is still evolving its own standards. Expect to work alongside Air Force cyber counterparts early in your career.",
+    "description_tldr": "Space Force cyberspace operator — cyber defense and offensive operations in support of space missions.",
+    "asvab": { "composites": { "G": 64 }, "afqt_minimum": null, "raw_requirement": "G (General): 64 (DRAFT — verify; Space Force currently uses Air Force aptitude composites)", "source_system": "space_force_aptitude", "notes": "Space Force uses Air Force aptitude composites pending its own system." },
+    "security_clearance": "top_secret",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard physical requirements.", "vision": null, "color_vision": null, "swim_qualified": false },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Basic Military Training", "school_name": "BMT (joint with Air Force)", "location": "Joint Base San Antonio-Lackland, TX", "duration_weeks": 8, "description": "Space Force currently uses Air Force BMT.", "is_required": true, "prerequisite": null },
+      { "stage": "Cyber Technical Training", "school_name": "Keesler AFB", "location": "Keesler AFB, MS", "duration_weeks": 34, "description": "DRAFT — verify current Space Force pipeline.", "is_required": true, "prerequisite": "BMT" }
+    ],
+    "compensation": { "typical_entry_rank": "E-3 (Specialist 3)", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "conus", "oconus", "space_installation"],
+    "common_duty_stations": ["Peterson SFB, CO", "Schriever SFB, CO", "Vandenberg SFB, CA", "Buckley SFB, CO"],
+    "civilian_equivalents": [
+      { "title": "Information Security Analyst", "industry": "Information Technology", "onet_code": "15-1212.00" },
+      { "title": "Cybersecurity Engineer", "industry": "Information Technology", "onet_code": "15-1299.04" }
+    ],
+    "transferable_certifications": ["CompTIA Security+", "CompTIA CySA+", "CEH"],
+    "branch_specific": { "delta": "Assigned to Space Operations Command (SpOC) cyber units", "squadron_types": ["Cyber Squadrons attached to Deltas"] },
+    "sources": [{ "name": "Space Force enlisted classification (DRAFT — Space Force is still publishing formal directives)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — Space Force is the newest branch and its SFSC structure is still evolving. Verify everything against current official sources.",
+    "last_updated": "2026-04-17"
+  }
+]
