@@ -17,6 +17,9 @@ export function Nav() {
           <Link href="/jobs/marine-corps" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] md:inline">
             Marine Corps
           </Link>
+          <Link href="/compare" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] sm:inline">
+            Compare
+          </Link>
           <Link href="/about" className="text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)]">
             About
           </Link>
@@ -47,14 +50,19 @@ export function Footer() {
         <div>
           <p className="mono text-xs uppercase tracking-wide opacity-60">Site</p>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><Link href="/jobs" className="no-underline hover:underline">Jobs</Link></li>
+            <li><Link href="/jobs" className="no-underline hover:underline">All jobs</Link></li>
+            <li><Link href="/compare" className="no-underline hover:underline">Compare</Link></li>
+            <li><Link href="/blog" className="no-underline hover:underline">Blog</Link></li>
             <li><Link href="/about" className="no-underline hover:underline">About</Link></li>
             <li><Link href="/newsletter" className="no-underline hover:underline">Newsletter</Link></li>
+            <li><Link href="/contact" className="no-underline hover:underline">Contact</Link></li>
           </ul>
         </div>
         <div>
-          <p className="mono text-xs uppercase tracking-wide opacity-60">Legal</p>
+          <p className="mono text-xs uppercase tracking-wide opacity-60">Standards</p>
           <ul className="mt-3 space-y-2 text-sm">
+            <li><Link href="/editorial-standards" className="no-underline hover:underline">Editorial standards</Link></li>
+            <li><Link href="/corrections" className="no-underline hover:underline">Corrections log</Link></li>
             <li><Link href="/privacy" className="no-underline hover:underline">Privacy</Link></li>
             <li><Link href="/terms" className="no-underline hover:underline">Terms</Link></li>
             <li><Link href="/affiliate-disclosure" className="no-underline hover:underline">Affiliate disclosure</Link></li>
