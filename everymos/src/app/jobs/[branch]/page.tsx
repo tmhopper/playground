@@ -5,6 +5,7 @@ import { getAllJobs, BRANCH_ENUM_TO_SLUG } from "@/lib/data";
 import type { Branch, JobEntry } from "@schemas/job";
 import { JobCard } from "@/components/JobCard";
 import { Nav, Footer } from "@/components/Nav";
+import { themeFor } from "@/lib/branch-theme";
 
 const BRANCH_META: Record<Branch, { display: string; term: string; take: string }> = {
   marine_corps: {
@@ -119,6 +120,7 @@ export default async function BranchPage({ params }: { params: Promise<Params> }
 
   const verifiedCount = branchJobs.filter((j) => j.confidence === "verified").length;
   const uncertainCount = branchJobs.filter((j) => j.confidence === "uncertain").length;
+  const theme = themeFor(b);
 
   return (
     <>
@@ -128,8 +130,17 @@ export default async function BranchPage({ params }: { params: Promise<Params> }
           <Link href="/jobs">All jobs</Link> / <span>{meta.display}</span>
         </nav>
 
-        <header className="mb-12 rounded-2xl border border-[color:var(--color-rule)] bg-white p-6 md:p-10">
-          <h1>{meta.display}</h1>
+        <header
+          className="relative mb-12 overflow-hidden rounded-2xl border border-[color:var(--color-rule)] bg-white p-6 md:p-10"
+          style={{ borderTopWidth: 8, borderTopColor: theme.accent }}
+        >
+          <p
+            className="mono text-xs uppercase tracking-wide"
+            style={{ color: theme.accent }}
+          >
+            {theme.termLong}
+          </p>
+          <h1 className="mt-2">{meta.display}</h1>
           <p className="mono mt-3 text-sm opacity-70">{meta.term}</p>
           <p className="mt-6 max-w-3xl text-lg">{meta.take}</p>
           <dl className="mt-8 grid gap-4 sm:grid-cols-4">

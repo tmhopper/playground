@@ -5,6 +5,7 @@ import { getAllJobParams, getAllJobs, getJob } from "@/lib/data";
 import { Nav, Footer } from "@/components/Nav";
 import { TrainingTimeline } from "@/components/TrainingTimeline";
 import { JobCard } from "@/components/JobCard";
+import { themeFor } from "@/lib/branch-theme";
 
 type Params = { branch: string; jobCode: string };
 
@@ -57,6 +58,7 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
   if (!job) notFound();
 
   const confColor = CONFIDENCE_COLOR[job.confidence] ?? "inherit";
+  const theme = themeFor(job.branch);
   const totalTrainingWeeks = job.training_pipeline.reduce(
     (sum, s) => sum + s.duration_weeks,
     0,
@@ -112,9 +114,20 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
         </nav>
 
         {/* HERO */}
-        <header className="mb-12 rounded-2xl border border-[color:var(--color-rule)] bg-white p-6 md:p-10">
+        <header
+          className="relative mb-12 overflow-hidden rounded-2xl border border-[color:var(--color-rule)] bg-white p-6 md:p-10"
+          style={{ borderLeftWidth: 8, borderLeftColor: theme.accent }}
+        >
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-1"
+            style={{ background: `linear-gradient(90deg, ${theme.accent} 0%, ${theme.accentDark} 100%)` }}
+          />
           <div className="flex flex-wrap items-center gap-3">
-            <span className="mono rounded bg-[color:var(--color-ink-900)] px-3 py-1 text-lg font-semibold text-white">
+            <span
+              className="mono rounded px-3 py-1 text-lg font-semibold"
+              style={{ background: theme.accent, color: theme.onAccent }}
+            >
               {job.job_code}
             </span>
             <span className="mono text-xs uppercase tracking-wide opacity-60">
@@ -129,7 +142,7 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
             </span>
           </div>
           <h1 className="mt-4">{job.job_title}</h1>
-          <p className="mono mt-3 text-sm opacity-70">
+          <p className="mono mt-3 text-sm opacity-70" style={{ color: theme.accentDark }}>
             {job.branch_display} &middot;{" "}
             {job.personnel_category.replace("_", " ")} &middot;{" "}
             {job.occupational_field.name} ({job.occupational_field.code}) &middot; {job.status}
