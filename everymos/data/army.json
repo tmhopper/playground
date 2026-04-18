@@ -26,9 +26,35 @@
     "civilian_equivalents": [{ "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }],
     "transferable_certifications": null,
     "branch_specific": { "cmf": "11", "asi_codes": [] },
+    "career_path": {
+      "standard_progression": [
+        { "paygrade": "E-1", "rank_name": "Private", "rank_abbreviation": "PV1", "typical_years_in_service": "0–6 months", "typical_billets": ["Rifleman"], "notes": null },
+        { "paygrade": "E-2", "rank_name": "Private", "rank_abbreviation": "PV2", "typical_years_in_service": "6 months–1 year", "typical_billets": ["Rifleman"], "notes": null },
+        { "paygrade": "E-3", "rank_name": "Private First Class", "rank_abbreviation": "PFC", "typical_years_in_service": "1–2 years", "typical_billets": ["Rifleman", "SAW Gunner"], "notes": null },
+        { "paygrade": "E-4", "rank_name": "Specialist / Corporal", "rank_abbreviation": "SPC / CPL", "typical_years_in_service": "2–4 years", "typical_billets": ["Team Leader (as Corporal)"], "notes": "Specialist is the technical E-4; Corporal is the NCO E-4. Same paygrade, different role." },
+        { "paygrade": "E-5", "rank_name": "Sergeant", "rank_abbreviation": "SGT", "typical_years_in_service": "4–7 years", "typical_billets": ["Squad Leader"], "notes": null },
+        { "paygrade": "E-6", "rank_name": "Staff Sergeant", "rank_abbreviation": "SSG", "typical_years_in_service": "6–10 years", "typical_billets": ["Squad Leader", "Platoon Sergeant"], "notes": null },
+        { "paygrade": "E-7", "rank_name": "Sergeant First Class", "rank_abbreviation": "SFC", "typical_years_in_service": "10–16 years", "typical_billets": ["Platoon Sergeant", "First Sergeant (acting)"], "notes": null },
+        { "paygrade": "E-8", "rank_name": "First Sergeant / Master Sergeant", "rank_abbreviation": "1SG / MSG", "typical_years_in_service": "14–20 years", "typical_billets": ["First Sergeant", "Operations NCO"], "notes": null },
+        { "paygrade": "E-9", "rank_name": "Command Sergeant Major / Sergeant Major", "rank_abbreviation": "CSM / SGM", "typical_years_in_service": "18–30 years", "typical_billets": ["Battalion, Brigade, Division CSM"], "notes": "Career capstone." }
+      ],
+      "b_billets": [
+        { "title": "Drill Sergeant", "code": null, "description": "Train recruits at Basic Combat Training or OSUT.", "eligibility": "E-5 to E-7, Drill Sergeant Academy graduate.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Recruiter", "code": "79R", "description": "Army recruiter (entire career-field reclass).", "eligibility": "E-5 to E-7, Recruiter School.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "Ranger Instructor", "code": null, "description": "Teach at the Ranger School.", "eligibility": "E-5+, Ranger-qualified, strong record.", "typical_timeline": "Mid-to-senior career.", "duration": "3 years", "notes": null }
+      ],
+      "lateral_moves": [
+        { "title": "Indirect Fire Infantryman", "code": "11C", "description": "Mortar crew. Lateral within the 11-series.", "eligibility": "Within the infantry CMF; additional mortar training.", "typical_timeline": null, "duration": null, "notes": null }
+      ],
+      "reclass_options": [
+        { "title": "Out-of-CMF reclass", "code": null, "description": "At re-enlistment, reclass to a different MOS. Common targets: 25B (IT), 35F (Intel), 68W (Medic), 18-series (SF).", "eligibility": "At re-enlistment, meets ASVAB for target MOS.", "typical_timeline": "End of first or second term.", "duration": "Varies", "notes": null },
+        { "title": "Special Forces (18-series)", "code": "18X", "description": "Special Forces via selection and the Q-Course.", "eligibility": "Passes SFAS and the Q-Course.", "typical_timeline": null, "duration": null, "notes": "High attrition." }
+      ],
+      "career_capstone_notes": "Career infantry NCOs top out as Command Sergeant Major at the battalion, brigade, division, or Army-wide level. Commissioning via OCS, Green-to-Gold, or direct ROTC programs is possible for qualified soldiers."
+    },
     "sources": [{ "name": "DA PAM 611-21 (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
-    "confidence": "incomplete",
-    "notes": "Stub entry for cross-branch demo. All fields DRAFT.",
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify all fields against current DA PAM 611-21 and Army promotion MilPers.",
     "last_updated": "2026-04-17"
   }
 ]

@@ -131,6 +131,25 @@
     ],
     "transferable_certifications": null,
     "branch_specific": { "pef_code": null, "occfld_sponsor": "Infantry" },
+    "career_path": {
+      "standard_progression": [
+        { "paygrade": "E-4", "rank_name": "Corporal", "rank_abbreviation": "Cpl", "typical_years_in_service": "2–5 years", "typical_billets": ["Scout Sniper team member"], "notes": "Typical entry rank for the MOS via SSBC lateral." },
+        { "paygrade": "E-5", "rank_name": "Sergeant", "rank_abbreviation": "Sgt", "typical_years_in_service": "4–8 years", "typical_billets": ["Scout Sniper Team Leader"], "notes": null },
+        { "paygrade": "E-6", "rank_name": "Staff Sergeant", "rank_abbreviation": "SSgt", "typical_years_in_service": "7–12 years", "typical_billets": ["Scout Sniper Platoon Sergeant", "Chief Scout"], "notes": "Senior 0317s often lateral to 0369 or 0321 at this point." },
+        { "paygrade": "E-7", "rank_name": "Gunnery Sergeant", "rank_abbreviation": "GySgt", "typical_years_in_service": "10–16 years", "typical_billets": ["Senior intel / operations billets"], "notes": null }
+      ],
+      "b_billets": [
+        { "title": "Formal School Instructor at SSBC", "code": "0933 family", "description": "Teach at the Scout Sniper Basic Course.", "eligibility": "E-5 to E-7, strong record, FSIC graduate.", "typical_timeline": "Mid-career.", "duration": "3 years", "notes": null },
+        { "title": "MARSOC Critical Skills Operator", "code": "0372", "description": "MARSOC via A&S + ITC.", "eligibility": "Passes MARSOC selection.", "typical_timeline": "Earlier in career typical.", "duration": "Permanent reclassification.", "notes": null }
+      ],
+      "lateral_moves": [
+        { "title": "Reconnaissance Marine", "code": "0321", "description": "Ground reconnaissance via RTAP and BRC.", "eligibility": "Passes BRC.", "typical_timeline": null, "duration": null, "notes": null }
+      ],
+      "reclass_options": [
+        { "title": "Officer commissioning", "code": null, "description": "LDO, MCP, ECP commissioning paths.", "eligibility": "Varies.", "typical_timeline": null, "duration": null, "notes": null }
+      ],
+      "career_capstone_notes": "Verify current MOS status under Force Design before planning a career around 0317."
+    },
     "sources": [{ "name": "Marine Corps Force Design announcements (DRAFT — verify)", "url": null, "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "MOS 0317 has been affected by Marine Corps Force Design restructuring. Current status must be verified before any public-facing claim.",
@@ -672,6 +691,113 @@
     "sources": [{ "name": "Marine Warrant Officer program documentation (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify exact MOS code (historically 2305, possibly now 0306). Verify WOBC and Gunner Course lengths.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_1371",
+    "job_code": "1371",
+    "job_title": "Combat Engineer",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "13", "name": "Engineer, Construction, Equipment, and Shore Party" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Combat engineers clear obstacles, breach fortifications, emplace demolitions, and build defensive positions. You operate alongside the infantry but carry the engineering expertise — mines, explosives, mobility and counter-mobility tasks. Attached to infantry units for most deployments.",
+    "description_tldr": "Marine Corps combat engineer — demolition, breaching, obstacle reduction, and combat construction.",
+    "asvab": { "composites": { "GT": 95 }, "afqt_minimum": null, "raw_requirement": "GT: 95 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard; physically demanding field work.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Combat Engineer Course", "school_name": "Marine Corps Engineer School", "location": "Courthouse Bay, Camp Lejeune, NC", "duration_weeks": 9, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Lejeune, NC", "Camp Pendleton, CA", "Marine Corps Base Hawaii", "Okinawa, Japan"],
+    "civilian_equivalents": [
+      { "title": "Demolitions / Blasting Technician", "industry": "Construction / Mining", "onet_code": "47-5031.00" },
+      { "title": "Construction Equipment Operator", "industry": "Construction", "onet_code": "47-2073.00" }
+    ],
+    "transferable_certifications": ["OSHA construction safety certs via DoD COOL"],
+    "branch_specific": { "occfld_sponsor": "Engineer" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_6531",
+    "job_code": "6531",
+    "job_title": "Aircraft Ordnance Technician",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "65", "name": "Aviation Ordnance" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Aviation ordnance Marines load bombs, missiles, and guns on Marine aircraft — F-35, F/A-18, AH-1, and others. Loudest job on the flight line. Safety-critical work with a tight feedback loop: something's wrong, you hear it from the pilot, fast.",
+    "description_tldr": "Marine Corps aviation ordnance technician — loads and maintains weapons systems on Marine aircraft.",
+    "asvab": { "composites": { "MM": 95 }, "afqt_minimum": null, "raw_requirement": "MM: 95 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Standard; must pass hazardous-material and explosives handling qualifications.", "vision": "Corrected 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Aircraft Ordnance Course", "school_name": "Center for Naval Aviation Technical Training", "location": "NAS Pensacola, FL or NAS Oceana, VA", "duration_weeks": 10, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "Recruit Training" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [{ "pay_type": "Hazardous Duty Incentive Pay", "amount": "Varies", "conditions": "When regularly handling explosives as part of primary duty" }], "enlistment_bonus": null },
+    "duty_station_types": ["airfield", "base", "conus", "oconus"],
+    "common_duty_stations": ["MCAS Miramar, CA", "MCAS Cherry Point, NC", "MCAS Beaufort, SC", "MCAS Iwakuni, Japan"],
+    "civilian_equivalents": [
+      { "title": "Aircraft Mechanic (powerplant / airframe)", "industry": "Aviation", "onet_code": "49-3011.00" }
+    ],
+    "transferable_certifications": ["FAA Airframe & Powerplant (A&P) via DoD COOL + SkillBridge"],
+    "branch_specific": { "occfld_sponsor": "Aviation Ordnance" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0451",
+    "job_code": "0451",
+    "job_title": "Parachute Rigger (Air Delivery Specialist)",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "enlisted",
+    "occupational_field": { "code": "04", "name": "Logistics" },
+    "status": "active",
+    "description_official": "DRAFT — verify.",
+    "description_plain": "Air delivery specialists pack parachutes, rig cargo for aerial delivery, and are among the few Marines whose primary MOS makes them jump-qualified. Small community, specialized skill set. Supports Marine airborne operations and aerial resupply.",
+    "description_tldr": "Marine Corps parachute rigger — packs parachutes, rigs aerial delivery, jump-qualified logistics specialist.",
+    "asvab": { "composites": { "GT": 90 }, "afqt_minimum": null, "raw_requirement": "GT: 90 (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": null },
+    "security_clearance": "none",
+    "physical_requirements": { "has_additional_requirements": true, "details": "Must pass Army Airborne School and Parachute Rigger Course.", "vision": "Corrected 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Recruit Training", "school_name": "Marine Corps Recruit Depot", "location": "Parris Island, SC or San Diego, CA", "duration_weeks": 13, "description": null, "is_required": true, "prerequisite": null },
+      { "stage": "Basic Airborne Course", "school_name": "Army Airborne School", "location": "Fort Moore, GA", "duration_weeks": 3, "description": "Five-jump Army Airborne course.", "is_required": true, "prerequisite": "Recruit Training" },
+      { "stage": "Parachute Rigger Course", "school_name": "Army Rigger School", "location": "Fort Gregg-Adams, VA", "duration_weeks": 12, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "Basic Airborne Course" }
+    ],
+    "compensation": { "typical_entry_rank": "E-2", "typical_rank_range": "E-1 through E-5", "special_pay": [{ "pay_type": "Parachute Duty Pay", "amount": "Varies", "conditions": "While assigned to a parachute billet and jump-qualified" }], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Lejeune, NC", "Camp Pendleton, CA", "Marine Corps Base Hawaii"],
+    "civilian_equivalents": [
+      { "title": "FAA Senior Parachute Rigger", "industry": "Aviation", "onet_code": "53-1043.00" }
+    ],
+    "transferable_certifications": ["FAA Parachute Rigger certificate"],
+    "branch_specific": { "occfld_sponsor": "Logistics" },
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
   }
 ]

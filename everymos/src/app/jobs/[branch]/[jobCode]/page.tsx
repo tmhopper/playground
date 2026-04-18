@@ -137,6 +137,21 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
             {job.description_tldr}
           </p>
 
+          <div className="mt-6 flex flex-wrap gap-3 text-xs">
+            <Link
+              href={`/contact?topic=Correction&ref=${job.id}`}
+              className="mono rounded border border-[color:var(--color-rule)] bg-[color:var(--color-paper)] px-3 py-1.5 text-[color:var(--color-ink-700)] no-underline hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
+            >
+              Report an error
+            </Link>
+            <Link
+              href={`/compare?a=${job.id}`}
+              className="mono rounded border border-[color:var(--color-rule)] bg-[color:var(--color-paper)] px-3 py-1.5 text-[color:var(--color-ink-700)] no-underline hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
+            >
+              Compare with another job
+            </Link>
+          </div>
+
           {/* At-a-glance tiles */}
           <dl className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
             <Tile label="ASVAB" value={job.asvab.raw_requirement.replace(/\s*\(.*?\)\s*/g, "")} />
