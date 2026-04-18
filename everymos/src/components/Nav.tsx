@@ -20,6 +20,9 @@ export function Nav() {
           <Link href="/compare" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] sm:inline">
             Compare
           </Link>
+          <Link href="/browse" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] lg:inline">
+            Browse
+          </Link>
           <Link href="/guides" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] lg:inline">
             Guides
           </Link>
@@ -57,6 +60,7 @@ export function Footer() {
           <p className="mono text-xs uppercase tracking-wide opacity-60">Site</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li><Link href="/jobs" className="no-underline hover:underline">All jobs</Link></li>
+            <li><Link href="/browse" className="no-underline hover:underline">Browse (by base / ASVAB / career)</Link></li>
             <li><Link href="/compare" className="no-underline hover:underline">Compare</Link></li>
             <li><Link href="/asvab" className="no-underline hover:underline">ASVAB tool</Link></li>
             <li><Link href="/guides" className="no-underline hover:underline">Guides</Link></li>

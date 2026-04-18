@@ -55,7 +55,7 @@
       ],
       "career_capstone_notes": "Career BMs can make Command Master Chief, Fleet Master Chief, or MCPON (senior enlisted of the Navy). Sea-shore rotation is critical to career planning — verify current OPNAVINST 1301."
     },
-    "sources": [{ "name": "Navy COOL and MyNavy HR (DRAFT references)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Navy COOL and MyNavy HR (DRAFT references)", "url": "https://www.cool.osd.mil/usn/", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify current A-School structure, sea-shore rotation, and MMC credit policy.",
     "last_updated": "2026-04-17"
@@ -93,7 +93,7 @@
     ],
     "transferable_certifications": ["NREMT (via training)", "RN via bridge programs", "IPAP commissioning path to PA"],
     "branch_specific": { "community": "Medical / Fleet Marine Force", "nec_codes_common": ["HM-L02A (SARC)", "HM-L05A (Combat Medic)", "HM-L08A (Dental)"] },
-    "sources": [{ "name": "Navy HM Rating documentation (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Navy HM Rating documentation (DRAFT)", "url": "https://www.mynavyhr.navy.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify current NECs, FMTB course length, and civilian reciprocity for EMT/RN programs.",
     "last_updated": "2026-04-17"

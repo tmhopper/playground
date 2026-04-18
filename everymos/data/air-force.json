@@ -30,7 +30,7 @@
     ],
     "transferable_certifications": ["CompTIA Security+", "CompTIA CySA+", "CCNA Security", "CEH", "CISSP (via DoD COOL)"],
     "branch_specific": { "shredouts": ["1D7X1A (Network Operations)", "1D7X1B (Systems Operations)", "1D7X1X (Client Systems)"] },
-    "sources": [{ "name": "AFECD — Air Force Enlisted Classification Directory (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "AFECD — Air Force Enlisted Classification Directory (DRAFT reference)", "url": "https://www.afpc.af.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify current AFSC structure, shredouts, and tech school length.",
     "last_updated": "2026-04-17"
@@ -66,7 +66,7 @@
     ],
     "transferable_certifications": null,
     "branch_specific": { "shredouts": ["1C4X1X (generalist)"] },
-    "sources": [{ "name": "AFECD (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "AFECD (DRAFT)", "url": "https://www.afpc.af.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify TACP pipeline and JTAC qualification currency.",
     "last_updated": "2026-04-17"

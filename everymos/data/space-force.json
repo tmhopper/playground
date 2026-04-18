@@ -30,7 +30,7 @@
     ],
     "transferable_certifications": ["CompTIA Security+", "CompTIA CySA+", "CEH"],
     "branch_specific": { "delta": "Assigned to Space Operations Command (SpOC) cyber units", "squadron_types": ["Cyber Squadrons attached to Deltas"] },
-    "sources": [{ "name": "Space Force enlisted classification (DRAFT — Space Force is still publishing formal directives)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Space Force enlisted classification (DRAFT — Space Force is still publishing formal directives)", "url": "https://www.spaceforce.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — Space Force is the newest branch and its SFSC structure is still evolving. Verify everything against current official sources.",
     "last_updated": "2026-04-17"

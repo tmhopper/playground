@@ -52,7 +52,7 @@
       ],
       "career_capstone_notes": "Career infantry NCOs top out as Command Sergeant Major at the battalion, brigade, division, or Army-wide level. Commissioning via OCS, Green-to-Gold, or direct ROTC programs is possible for qualified soldiers."
     },
-    "sources": [{ "name": "DA PAM 611-21 (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "DA PAM 611-21 (DRAFT reference)", "url": "https://armypubs.army.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify all fields against current DA PAM 611-21 and Army promotion MilPers.",
     "last_updated": "2026-04-17"
@@ -114,7 +114,7 @@
       ],
       "career_capstone_notes": "Career 68Ws often advance into 68W-W1 (SOCM), 18D (Special Forces Medic via reclass), or commission into AMEDD via IPAP or direct programs."
     },
-    "sources": [{ "name": "DA PAM 611-21 (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "DA PAM 611-21 (DRAFT)", "url": "https://armypubs.army.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify current AIT structure, NREMT timing, and ASI codes.",
     "last_updated": "2026-04-17"

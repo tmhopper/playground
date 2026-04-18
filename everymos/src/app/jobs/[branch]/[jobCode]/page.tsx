@@ -465,13 +465,43 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
               <p className="mt-2 text-sm" style={{ color: confColor }}>
                 Confidence: <strong>{job.confidence}</strong> &mdash; {CONFIDENCE_COPY[job.confidence]}
               </p>
-              <ul className="mt-4 space-y-2 text-sm opacity-80">
-                {job.sources.map((s, i) => (
-                  <li key={i}>
-                    {s.url ? <a href={s.url}>{s.name}</a> : s.name}{" "}
-                    <span className="mono text-xs opacity-60">(accessed {s.accessed_date})</span>
-                  </li>
-                ))}
+              <ul className="mt-4 space-y-3 text-sm">
+                {job.sources.map((s, i) => {
+                  let host: string | null = null;
+                  try {
+                    host = s.url ? new URL(s.url).hostname.replace(/^www\./, "") : null;
+                  } catch {
+                    host = null;
+                  }
+                  return (
+                    <li key={i} className="rounded-lg border border-[color:var(--color-rule)] bg-white p-3">
+                      <div className="flex flex-wrap items-baseline justify-between gap-3">
+                        <div className="min-w-0 flex-1">
+                          {s.url ? (
+                            <a href={s.url} target="_blank" rel="noreferrer noopener" className="no-underline hover:underline">
+                              {s.name}
+                            </a>
+                          ) : (
+                            <span>{s.name}</span>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          {host && (
+                            <span
+                              className="mono rounded border border-[color:var(--color-rule)] bg-[color:var(--color-paper)] px-2 py-0.5 text-xs"
+                              title={host}
+                            >
+                              {host}
+                            </span>
+                          )}
+                          <span className="mono text-xs opacity-60">
+                            accessed {s.accessed_date}
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
               <p className="mono mt-6 text-xs opacity-60">Last updated {job.last_updated}</p>
               {job.notes && (
@@ -481,6 +511,10 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
                   {job.notes}
                 </p>
               )}
+              <p className="mono mt-6 text-xs opacity-60">
+                Spot something wrong?{" "}
+                <Link href={`/contact?topic=Correction&ref=${job.id}`}>Report it</Link>.
+              </p>
             </section>
           </div>
         </div>

@@ -79,7 +79,7 @@
       ],
       "career_capstone_notes": "Career infantry Marines typically lateral to 0369 Infantry Unit Leader at or before E-6 to remain in the infantry field at senior enlisted ranks. A smaller number commission as officers through Limited Duty Officer (LDO), Meritorious Commissioning Program (MCP), or the Enlisted Commissioning Program (ECP). Verify current program availability and eligibility before planning around any of these paths."
     },
-    "sources": [{ "name": "NAVMC 1200.1E — Military Occupational Specialties Manual (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E — Military Occupational Specialties Manual (DRAFT reference)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — every field must be verified against current NAVMC 1200 series, Marines.mil, MCO 1040 (re-enlistment), and MCO P1400 series (promotion) before publishing. Rank time-in-service ranges are illustrative; actual TIS/TIG requirements are published in current promotion MCOs.",
     "last_updated": "2026-04-17"
@@ -150,7 +150,7 @@
       ],
       "career_capstone_notes": "Verify current MOS status under Force Design before planning a career around 0317."
     },
-    "sources": [{ "name": "Marine Corps Force Design announcements (DRAFT — verify)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Marine Corps Force Design announcements (DRAFT — verify)", "url": "https://www.marines.mil/force-design-2030", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "MOS 0317 has been affected by Marine Corps Force Design restructuring. Current status must be verified before any public-facing claim.",
     "last_updated": "2026-04-17"
@@ -216,7 +216,7 @@
       ],
       "career_capstone_notes": "Career infantry machine gunners lateral to 0369 Infantry Unit Leader at or before E-6 to continue in the field. Commissioning via LDO, MCP, or ECP available to qualified Marines."
     },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify all fields before publishing.",
     "last_updated": "2026-04-17"
@@ -268,7 +268,7 @@
       ],
       "career_capstone_notes": "0369 is the senior enlisted infantry track. Top billets are Battalion / Regimental / Division Sergeant Major and Marine Corps-level senior enlisted billets."
     },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -332,7 +332,7 @@
       ],
       "career_capstone_notes": "Senior comms Marines can serve at the Service-level staff. Civilian transition is strong — DoD COOL funds CompTIA A+, Network+, Security+, and Cisco certs, all of which translate directly to IT/telecom civilian roles."
     },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -367,7 +367,7 @@
     ],
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Field Artillery" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — field artillery structure has shifted under Force Design; verify before publishing.",
     "last_updated": "2026-04-17"
@@ -404,7 +404,7 @@
     ],
     "transferable_certifications": ["POST certification (state-by-state; varies)", "Taser / OC spray instructor certs"],
     "branch_specific": { "occfld_sponsor": "Military Police" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify current POST reciprocity; many states partially recognize MP training.",
     "last_updated": "2026-04-17"
@@ -440,7 +440,7 @@
     ],
     "transferable_certifications": ["Commercial Driver's License (CDL) via SkillBridge or DoD COOL"],
     "branch_specific": { "occfld_sponsor": "Motor Transport" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -476,7 +476,7 @@
     ],
     "transferable_certifications": ["TS/SCI clearance is a major civilian asset; maintain eligibility"],
     "branch_specific": { "occfld_sponsor": "Intelligence" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify clearance requirements, school length, and current location.",
     "last_updated": "2026-04-17"
@@ -512,7 +512,7 @@
     ],
     "transferable_certifications": ["APICS CPIM / CSCP (via DoD COOL)"],
     "branch_specific": { "occfld_sponsor": "Aviation Logistics" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -547,7 +547,7 @@
     ],
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Infantry" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -580,7 +580,7 @@
     "civilian_equivalents": [{ "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }],
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Infantry" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — Antitank structure has shifted under Marine Corps Force Design. Verify current status before publishing.",
     "last_updated": "2026-04-17"
@@ -634,7 +634,7 @@
       ],
       "career_capstone_notes": "Senior recon Marines often transition to 0369 Infantry Unit Leader or pursue MARSOC selection. Officer commissioning paths also common."
     },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify RTAP and BRC current lengths, attrition rates, and any Force Design changes.",
     "last_updated": "2026-04-17"
@@ -671,7 +671,7 @@
     ],
     "transferable_certifications": ["PMP eligibility via military experience + education"],
     "branch_specific": { "occfld_sponsor": "Infantry" },
-    "sources": [{ "name": "Marine Corps Officer MOS Manual (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Marine Corps Officer MOS Manual (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify TBS duration, IOC current length and standards, and officer promotion timelines.",
     "last_updated": "2026-04-17"
@@ -707,7 +707,7 @@
     ],
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Infantry" },
-    "sources": [{ "name": "Marine Warrant Officer program documentation (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Marine Warrant Officer program documentation (DRAFT)", "url": "https://www.manpower.usmc.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify exact MOS code (historically 2305, possibly now 0306). Verify WOBC and Gunner Course lengths.",
     "last_updated": "2026-04-17"
@@ -743,7 +743,7 @@
     ],
     "transferable_certifications": ["OSHA construction safety certs via DoD COOL"],
     "branch_specific": { "occfld_sponsor": "Engineer" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -778,7 +778,7 @@
     ],
     "transferable_certifications": ["FAA Airframe & Powerplant (A&P) via DoD COOL + SkillBridge"],
     "branch_specific": { "occfld_sponsor": "Aviation Ordnance" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -814,7 +814,7 @@
     ],
     "transferable_certifications": ["FAA Parachute Rigger certificate"],
     "branch_specific": { "occfld_sponsor": "Logistics" },
-    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "NAVMC 1200.1E (DRAFT)", "url": "https://www.marines.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"

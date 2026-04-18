@@ -30,7 +30,7 @@
     ],
     "transferable_certifications": ["FLETC certification (federal law enforcement preparation)"],
     "branch_specific": { "cutter_types": ["WMEC", "WHEC", "FRC", "Sector shore stations"] },
-    "sources": [{ "name": "Coast Guard Rating Information Cards (DRAFT reference)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Coast Guard Rating Information Cards (DRAFT reference)", "url": "https://www.gocoastguard.com", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",
     "last_updated": "2026-04-17"
@@ -67,7 +67,7 @@
     ],
     "transferable_certifications": ["NREMT (earned during A-School)"],
     "branch_specific": { "cutter_types": ["Air stations only — AST is an aviation-specific rating"] },
-    "sources": [{ "name": "Coast Guard AST Rating documentation (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "sources": [{ "name": "Coast Guard AST Rating documentation (DRAFT)", "url": "https://www.gocoastguard.com/active-duty-careers/enlisted-opportunities/ratings/ast", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify pipeline lengths and attrition.",
     "last_updated": "2026-04-17"
