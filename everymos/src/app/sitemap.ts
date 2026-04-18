@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/jobs",
     "/compare",
+    "/asvab",
+    "/guides",
     "/blog",
     "/about",
     "/newsletter",

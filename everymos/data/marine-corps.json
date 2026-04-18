@@ -600,5 +600,78 @@
     "confidence": "uncertain",
     "notes": "DRAFT — verify RTAP and BRC current lengths, attrition rates, and any Force Design changes.",
     "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0302",
+    "job_code": "0302",
+    "job_title": "Infantry Officer",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "officer",
+    "occupational_field": { "code": "03", "name": "Infantry" },
+    "status": "active",
+    "description_official": "DRAFT — verify against current Marine Corps Officer MOS directives.",
+    "description_plain": "The infantry officer leads Marines in ground combat. You commission as a 2nd Lieutenant, run The Basic School with every other new Marine officer, then attend Infantry Officer Course (IOC — the hardest initial officer pipeline in the Marine Corps). From there you lead a rifle platoon, then a weapons platoon, and by Captain you command a company.",
+    "description_tldr": "Marine Corps infantry officer — leads rifle platoons and companies in ground combat operations.",
+    "asvab": { "composites": {}, "afqt_minimum": null, "raw_requirement": "Officer commissioning — no enlisted ASVAB requirement. Bachelor's degree + OCS/NROTC/USNA.", "source_system": "marine_corps_composites", "notes": "Officer accessions do not take the enlisted ASVAB. Standards are governed by officer selection boards." },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": true, "details": "High-end PFT/CFT. Must pass The Basic School and Infantry Officer Course.", "vision": "Correctable to 20/20", "color_vision": true, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Commissioning source", "school_name": "OCS / NROTC / USNA / PLC / ECP", "location": "Various", "duration_weeks": 0, "description": "Source of commission — Officer Candidate School (Quantico), Naval ROTC, U.S. Naval Academy, Platoon Leaders Course, or Enlisted Commissioning Program.", "is_required": true, "prerequisite": "Bachelor's degree" },
+      { "stage": "The Basic School (TBS)", "school_name": "Marine Corps Officer Basic School", "location": "Quantico, VA", "duration_weeks": 28, "description": "All Marine officers regardless of MOS attend TBS. Six months of infantry-officer-level training.", "is_required": true, "prerequisite": "Commissioning" },
+      { "stage": "Infantry Officer Course (IOC)", "school_name": "IOC", "location": "Quantico, VA", "duration_weeks": 13, "description": "DRAFT — IOC length and standards have been updated periodically. Verify current pipeline.", "is_required": true, "prerequisite": "TBS" }
+    ],
+    "compensation": { "typical_entry_rank": "O-1 (Second Lieutenant)", "typical_rank_range": "O-1 through O-10", "special_pay": [{ "pay_type": "Hostile Fire / Imminent Danger Pay", "amount": "$225/month", "conditions": "In designated combat zones" }], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC", "Marine Corps Base Hawaii", "Okinawa, Japan"],
+    "civilian_equivalents": [
+      { "title": "Operations Manager", "industry": "Corporate", "onet_code": "11-1021.00" },
+      { "title": "Project Manager (PMP)", "industry": "Cross-industry", "onet_code": "13-1082.00" }
+    ],
+    "transferable_certifications": ["PMP eligibility via military experience + education"],
+    "branch_specific": { "occfld_sponsor": "Infantry" },
+    "sources": [{ "name": "Marine Corps Officer MOS Manual (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify TBS duration, IOC current length and standards, and officer promotion timelines.",
+    "last_updated": "2026-04-17"
+  },
+  {
+    "id": "marine_corps_0306",
+    "job_code": "0306",
+    "job_title": "Infantry Weapons Officer (Marine Gunner)",
+    "branch": "marine_corps",
+    "branch_display": "U.S. Marine Corps",
+    "classification_term": "MOS",
+    "personnel_category": "warrant_officer",
+    "occupational_field": { "code": "03", "name": "Infantry" },
+    "status": "active",
+    "description_official": "DRAFT — verify exact MOS code; the Marine Gunner has used different codes historically (2305, 0306). Verify current NAVMC 1200 series.",
+    "description_plain": "The Marine Gunner is the infantry weapons subject-matter expert at the battalion and regimental level. You select as a Chief Warrant Officer from the senior enlisted infantry ranks (typically GySgt or MSgt). You wear a distinctive bursting-bomb insignia on your collar and you're the go-to expert on every weapons system the infantry uses.",
+    "description_tldr": "Marine Corps infantry weapons warrant officer — the Marine Gunner; selected from senior enlisted infantry.",
+    "asvab": { "composites": { "GT": 110 }, "afqt_minimum": null, "raw_requirement": "Warrant Officer program — typically GT 110 plus board selection (DRAFT — verify)", "source_system": "marine_corps_composites", "notes": "Warrant Officer accession is board-selected from the senior enlisted ranks; ASVAB is usually already on record." },
+    "security_clearance": "secret",
+    "physical_requirements": { "has_additional_requirements": false, "details": "Must maintain Marine Corps fitness standards appropriate for the rank.", "vision": null, "color_vision": null, "swim_qualified": true },
+    "citizenship_required": true,
+    "eligible_genders": "all",
+    "training_pipeline": [
+      { "stage": "Senior enlisted infantry experience", "school_name": "Various infantry units", "location": "Fleet assignment", "duration_weeks": 0, "description": "Candidates are typically GySgt or MSgt with a record of infantry expertise.", "is_required": true, "prerequisite": "0369 Infantry Unit Leader (usually)" },
+      { "stage": "Warrant Officer Basic Course", "school_name": "The Basic School — WO track", "location": "Quantico, VA", "duration_weeks": 16, "description": "DRAFT — verify current WOBC length for Marine warrants.", "is_required": true, "prerequisite": "Warrant Officer selection board" },
+      { "stage": "Infantry Weapons Officer Course", "school_name": "Marine Gunner Course", "location": "Quantico, VA", "duration_weeks": 6, "description": "DRAFT — verify.", "is_required": true, "prerequisite": "WOBC" }
+    ],
+    "compensation": { "typical_entry_rank": "W-1 (Warrant Officer)", "typical_rank_range": "W-1 through W-5 (CWO5)", "special_pay": [], "enlistment_bonus": null },
+    "duty_station_types": ["base", "deployable", "conus", "oconus"],
+    "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC", "Quantico, VA"],
+    "civilian_equivalents": [
+      { "title": "Technical Expert / Subject-Matter Expert", "industry": "Defense / Consulting", "onet_code": null }
+    ],
+    "transferable_certifications": null,
+    "branch_specific": { "occfld_sponsor": "Infantry" },
+    "sources": [{ "name": "Marine Warrant Officer program documentation (DRAFT)", "url": null, "accessed_date": "2026-04-17" }],
+    "confidence": "uncertain",
+    "notes": "DRAFT — verify exact MOS code (historically 2305, possibly now 0306). Verify WOBC and Gunner Course lengths.",
+    "last_updated": "2026-04-17"
   }
 ]

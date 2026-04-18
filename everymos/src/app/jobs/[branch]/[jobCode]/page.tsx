@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllJobParams, getJob } from "@/lib/data";
 import { Nav, Footer } from "@/components/Nav";
+import { TrainingTimeline } from "@/components/TrainingTimeline";
 
 type Params = { branch: string; jobCode: string };
 
@@ -71,9 +72,38 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
     { id: "sources", label: "Sources", show: true },
   ];
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:5000";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Occupation",
+    name: `${job.job_code} ${job.job_title}`,
+    description: job.description_tldr,
+    occupationalCategory: `${job.occupational_field.code} ${job.occupational_field.name}`,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: job.branch_display,
+    },
+    qualifications: job.asvab.raw_requirement,
+    skills: job.civilian_equivalents.map((c) => c.title).join(", "),
+    estimatedSalary: job.compensation.typical_rank_range,
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Jobs", item: `${baseUrl}/jobs` },
+      { "@type": "ListItem", position: 3, name: job.branch_display, item: `${baseUrl}/jobs/${branch}` },
+      { "@type": "ListItem", position: 4, name: `${job.job_code} ${job.job_title}`, item: `${baseUrl}/jobs/${branch}/${jobCode}` },
+    ],
+  };
+
   return (
     <>
       <Nav />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <main id="main" className="mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-12">
         <nav className="mono mb-6 text-xs uppercase tracking-wide opacity-60" aria-label="Breadcrumb">
           <Link href="/">Home</Link> / <Link href="/jobs">Jobs</Link> /{" "}
@@ -182,31 +212,9 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
               <p className="mt-2 text-sm opacity-70">
                 Total time from enlistment to MOS-qualified: ~{totalTrainingWeeks} weeks.
               </p>
-              <ol className="mt-6 space-y-4">
-                {job.training_pipeline.map((stage, i) => (
-                  <li
-                    key={i}
-                    className="relative rounded-lg border border-[color:var(--color-rule)] bg-white p-5"
-                  >
-                    <div className="flex flex-wrap items-baseline justify-between gap-4">
-                      <div className="flex items-baseline gap-3">
-                        <span className="mono text-xs opacity-60">Step {i + 1}</span>
-                        <span className="text-base font-semibold text-[color:var(--color-ink-900)]">
-                          {stage.stage}
-                        </span>
-                      </div>
-                      <span className="mono text-xs opacity-60">{stage.duration_weeks} weeks</span>
-                    </div>
-                    <p className="mt-2 text-sm opacity-80">
-                      {stage.school_name} &middot; {stage.location}
-                    </p>
-                    {stage.description && <p className="mt-3 text-sm">{stage.description}</p>}
-                    {stage.prerequisite && (
-                      <p className="mono mt-2 text-xs opacity-60">Prerequisite: {stage.prerequisite}</p>
-                    )}
-                  </li>
-                ))}
-              </ol>
+              <div className="mt-6">
+                <TrainingTimeline pipeline={job.training_pipeline} />
+              </div>
             </section>
 
             {/* CAREER ROADMAP */}
