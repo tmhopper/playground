@@ -3,6 +3,7 @@ import { getAllJobs } from "@/lib/data";
 import { JobCard } from "@/components/JobCard";
 import { Nav, Footer } from "@/components/Nav";
 import { BranchSeal } from "@/components/BranchSeal";
+import { HeroSearch } from "@/components/HeroSearch";
 import { BRANCH_ENUM_TO_SLUG } from "@/lib/branch";
 import type { Branch } from "@schemas/job";
 import { POSTS } from "../../data/posts";
@@ -59,7 +60,10 @@ export default function HomePage() {
               existed — sources cited, no recruiter spin, rank ladder to pay range in one
               place.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-10">
+              <HeroSearch />
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/jobs"
                 className="rounded-md bg-[color:var(--color-ink-900)] px-5 py-3 text-sm font-medium text-white no-underline hover:bg-[color:var(--color-signal)]"

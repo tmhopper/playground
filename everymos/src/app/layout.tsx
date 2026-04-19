@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { SearchProvider } from "@/components/SearchProvider";
+import { CommandPalette } from "@/components/CommandPalette";
 
 export const metadata: Metadata = {
   title: {
@@ -29,7 +31,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Skip to content
         </a>
-        {children}
+        <SearchProvider>
+          {children}
+          <CommandPalette />
+        </SearchProvider>
       </body>
     </html>
   );

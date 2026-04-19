@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { JobsDropdown } from "./JobsDropdown";
 import { ThemeToggle } from "./ThemeToggle";
+import { HeaderSearch } from "./HeaderSearch";
+import { MobileDrawer } from "./MobileDrawer";
 
 export function Nav() {
   return (
@@ -12,7 +14,12 @@ export function Nav() {
         >
           EveryMOS
         </Link>
-        <nav className="flex items-center gap-6 text-sm">
+        <div className="hidden flex-1 justify-center px-6 md:flex">
+          <div className="w-full max-w-md">
+            <HeaderSearch />
+          </div>
+        </div>
+        <nav className="hidden items-center gap-6 text-sm md:flex">
           <JobsDropdown />
           <Link href="/compare" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] sm:inline">
             Compare
@@ -37,6 +44,7 @@ export function Nav() {
           </Link>
           <ThemeToggle />
         </nav>
+        <MobileDrawer />
       </div>
     </header>
   );
