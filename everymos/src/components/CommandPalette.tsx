@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import type { Route } from "next";
 import { useSearch } from "./SearchProvider";
 import { TYPE_LABEL } from "@/lib/search";
 import { POPULAR_SEARCHES } from "@/lib/search-docs";
@@ -63,13 +64,13 @@ export function CommandPalette() {
     if (!hit) {
       if (query.trim()) {
         persistRecent(query);
-        router.push(`/search?q=${encodeURIComponent(query)}`);
+        router.push(`/search?q=${encodeURIComponent(query)}` as Route);
         closePalette();
       }
       return;
     }
     persistRecent(query || hit.url);
-    router.push(hit.url);
+    router.push(hit.url as Route);
     closePalette();
   }
 
@@ -218,7 +219,7 @@ export function CommandPalette() {
               className="mono underline"
               onClick={() => {
                 persistRecent(query);
-                router.push(`/search?q=${encodeURIComponent(query)}`);
+                router.push(`/search?q=${encodeURIComponent(query)}` as Route);
                 closePalette();
               }}
             >

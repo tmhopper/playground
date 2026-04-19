@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import type { Route } from "next";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { JobEntry } from "@schemas/job";
 import { JobCard } from "./JobCard";
@@ -64,7 +65,7 @@ export function JobsIndexFilter({ jobs }: Props) {
     if (sort !== "relevance") next.set("s", sort);
     if (density !== "medium") next.set("d", density);
     const qs = next.toString();
-    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    router.replace((qs ? `${pathname}?${qs}` : pathname) as Route, { scroll: false });
   }, [query, branches, categories, fields, clearance, gtMin, envs, sort, density, pathname, router]);
 
   const branchesWithCounts = useMemo(() => {

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getAllJobs } from "@/lib/data";
 import { JobsIndexFilter } from "@/components/JobsIndexFilter";
@@ -25,7 +26,9 @@ export default function JobsIndex() {
             relying on them.
           </p>
         </header>
-        <JobsIndexFilter jobs={jobs} />
+        <Suspense fallback={<p className="mono text-sm opacity-60">Loading filters…</p>}>
+          <JobsIndexFilter jobs={jobs} />
+        </Suspense>
       </main>
       <Footer />
     </>

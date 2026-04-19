@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import type { Route } from "next";
 import { BranchSeal } from "./BranchSeal";
 import { useSearch } from "./SearchProvider";
 import type { Branch } from "@schemas/job";
@@ -114,7 +115,7 @@ export function MobileDrawer() {
               ].map((i) => (
                 <li key={i.href}>
                   <Link
-                    href={i.href}
+                    href={i.href as Route}
                     onClick={() => setOpen(false)}
                     className="block rounded px-3 py-3 text-base no-underline hover:bg-white"
                   >
@@ -135,7 +136,7 @@ export function MobileDrawer() {
               ].map((i) => (
                 <li key={i.href}>
                   <Link
-                    href={i.href}
+                    href={i.href as Route}
                     onClick={() => setOpen(false)}
                     className="block rounded px-3 py-3 text-base no-underline hover:bg-white"
                   >
@@ -157,7 +158,7 @@ export function MobileDrawer() {
               ].map((i) => (
                 <li key={i.href}>
                   <Link
-                    href={i.href}
+                    href={i.href as Route}
                     onClick={() => setOpen(false)}
                     className="block rounded px-3 py-3 text-sm opacity-80 no-underline hover:bg-white"
                   >

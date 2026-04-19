@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import type { Route } from "next";
 import { useSearch } from "./SearchProvider";
 import { TYPE_LABEL, type SearchHit } from "@/lib/search";
 import { POPULAR_SEARCHES } from "@/lib/search-docs";
@@ -23,7 +24,7 @@ export function SearchResults() {
     if (query) next.set("q", query);
     if (type !== "all") next.set("type", type);
     const qs = next.toString();
-    router.replace(qs ? `/search?${qs}` : "/search", { scroll: false });
+    router.replace((qs ? `/search?${qs}` : "/search") as Route, { scroll: false });
   }, [query, type, router]);
 
   const hits = useMemo(() => (query ? search(query, 100) : []), [query, search]);
@@ -100,7 +101,7 @@ export function SearchResults() {
           {filtered.map((h) => (
             <li key={h.id}>
               <Link
-                href={h.url}
+                href={h.url as Route}
                 className="block rounded-lg border border-[color:var(--color-rule)] bg-white p-5 no-underline hover:border-[color:var(--color-signal)]"
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-3">

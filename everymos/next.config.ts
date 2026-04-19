@@ -10,9 +10,6 @@ const config: NextConfig = {
     root: __dirname,
   },
   outputFileTracingRoot: __dirname,
-  experimental: {
-    typedRoutes: true,
-  },
 };
 
 export default config;
