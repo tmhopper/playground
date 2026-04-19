@@ -193,10 +193,41 @@
     "duty_station_types": ["base", "deployable"],
     "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC"],
     "civilian_equivalents": [
-      { "title": "Law Enforcement Tactical Specialist", "industry": "Public Safety", "onet_code": null }
+      {
+        "title": "Law Enforcement Tactical Officer (SWAT)",
+        "industry": "Public Safety",
+        "onet_code": null,
+        "salary_range_usd": { "low": 55000, "median": 85000, "high": 130000, "source": "Illustrative — varies widely by jurisdiction", "notes": "Federal agencies (CBP, FBI HRT) pay well above local SWAT." }
+      }
+    ],
+    "notable_holders": [
+      { "name": "Carlos Hathcock", "years_served": "1959–1979", "notable_for": "One of the most famous Marine scout snipers — 93 confirmed kills in Vietnam.", "notes": "Subject of the book Marine Sniper by Charles Henderson.", "source_url": null },
+      { "name": "Chuck Mawhinney", "years_served": "1967–1970", "notable_for": "Marine scout sniper in Vietnam with 103 confirmed kills — highest-count Marine sniper of the Vietnam War.", "notes": null, "source_url": null }
     ],
     "transferable_certifications": null,
     "branch_specific": { "pef_code": null, "occfld_sponsor": "Infantry" },
+    "daily_life": "On a Scout Sniper platoon: specialized training most of the time — stalking, range estimation, observation, mission planning, advanced marksmanship. Deployments are often in smaller elements attached to infantry battalions or reconnaissance units. A lot of the job is field-craft that looks like nothing to a civilian and everything to an infantry commander.",
+    "honest_take": {
+      "good_for": [
+        "Infantry Marines with the patience and discipline for long, quiet, deliberate work.",
+        "Marines who want a specialized skill that's recognizable across the force.",
+        "People who take feedback well and accept hard cuts in training."
+      ],
+      "hard_part": [
+        "High attrition at Scout Sniper Basic Course — many qualified Marines don't make it through.",
+        "MOS status has shifted under Marine Corps Force Design — uncertainty about the long-term future of the specialty.",
+        "Selection favors body type, mindset, and marksmanship — not everyone will qualify regardless of effort."
+      ],
+      "surprises": [
+        "Stalking and field-craft take up more training time than actual marksmanship.",
+        "The MOS is small — fewer than a few hundred active at any time historically.",
+        "Many 0317s end up returning to 0311 or transitioning to 0321/MARSOC after their tour."
+      ],
+      "reconsider_if": [
+        "You want certainty about the MOS existing long-term — Force Design changes have affected the community.",
+        "You want a specialty with strong civilian translation — 0317 has less direct civilian transfer than medical or comms."
+      ]
+    },
     "career_path": {
       "standard_progression": [
         { "paygrade": "E-4", "rank_name": "Corporal", "rank_abbreviation": "Cpl", "typical_years_in_service": "2–5 years", "typical_billets": ["Scout Sniper team member"], "notes": "Typical entry rank for the MOS via SSBC lateral." },
@@ -678,7 +709,55 @@
     "compensation": { "typical_entry_rank": "E-3", "typical_rank_range": "E-1 through E-7", "special_pay": [{ "pay_type": "Diving Duty Pay", "amount": "Varies by qualification", "conditions": "When dive-qualified and assigned to a dive-billet" }, { "pay_type": "Parachute Duty Pay", "amount": "Varies", "conditions": "When jump-qualified and on a parachute billet" }], "enlistment_bonus": null },
     "duty_station_types": ["base", "deployable", "conus", "oconus"],
     "common_duty_stations": ["Camp Pendleton, CA (1st Recon Bn)", "Camp Lejeune, NC (2nd Recon Bn)", "Marine Corps Base Hawaii (3rd Recon Bn)"],
-    "civilian_equivalents": [{ "title": "Federal Tactical Officer", "industry": "Public Safety", "onet_code": null }],
+    "civilian_equivalents": [
+      {
+        "title": "Federal Tactical Officer (FBI HRT, DEA FAST, USMS SOG)",
+        "industry": "Federal Law Enforcement",
+        "onet_code": null,
+        "salary_range_usd": { "low": 85000, "median": 125000, "high": 175000, "source": "Federal LE special pay scales (illustrative)", "notes": "Requires additional federal-agency selection; former Recon is a strong resume." }
+      },
+      {
+        "title": "Private Maritime / High-Risk Security",
+        "industry": "Security",
+        "onet_code": null,
+        "salary_range_usd": { "low": 70000, "median": 120000, "high": 200000, "source": "Industry-specific (illustrative)", "notes": "Contracts fluctuate heavily with geopolitics." }
+      }
+    ],
+    "daily_life": "Platoon-level recon training is brutal and specialized: long-range patrolling, hydrographic surveys, small-boat ops, helicopter and parachute insertion/extraction. On deployment: attached to MEUs or special operations task forces; rarely operating as a full unit in combat. Day-to-day is field-craft, jocking up, planning, and rehearsing the same mission patterns endlessly. Between deployments, you're re-qualifying on schools — dive, jump, SERE — to stay current.",
+    "honest_take": {
+      "good_for": [
+        "Marines who want the hardest non-MARSOC pipeline in the Corps.",
+        "People who enjoy autonomous small-team operations with minimal oversight.",
+        "Those who want a direct path to MARSOC or federal tactical selection after service."
+      ],
+      "hard_part": [
+        "RTAP + BRC attrition is high — many qualified Marines don't make it through.",
+        "Physical toll is severe — injuries accumulate faster than in conventional infantry.",
+        "Family separation is significant due to multiple school pipelines and frequent deployment."
+      ],
+      "surprises": [
+        "The community is small enough that everyone knows everyone; reputation travels fast.",
+        "Recon is amphibious-focused — swimming and maritime insertion are core, not optional.",
+        "Many Recon Marines transition to MARSOC within 5–8 years of qualifying."
+      ],
+      "reconsider_if": [
+        "You don't love the water — swim qualifications go beyond basic Marine standards.",
+        "You want predictable schedules — you'll be in schools or on ready status most years.",
+        "You want to stay a generalist — Recon is a narrow specialty."
+      ]
+    },
+    "notable_holders": [
+      { "name": "Col. William 'Rich' Higgins", "years_served": "1967–1988", "notable_for": "Marine Corps Recon officer abducted and killed in Lebanon while serving with UNTSO.", "notes": null, "source_url": null },
+      { "name": "Jason Everman", "years_served": "early 1990s (Marine)", "notable_for": "Former Recon Marine; earlier an original member of Nirvana and Soundgarden. Completed Ranger School after leaving the Marine Corps.", "notes": "Unusual career arc.", "source_url": null }
+    ],
+    "promotion_speed": {
+      "typical_to_e4_years": "2–4 years",
+      "typical_to_e5_years": "4–6 years",
+      "typical_to_e7_years": "10–14 years",
+      "fast_promote_notes": "Graduate-of-BRC plus additional schools (jump, dive, SERE, Team Leader) accelerate promotion. Small community means boards see your record clearly.",
+      "slow_promote_notes": "Community is small — promotion quotas can be tight.",
+      "cutting_score_note": "Same USMC composite-score system as other infantry MOSs; additional schools feed PME credit."
+    },
     "transferable_certifications": null,
     "branch_specific": { "occfld_sponsor": "Reconnaissance" },
     "career_path": {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { JobsDropdown } from "./JobsDropdown";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Nav() {
   return (
@@ -34,6 +35,7 @@ export function Nav() {
           >
             Newsletter
           </Link>
+          <ThemeToggle />
         </nav>
       </div>
     </header>

@@ -24,6 +24,23 @@ html {
   color-scheme: light;
 }
 
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --color-paper: #0B1220;
+  --color-ink-900: #F3F4F6;
+  --color-ink-700: #D1D5DB;
+  --color-rule: #1F2937;
+}
+
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] [class*="bg-white"] {
+  background: #111827 !important;
+}
+
+html[data-theme="dark"] .bg-\[color\:var\(--color-paper\)\] {
+  background: #0B1220 !important;
+}
+
 body {
   background: var(--color-paper);
   color: var(--color-ink-700);
