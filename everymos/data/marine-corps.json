@@ -87,6 +87,32 @@
       "slow_promote_notes": "Infantry can be a competitive MOS for promotion; cutting scores vary by year. Non-promotion boards (Perform-to-Serve equivalents) can affect retention at E-4 and E-5.",
       "cutting_score_note": "USMC promotion to E-4 and E-5 is via composite score that combines PFT/CFT, rifle score, PME completion, and command ratings. MOS-specific cutting scores are published monthly by Manpower Management."
     },
+    "honest_take": {
+      "good_for": [
+        "People who want a hard thing to point at when they're 40.",
+        "Leaders who want real responsibility early — a 22-year-old squad leader runs 13 Marines.",
+        "Anyone who learns better by doing the same hard thing thousands of times.",
+        "People who want the Marine Corps infantry community as a lifelong network."
+      ],
+      "hard_part": [
+        "Physical wear-and-tear is cumulative — knees, back, shoulders.",
+        "Deployment tempo strains relationships and family life.",
+        "Long stretches of boredom punctuated by intensity.",
+        "You're at the bottom of the pay scale while doing the most physically demanding job in the Corps."
+      ],
+      "surprises": [
+        "The technical skills of 0311 don't transfer directly to civilian work — the leadership does.",
+        "DoD COOL doesn't fund much specific to 0311. Post-9/11 GI Bill and SkillBridge matter more.",
+        "B-billets (recruiter, DI, MSG) promote you faster than operational time does at E-5 and above.",
+        "Combat Correspondents, MCMAP trainers, and other collateral-duty billets let you diversify a resume on the side."
+      ],
+      "reconsider_if": [
+        "You want a job that translates directly to a high-paying civilian technical role — consider 06xx (comms), 02xx (intel), or a cyber MOS in another branch.",
+        "You have a pre-existing orthopedic injury — infantry load-bearing is not forgiving.",
+        "You want control over where you're stationed and when — infantry needs drive most assignment decisions.",
+        "You're ambivalent about being deployed — this MOS deploys more than almost any other."
+      ]
+    },
     "career_path": {
       "standard_progression": [
         { "paygrade": "E-1", "rank_name": "Private", "rank_abbreviation": "Pvt", "typical_years_in_service": "0–6 months", "typical_billets": ["Rifleman"], "notes": "Entry rank if no promotion meritoriously earned in recruit training or shipping with no prior service benefit." },

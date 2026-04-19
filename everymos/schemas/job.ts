@@ -127,6 +127,13 @@ const FaqItem = z.object({
   answer: z.string().min(1),
 });
 
+const HonestTake = z.object({
+  good_for: z.array(z.string().min(1)),
+  hard_part: z.array(z.string().min(1)),
+  surprises: z.array(z.string().min(1)),
+  reconsider_if: z.array(z.string().min(1)),
+});
+
 const PromotionSpeed = z.object({
   typical_to_e4_years: z.string().nullable(),
   typical_to_e5_years: z.string().nullable(),
@@ -206,6 +213,7 @@ export const JobEntry = z.object({
   notable_holders: z.array(NotableHolder).optional(),
   daily_life: z.string().optional(),
   faq: z.array(FaqItem).optional(),
+  honest_take: HonestTake.optional(),
 
   sources: z.array(Source),
   confidence: Confidence,

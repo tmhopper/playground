@@ -69,6 +69,7 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
   const sections: { id: string; label: string; show: boolean }[] = [
     { id: "overview", label: "Overview", show: true },
     { id: "daily-life", label: "Daily life", show: !!job.daily_life },
+    { id: "honest-take", label: "Honest take", show: !!job.honest_take },
     { id: "requirements", label: "Requirements", show: true },
     { id: "training", label: "Training pipeline", show: true },
     { id: "career-roadmap", label: "Career roadmap", show: !!job.career_path },
@@ -237,6 +238,23 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
                 <p className="mt-4 rounded-lg border border-[color:var(--color-rule)] bg-white p-5 text-base leading-relaxed">
                   {job.daily_life}
                 </p>
+              </section>
+            )}
+
+            {/* HONEST TAKE */}
+            {job.honest_take && (
+              <section id="honest-take" className="scroll-mt-8">
+                <h2>The honest take</h2>
+                <p className="mt-2 text-sm opacity-70">
+                  Not a recruiting pitch. What actually goes into this job, from people who
+                  lived it.
+                </p>
+                <div className="mt-6 grid gap-4 md:grid-cols-2">
+                  <TakeBlock label="Good for" items={job.honest_take.good_for} tone="ok" />
+                  <TakeBlock label="The hard part" items={job.honest_take.hard_part} tone="warn" />
+                  <TakeBlock label="Surprises" items={job.honest_take.surprises} tone="neutral" />
+                  <TakeBlock label="Reconsider if…" items={job.honest_take.reconsider_if} tone="warn" />
+                </div>
               </section>
             )}
 
@@ -615,7 +633,7 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
             {/* RELATED */}
             {(() => {
               const all = getAllJobs();
-              const related = all
+              const sameField = all
                 .filter((j) => j.id !== job.id)
                 .filter(
                   (j) =>
@@ -623,18 +641,56 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
                     j.occupational_field.code === job.occupational_field.code,
                 )
                 .slice(0, 4);
-              if (related.length === 0) return null;
+
+              const fieldKeywords = job.occupational_field.name
+                .toLowerCase()
+                .split(/[\s/]+/)
+                .filter((w) => w.length > 3);
+              const crossBranch = all
+                .filter((j) => j.id !== job.id && j.branch !== job.branch)
+                .filter((j) =>
+                  fieldKeywords.some((kw) =>
+                    j.occupational_field.name.toLowerCase().includes(kw),
+                  ),
+                )
+                .slice(0, 4);
+
               return (
-                <section className="scroll-mt-8">
-                  <h2>Related in {job.occupational_field.name}</h2>
-                  <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-                    {related.map((j) => (
-                      <li key={j.id}>
-                        <JobCard job={j} />
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+                <>
+                  {sameField.length > 0 && (
+                    <section className="scroll-mt-8">
+                      <h2>Related in {job.occupational_field.name}</h2>
+                      <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                        {sameField.map((j) => (
+                          <li key={j.id}>
+                            <JobCard job={j} />
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  )}
+                  {crossBranch.length > 0 && (
+                    <section className="scroll-mt-8">
+                      <h2>Similar jobs in other branches</h2>
+                      <p className="mt-2 text-sm opacity-70">
+                        The same role exists under different names across the services. Use
+                        /compare to put them side-by-side.
+                      </p>
+                      <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                        {crossBranch.map((j) => (
+                          <li key={j.id}>
+                            <JobCard job={j} />
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mono mt-4 text-xs">
+                        <Link href={`/compare?a=${job.id}&b=${crossBranch[0].id}`}>
+                          Compare {job.job_code} vs {crossBranch[0].job_code} →
+                        </Link>
+                      </p>
+                    </section>
+                  )}
+                </>
               );
             })()}
 
@@ -700,6 +756,38 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
       </main>
       <Footer />
     </>
+  );
+}
+
+function TakeBlock({
+  label,
+  items,
+  tone,
+}: {
+  label: string;
+  items: string[];
+  tone: "ok" | "warn" | "neutral";
+}) {
+  const color =
+    tone === "ok"
+      ? "var(--color-ok)"
+      : tone === "warn"
+        ? "var(--color-warn)"
+        : "var(--color-ink-900)";
+  return (
+    <div
+      className="rounded-lg border border-[color:var(--color-rule)] bg-white p-5"
+      style={{ borderLeftWidth: 4, borderLeftColor: color }}
+    >
+      <p className="mono text-xs uppercase tracking-wide" style={{ color }}>
+        {label}
+      </p>
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm">
+        {items.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

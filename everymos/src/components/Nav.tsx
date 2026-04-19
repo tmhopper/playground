@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JobsDropdown } from "./JobsDropdown";
 
 export function Nav() {
   return (
@@ -11,12 +12,7 @@ export function Nav() {
           EveryMOS
         </Link>
         <nav className="flex items-center gap-6 text-sm">
-          <Link href="/jobs" className="text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)]">
-            All Jobs
-          </Link>
-          <Link href="/jobs/marine-corps" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] md:inline">
-            Marine Corps
-          </Link>
+          <JobsDropdown />
           <Link href="/compare" className="hidden text-[color:var(--color-ink-700)] no-underline hover:text-[color:var(--color-signal)] sm:inline">
             Compare
           </Link>
