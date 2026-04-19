@@ -25,11 +25,37 @@
     "duty_station_types": ["base", "conus", "oconus", "space_installation"],
     "common_duty_stations": ["Peterson SFB, CO", "Schriever SFB, CO", "Vandenberg SFB, CA", "Buckley SFB, CO"],
     "civilian_equivalents": [
-      { "title": "Information Security Analyst", "industry": "Information Technology", "onet_code": "15-1212.00" },
-      { "title": "Cybersecurity Engineer", "industry": "Information Technology", "onet_code": "15-1299.04" }
+      {
+        "title": "Information Security Analyst",
+        "industry": "Information Technology",
+        "onet_code": "15-1212.00",
+        "salary_range_usd": { "low": 75000, "median": 120000, "high": 175000, "source": "BLS OES May 2024 (illustrative)", "notes": "Space/cyber cleared roles pay at the top of range." }
+      },
+      {
+        "title": "Cybersecurity Engineer",
+        "industry": "Information Technology",
+        "onet_code": "15-1299.04",
+        "salary_range_usd": { "low": 85000, "median": 135000, "high": 195000, "source": "Industry surveys (illustrative)", "notes": null }
+      }
     ],
     "transferable_certifications": ["CompTIA Security+", "CompTIA CySA+", "CEH"],
     "branch_specific": { "delta": "Assigned to Space Operations Command (SpOC) cyber units", "squadron_types": ["Cyber Squadrons attached to Deltas"] },
+    "daily_life": "SCIF-based cyber watch and response, similar to Air Force cyber but scoped to Space Force mission systems and satellite networks. Day shifts and mid/night rotating watches are common. Strong collaboration with NSA, USCYBERCOM, and Space Operations Command.",
+    "faq": [
+      { "question": "Is Space Force really separate from the Air Force?", "answer": "Yes — Space Force is an independent service under the Department of the Air Force. It has its own ranks (Specialist 1-4, Sergeant, Technical Sergeant, Master Sergeant, Chief Master Sergeant) and classification system. Many Space Force members transferred from the Air Force in 2020-2021." },
+      { "question": "Do Space Force members go to space?", "answer": "No — Space Force operates space-based systems from Earth. Astronauts belong to NASA. Space Force handles satellites, ground control, and cyber defense for space missions." }
+    ],
+    "notable_holders": [
+      { "name": "Chief Master Sergeant of the Space Force Roger A. Towberman", "years_served": "1989–present (inaugural CMSSF)", "notable_for": "First senior enlisted advisor of the Space Force.", "notes": "Not 5C0X1-specific; representative Space Force senior enlisted leadership.", "source_url": null }
+    ],
+    "promotion_speed": {
+      "typical_to_e4_years": "~3 years (Specialist 4)",
+      "typical_to_e5_years": "4–6 years (Sergeant)",
+      "typical_to_e7_years": "12–16 years",
+      "fast_promote_notes": "Space Force is small and still building out its senior enlisted ranks — early promotion has been comparatively fast for strong performers in cyber and space operations.",
+      "slow_promote_notes": "The force is small enough that specific billets can create bottlenecks.",
+      "cutting_score_note": "Space Force uses a modified version of WAPS currently; its own evaluation system is being finalized."
+    },
     "sources": [{ "name": "Space Force enlisted classification (DRAFT — Space Force is still publishing formal directives)", "url": "https://www.spaceforce.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — Space Force is the newest branch and its SFSC structure is still evolving. Verify everything against current official sources.",

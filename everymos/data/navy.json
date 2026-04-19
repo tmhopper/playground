@@ -87,12 +87,45 @@
     "duty_station_types": ["ship", "shore", "base", "deployable", "conus", "oconus"],
     "common_duty_stations": ["San Diego, CA (Balboa)", "Bethesda, MD", "Portsmouth, VA", "Camp Pendleton, CA (FMF)", "Camp Lejeune, NC (FMF)"],
     "civilian_equivalents": [
-      { "title": "Emergency Medical Technician / Paramedic", "industry": "Healthcare", "onet_code": "29-2041.00" },
-      { "title": "Registered Nurse (via bridge program)", "industry": "Healthcare", "onet_code": "29-1141.00" },
-      { "title": "Physician Assistant (via IPAP)", "industry": "Healthcare", "onet_code": "29-1071.00" }
+      {
+        "title": "Emergency Medical Technician / Paramedic",
+        "industry": "Healthcare",
+        "onet_code": "29-2041.00",
+        "salary_range_usd": { "low": 36000, "median": 52000, "high": 78000, "source": "BLS OES May 2024 (illustrative)", "notes": null }
+      },
+      {
+        "title": "Registered Nurse (via bridge program)",
+        "industry": "Healthcare",
+        "onet_code": "29-1141.00",
+        "salary_range_usd": { "low": 70000, "median": 95000, "high": 135000, "source": "BLS OES May 2024 (illustrative)", "notes": "Requires RN bridge program; FMF corpsmen often qualify for accelerated paths." }
+      },
+      {
+        "title": "Physician Assistant (via IPAP)",
+        "industry": "Healthcare",
+        "onet_code": "29-1071.00",
+        "salary_range_usd": { "low": 100000, "median": 130000, "high": 170000, "source": "BLS OES May 2024 (illustrative)", "notes": "IPAP is a path to commission as a PA officer; civilian transition is lucrative." }
+      }
     ],
     "transferable_certifications": ["NREMT (via training)", "RN via bridge programs", "IPAP commissioning path to PA"],
     "branch_specific": { "community": "Medical / Fleet Marine Force", "nec_codes_common": ["HM-L02A (SARC)", "HM-L05A (Combat Medic)", "HM-L08A (Dental)"] },
+    "daily_life": "In a hospital or clinic: shifts on wards, patient intake, medication administration, or specialty rotations. At sea on a ship: run the sick bay, conduct sea-duty physicals, respond to onboard injuries. With a Marine unit (FMF): train with the infantry, deploy attached to a company or battalion, and be the medical provider on patrols. FMF corpsmen live the Marine Corps lifestyle more than Navy — field exercises, rucks, and combat medicine training.",
+    "faq": [
+      { "question": "Hospital corpsman vs. FMF corpsman — can I pick?", "answer": "You can indicate preference. Some corpsmen start hospital-side and request FMTB later; others ship straight to FMTB. Not everyone gets FMF duty — it depends on orders and needs of the Navy." },
+      { "question": "Will I be a 'Doc' to Marines?", "answer": "Yes. Corpsmen attached to Marine units are called 'Doc' regardless of their actual rank. Deep tradition between Marines and their corpsmen." },
+      { "question": "Can I become a civilian nurse or PA?", "answer": "Yes — HM is one of the strongest civilian-transition ratings. NREMT is often earned during training. RN bridge programs accept HM service credit. IPAP lets you commission as a PA officer in-service." }
+    ],
+    "notable_holders": [
+      { "name": "Donald E. Ballard", "years_served": "1966–1970 (Navy); later Army National Guard", "notable_for": "Medal of Honor recipient for actions as a Navy corpsman in Vietnam.", "notes": null, "source_url": null },
+      { "name": "Richard D. Dewert", "years_served": "1948–1951", "notable_for": "Medal of Honor recipient (posthumous) for actions during the Korean War.", "notes": "Killed in action in Korea.", "source_url": null }
+    ],
+    "promotion_speed": {
+      "typical_to_e4_years": "2–4 years (HM3)",
+      "typical_to_e5_years": "4–7 years (HM2)",
+      "typical_to_e7_years": "12–17 years (HMC — 'Chief')",
+      "fast_promote_notes": "NECs (specialties) like SARC, SEAL medic, IDC, and advanced dental accelerate promotion. Navy-Wide Advancement Exam performance matters heavily.",
+      "slow_promote_notes": "HM is a large rating; some NEC pools are oversubscribed.",
+      "cutting_score_note": "Navy uses Final Multiple Score (FMS) combining exam score, performance evaluations, awards, and time-in-rate. Cutoffs vary by rating and NEC."
+    },
     "sources": [{ "name": "Navy HM Rating documentation (DRAFT)", "url": "https://www.mynavyhr.navy.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify current NECs, FMTB course length, and civilian reciprocity for EMT/RN programs.",

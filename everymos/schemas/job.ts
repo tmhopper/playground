@@ -103,6 +103,37 @@ const CivilianEquivalent = z.object({
   title: z.string().min(1),
   industry: z.string().min(1),
   onet_code: z.string().nullable(),
+  salary_range_usd: z
+    .object({
+      low: z.number().int().positive(),
+      median: z.number().int().positive(),
+      high: z.number().int().positive(),
+      source: z.string(),
+      notes: z.string().nullable(),
+    })
+    .optional(),
+});
+
+const NotableHolder = z.object({
+  name: z.string().min(1),
+  years_served: z.string().nullable(),
+  notable_for: z.string().min(1),
+  notes: z.string().nullable(),
+  source_url: z.string().url().nullable(),
+});
+
+const FaqItem = z.object({
+  question: z.string().min(1),
+  answer: z.string().min(1),
+});
+
+const PromotionSpeed = z.object({
+  typical_to_e4_years: z.string().nullable(),
+  typical_to_e5_years: z.string().nullable(),
+  typical_to_e7_years: z.string().nullable(),
+  fast_promote_notes: z.string().nullable(),
+  slow_promote_notes: z.string().nullable(),
+  cutting_score_note: z.string().nullable(),
 });
 
 const Source = z.object({
@@ -171,6 +202,10 @@ export const JobEntry = z.object({
   branch_specific: z.record(z.string(), z.unknown()),
 
   career_path: CareerPath.optional(),
+  promotion_speed: PromotionSpeed.optional(),
+  notable_holders: z.array(NotableHolder).optional(),
+  daily_life: z.string().optional(),
+  faq: z.array(FaqItem).optional(),
 
   sources: z.array(Source),
   confidence: Confidence,

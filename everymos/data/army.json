@@ -23,9 +23,49 @@
     "compensation": { "typical_entry_rank": "E-1 (Private)", "typical_rank_range": "E-1 through E-6", "special_pay": [], "enlistment_bonus": null },
     "duty_station_types": ["base", "deployable", "conus", "oconus"],
     "common_duty_stations": ["Fort Bragg, NC", "Fort Drum, NY", "Joint Base Lewis-McChord, WA", "Fort Campbell, KY"],
-    "civilian_equivalents": [{ "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }],
+    "civilian_equivalents": [
+      {
+        "title": "Law Enforcement Officer",
+        "industry": "Public Safety",
+        "onet_code": "33-3051.00",
+        "salary_range_usd": { "low": 48000, "median": 72000, "high": 110000, "source": "BLS OES May 2024 (illustrative)", "notes": null }
+      },
+      {
+        "title": "Corrections Officer",
+        "industry": "Public Safety",
+        "onet_code": "33-3012.00",
+        "salary_range_usd": { "low": 38000, "median": 53000, "high": 78000, "source": "BLS OES May 2024 (illustrative)", "notes": null }
+      },
+      {
+        "title": "Federal Law Enforcement (CBP, ICE, USMS)",
+        "industry": "Federal Law Enforcement",
+        "onet_code": "33-3021.00",
+        "salary_range_usd": { "low": 58000, "median": 95000, "high": 145000, "source": "OPM GL-5 through GS-13 (illustrative)", "notes": "Federal LE pays above base GS scale via LEAP; common post-Army target." }
+      }
+    ],
     "transferable_certifications": null,
     "branch_specific": { "cmf": "11", "asi_codes": [] },
+    "daily_life": "In garrison: PT at 0630, then company-level training — rifle marksmanship, squad movement, weapons maintenance, mounted or dismounted patrols depending on your unit type (light infantry vs. Stryker vs. mechanized vs. airborne). Afternoons shift to details, admin, or additional training. Pre-deployment rotations cycle through combined arms exercises at JRTC (Fort Johnson, LA) or NTC (Fort Irwin, CA) — 3-4 week field problems that test the whole brigade. On deployment: mission-dependent. Combat rotations mean real operations; security cooperation rotations mean training partner-nation forces.",
+    "faq": [
+      { "question": "What's the difference between 11B and 11C?", "answer": "11B is the rifleman MOS — the base of the infantry squad. 11C is Indirect Fire Infantryman — runs mortars. Both are in the 11-series and you can lateral between them with additional training, but they specialize differently from OSUT onward." },
+      { "question": "How long is OSUT for 11B?", "answer": "One Station Unit Training combines Basic Combat Training and Advanced Individual Training for infantry soldiers in one continuous course. Historically 14 weeks; extended in recent years to around 22 weeks. Verify current length before enlisting." },
+      { "question": "Can I pick my unit type (airborne, Ranger, light, mech)?", "answer": "You can volunteer for Airborne School as an Option 4 contract. Ranger School comes later — typically after arrival at unit and meeting qualifications. Light/mech/Stryker assignment depends on the needs of the Army and your first duty station, not necessarily your preference." },
+      { "question": "What's the deployment tempo like now?", "answer": "Varies by unit and Army posture. Historically 9-12 month deployments every 18-24 months. Recent years have shifted toward shorter rotations or security-cooperation deployments. Your unit's patch pattern is a good tell — check what they've deployed to in the last five years." }
+    ],
+    "notable_holders": [
+      { "name": "Audie Murphy", "years_served": "1942–1945", "notable_for": "Most decorated American combat soldier of World War II; Medal of Honor recipient. Later a major film actor.", "notes": "Killed in a plane crash in 1971.", "source_url": null },
+      { "name": "Sammy L. Davis", "years_served": "1966–1969", "notable_for": "Medal of Honor recipient for actions in Vietnam, November 1967.", "notes": "Ceremony footage was used in Forrest Gump.", "source_url": null },
+      { "name": "Dakota Meyer", "years_served": "2006–2010", "notable_for": "Medal of Honor recipient. Served as a Marine 0311 (not Army) — see Marine Corps entry.", "notes": "Included here as a reference note.", "source_url": null },
+      { "name": "Alvin York", "years_served": "1917–1919", "notable_for": "Medal of Honor recipient; one of the most decorated American soldiers of WWI.", "notes": "Subject of the 1941 film Sergeant York.", "source_url": null }
+    ],
+    "promotion_speed": {
+      "typical_to_e4_years": "1.5–3 years (SPC via automatic)",
+      "typical_to_e5_years": "3–5 years (SGT via board)",
+      "typical_to_e7_years": "10–14 years",
+      "fast_promote_notes": "Airborne, Ranger, and combat badges plus strong fitness and PME accelerate promotion. NCO board performance is weighted heavily from E-5 up.",
+      "slow_promote_notes": "Infantry is a large, competitive MOS. Points to SGT and SSG can spike when the force is contracting.",
+      "cutting_score_note": "Army promotion to E-5 and E-6 is by points: promotion points from awards, marksmanship, fitness, and PME plus board scores. MOS-specific cutoffs published monthly."
+    },
     "career_path": {
       "standard_progression": [
         { "paygrade": "E-1", "rank_name": "Private", "rank_abbreviation": "PV1", "typical_years_in_service": "0–6 months", "typical_billets": ["Rifleman"], "notes": null },

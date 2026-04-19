@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { JobEntry } from "@schemas/job";
 import { JobCard } from "./JobCard";
+import { BRANCH_ENUM_TO_SLUG } from "@/lib/branch";
 
 type Props = { jobs: JobEntry[] };
 
@@ -20,6 +22,7 @@ const CLEARANCE_ORDER = ["none", "confidential", "secret", "top_secret", "ts_sci
 type Clearance = (typeof CLEARANCE_ORDER)[number];
 
 type Sort = "relevance" | "code" | "title" | "training" | "updated";
+type Density = "compact" | "medium" | "expanded";
 
 function setToCsv(s: Set<string>): string {
   return [...s].sort().join(",");
@@ -44,6 +47,9 @@ export function JobsIndexFilter({ jobs }: Props) {
   const [gtMin, setGtMin] = useState<number>(Number(params.get("gt") ?? 0));
   const [envs, setEnvs] = useState<Set<string>>(csvToSet(params.get("env")));
   const [sort, setSort] = useState<Sort>((params.get("s") as Sort) ?? "relevance");
+  const [density, setDensity] = useState<Density>(
+    (params.get("d") as Density) ?? "medium",
+  );
 
   // Sync state → URL
   useEffect(() => {
@@ -56,9 +62,10 @@ export function JobsIndexFilter({ jobs }: Props) {
     if (gtMin > 0) next.set("gt", String(gtMin));
     if (envs.size) next.set("env", setToCsv(envs));
     if (sort !== "relevance") next.set("s", sort);
+    if (density !== "medium") next.set("d", density);
     const qs = next.toString();
     router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-  }, [query, branches, categories, fields, clearance, gtMin, envs, sort, pathname, router]);
+  }, [query, branches, categories, fields, clearance, gtMin, envs, sort, density, pathname, router]);
 
   const branchesWithCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -160,6 +167,7 @@ export function JobsIndexFilter({ jobs }: Props) {
     setter(next);
   }
 
+  // (helpers rendered below)
   const anyFilterActive =
     query ||
     branches.size > 0 ||
@@ -333,25 +341,55 @@ export function JobsIndexFilter({ jobs }: Props) {
           <p className="mono text-sm opacity-70" aria-live="polite">
             Showing {filtered.length} of {jobs.length} job{jobs.length === 1 ? "" : "s"}
           </p>
-          <label className="flex items-center gap-2 text-sm">
-            <span className="mono text-xs uppercase tracking-wide opacity-60">Sort</span>
-            <select
-              value={sort}
-              onChange={(e) => setSort(e.target.value as Sort)}
-              className="h-9 rounded-md border border-[color:var(--color-rule)] bg-white px-2 text-sm"
-            >
-              <option value="relevance">Relevance</option>
-              <option value="code">Job code</option>
-              <option value="title">Title</option>
-              <option value="training">Training length</option>
-              <option value="updated">Recently updated</option>
-            </select>
-          </label>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1 rounded-md border border-[color:var(--color-rule)] bg-white p-1 text-xs">
+              {(["compact", "medium", "expanded"] as Density[]).map((d) => (
+                <button
+                  key={d}
+                  type="button"
+                  onClick={() => setDensity(d)}
+                  className={
+                    "mono rounded px-2 py-1 capitalize " +
+                    (density === d
+                      ? "bg-[color:var(--color-ink-900)] text-white"
+                      : "opacity-70 hover:opacity-100")
+                  }
+                  aria-pressed={density === d}
+                >
+                  {d}
+                </button>
+              ))}
+            </div>
+            <label className="flex items-center gap-2 text-sm">
+              <span className="mono text-xs uppercase tracking-wide opacity-60">Sort</span>
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value as Sort)}
+                className="h-9 rounded-md border border-[color:var(--color-rule)] bg-white px-2 text-sm"
+              >
+                <option value="relevance">Relevance</option>
+                <option value="code">Job code</option>
+                <option value="title">Title</option>
+                <option value="training">Training length</option>
+                <option value="updated">Recently updated</option>
+              </select>
+            </label>
+          </div>
         </div>
         {filtered.length === 0 ? (
           <div className="rounded-lg border border-[color:var(--color-rule)] bg-white p-8 text-center text-sm opacity-70">
             No jobs match these filters. Try loosening the search or clearing filters.
           </div>
+        ) : density === "compact" ? (
+          <CompactTable jobs={filtered} />
+        ) : density === "expanded" ? (
+          <ul className="space-y-4">
+            {filtered.map((job) => (
+              <li key={job.id}>
+                <ExpandedRow job={job} />
+              </li>
+            ))}
+          </ul>
         ) : (
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {filtered.map((job) => (
@@ -362,6 +400,107 @@ export function JobsIndexFilter({ jobs }: Props) {
           </ul>
         )}
       </div>
+    </div>
+  );
+}
+
+function CompactTable({ jobs }: { jobs: JobEntry[] }) {
+  return (
+    <div className="overflow-x-auto rounded-lg border border-[color:var(--color-rule)] bg-white">
+      <table className="min-w-full text-sm">
+        <thead>
+          <tr className="border-b border-[color:var(--color-rule)] bg-[color:var(--color-paper)]">
+            <th className="p-2 text-left mono text-xs uppercase tracking-wide opacity-60">Code</th>
+            <th className="p-2 text-left mono text-xs uppercase tracking-wide opacity-60">Title</th>
+            <th className="hidden p-2 text-left mono text-xs uppercase tracking-wide opacity-60 sm:table-cell">Branch</th>
+            <th className="hidden p-2 text-left mono text-xs uppercase tracking-wide opacity-60 md:table-cell">Field</th>
+            <th className="hidden p-2 text-right mono text-xs uppercase tracking-wide opacity-60 md:table-cell">ASVAB</th>
+            <th className="hidden p-2 text-right mono text-xs uppercase tracking-wide opacity-60 lg:table-cell">Clearance</th>
+            <th className="p-2 text-right mono text-xs uppercase tracking-wide opacity-60">Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          {jobs.map((job) => (
+            <tr key={job.id} className="border-b border-[color:var(--color-rule)] last:border-b-0">
+              <td className="p-2">
+                <Link
+                  href={`/jobs/${BRANCH_ENUM_TO_SLUG[job.branch]}/${job.job_code.toLowerCase()}`}
+                  className="mono font-semibold no-underline"
+                >
+                  {job.job_code}
+                </Link>
+              </td>
+              <td className="p-2">
+                <Link
+                  href={`/jobs/${BRANCH_ENUM_TO_SLUG[job.branch]}/${job.job_code.toLowerCase()}`}
+                  className="no-underline"
+                >
+                  {job.job_title}
+                </Link>
+              </td>
+              <td className="hidden p-2 mono text-xs opacity-70 sm:table-cell">{job.branch_display}</td>
+              <td className="hidden p-2 opacity-80 md:table-cell">{job.occupational_field.name}</td>
+              <td className="hidden p-2 text-right mono text-xs opacity-80 md:table-cell">
+                {job.asvab.raw_requirement.split(" (")[0]}
+              </td>
+              <td className="hidden p-2 text-right mono text-xs capitalize opacity-70 lg:table-cell">
+                {job.security_clearance.replace("_", " ")}
+              </td>
+              <td className="p-2 text-right mono text-xs uppercase opacity-70">{job.confidence}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function ExpandedRow({ job }: { job: JobEntry }) {
+  const totalWeeks = job.training_pipeline.reduce((s, t) => s + t.duration_weeks, 0);
+  return (
+    <Link
+      href={`/jobs/${BRANCH_ENUM_TO_SLUG[job.branch]}/${job.job_code.toLowerCase()}`}
+      className="block rounded-lg border border-[color:var(--color-rule)] bg-white p-5 no-underline hover:border-[color:var(--color-signal)]"
+    >
+      <div className="flex flex-wrap items-baseline justify-between gap-4">
+        <div className="flex items-baseline gap-3">
+          <span className="mono text-lg font-semibold text-[color:var(--color-ink-900)]">
+            {job.job_code}
+          </span>
+          <span className="text-lg text-[color:var(--color-ink-900)]">{job.job_title}</span>
+        </div>
+        <span className="mono text-xs uppercase tracking-wide opacity-60">
+          {job.branch_display}
+        </span>
+      </div>
+      <p className="mt-3 text-sm">{job.description_tldr}</p>
+      <dl className="mt-4 grid gap-3 sm:grid-cols-4">
+        <Cell label="ASVAB">{job.asvab.raw_requirement.split(" (")[0]}</Cell>
+        <Cell label="Clearance">{job.security_clearance.replace("_", " ")}</Cell>
+        <Cell label="Training">{totalWeeks} wk</Cell>
+        <Cell label="Category">{job.personnel_category.replace("_", " ")}</Cell>
+      </dl>
+      {Object.keys(job.asvab.composites).length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-1">
+          {Object.entries(job.asvab.composites).map(([k, v]) => (
+            <span
+              key={k}
+              className="mono rounded border border-[color:var(--color-rule)] bg-[color:var(--color-paper)] px-2 py-0.5 text-xs"
+            >
+              {k} ≥ {v}
+            </span>
+          ))}
+        </div>
+      )}
+    </Link>
+  );
+}
+
+function Cell({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <dt className="mono text-xs uppercase tracking-wide opacity-60">{label}</dt>
+      <dd className="mono text-sm capitalize text-[color:var(--color-ink-900)]">{children}</dd>
     </div>
   );
 }

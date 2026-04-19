@@ -13,11 +13,11 @@
     "description_plain": "The rifleman is the Marine the rest of the Corps exists to support. You close with the enemy on foot, lead fire teams, and become an expert with the service rifle. This is ground combat — small units, long days, and the discipline that comes from doing the same hard things until they're automatic. Training pipeline runs through Parris Island or San Diego, then School of Infantry East or West. Most 0311s end up in an infantry battalion at Camp Pendleton, Camp Lejeune, or Kaneohe Bay. Expect deployments.",
     "description_tldr": "The Marine Corps rifleman is the ground-combat backbone of the USMC infantry — small-unit leader, marksman, and the Marine everything else supports.",
     "asvab": {
-      "composites": { "GT": 80 },
-      "afqt_minimum": null,
-      "raw_requirement": "GT: 80 (DRAFT — verify against current Marine Corps classification directive)",
+      "composites": { "GT": 80, "CL": 80, "EL": 80, "MM": 80, "ST": 80 },
+      "afqt_minimum": 32,
+      "raw_requirement": "GT: 80 (DRAFT — verify)",
       "source_system": "marine_corps_composites",
-      "notes": "Verify against the current NAVMC 1200 series before publishing."
+      "notes": "GT is the binding composite. Other composites listed are typical enlistment floors for infantry-eligible contracts — verify against current NAVMC 1200 series. USMC composites reference: GT (General Technical), CL (Clerical), EL (Electronics), MM (Mechanical Maintenance), ST (Skilled Technical)."
     },
     "security_clearance": "none",
     "physical_requirements": {
@@ -42,11 +42,51 @@
     "duty_station_types": ["base", "deployable", "conus", "oconus"],
     "common_duty_stations": ["Camp Pendleton, CA", "Camp Lejeune, NC", "Marine Corps Base Hawaii, Kaneohe Bay", "Twentynine Palms, CA", "Camp Hansen, Okinawa"],
     "civilian_equivalents": [
-      { "title": "Law Enforcement Officer", "industry": "Public Safety", "onet_code": "33-3051.00" },
-      { "title": "Security Officer", "industry": "Security Services", "onet_code": "33-9032.00" }
+      {
+        "title": "Law Enforcement Officer",
+        "industry": "Public Safety",
+        "onet_code": "33-3051.00",
+        "salary_range_usd": { "low": 48000, "median": 72000, "high": 110000, "source": "BLS OES May 2024 (illustrative)", "notes": "Range varies widely by state and agency; federal > state > local generally." }
+      },
+      {
+        "title": "Security Officer / Supervisor",
+        "industry": "Security Services",
+        "onet_code": "33-9032.00",
+        "salary_range_usd": { "low": 34000, "median": 42000, "high": 62000, "source": "BLS OES May 2024 (illustrative)", "notes": null }
+      },
+      {
+        "title": "Federal Protective Service / Federal Air Marshal",
+        "industry": "Federal Law Enforcement",
+        "onet_code": "33-3021.00",
+        "salary_range_usd": { "low": 58000, "median": 95000, "high": 145000, "source": "OPM GS-7 through GS-13 (illustrative)", "notes": "Federal law enforcement pays on a special scale above GS; includes LEAP." }
+      }
     ],
     "transferable_certifications": null,
     "branch_specific": { "pef_code": null, "occfld_sponsor": "Infantry" },
+    "daily_life": "On garrison (in-unit, not deployed): you wake up for 0600 PT, formation at 0730, and then the day runs on platoon or company training — weapons maintenance, dry-fire drills, small-unit tactics, land-nav, MCMAP, and whatever your billet requires. Afternoons often drop to field-day (cleaning) or admin until 1700. On a workup (pre-deployment): 2–3 week field exercises at Twentynine Palms, Camp Pendleton, or Camp Lejeune with live-fire ranges, mechanized ops, or urban training. On deployment: mission-driven. Could be MEU security posture on ship, a Korean peninsula rotation, exercises in the Philippines, or combat operations. Expect long days, weight on your back, and the rhythm that comes from doing the same hard things until they're automatic.",
+    "faq": [
+      { "question": "Do I have to start as 0311, or can I enlist open-contract?", "answer": "You can enlist with an infantry contract specifically (03xx field) and be classified to 0311 or another infantry MOS at SOI based on performance and needs of the Marine Corps. Some ship with a guaranteed MOS contract. Talk to your recruiter about the difference between open-contract, field-guaranteed, and MOS-guaranteed options." },
+      { "question": "What's the contract length?", "answer": "Standard active-duty infantry contracts are 4 years active. Some options include an additional IRR (Inactive Ready Reserve) commitment on top, extending the total service obligation." },
+      { "question": "Can women enlist as 0311?", "answer": "Yes. All ground combat MOSs opened to qualified women following the 2013-2015 DoD policy changes and subsequent Marine Corps integration. Standards are the same regardless of gender." },
+      { "question": "What happens if I get injured during training?", "answer": "Training injuries are common at SOI. Depending on severity, you may be rolled to the next class, transferred to medical hold, or medically separated. Verify current Marine Corps injury-return-to-duty policy through your chain of command." },
+      { "question": "Can I go MARSOC from 0311?", "answer": "Yes. MARSOC Assessment & Selection is open to active-duty Marines from most MOSs including 0311. You attend A&S after submitting a package; selection is followed by the Individual Training Course (ITC). Attrition is high. See 0372 Critical Skills Operator entry for details." }
+    ],
+    "notable_holders": [
+      { "name": "Lee Marvin", "years_served": "1942–1945", "notable_for": "Academy Award-winning actor (Cat Ballou, The Dirty Dozen). Served as a scout sniper in the Pacific; wounded at Saipan.", "notes": "Enlisted in the Marine Corps at 18.", "source_url": null },
+      { "name": "R. Lee Ermey", "years_served": "1961–1972", "notable_for": "Actor and drill instructor; Golden Globe-nominated role as Gunnery Sergeant Hartman in Full Metal Jacket.", "notes": "Served 14 years on active duty; deployed to Vietnam.", "source_url": null },
+      { "name": "Dakota Meyer", "years_served": "2006–2010", "notable_for": "Medal of Honor recipient for actions in the Battle of Ganjgal, Afghanistan, September 2009.", "notes": "First living Marine since the Vietnam War to receive the Medal of Honor.", "source_url": null },
+      { "name": "John Basilone", "years_served": "1934–1945", "notable_for": "Medal of Honor and Navy Cross recipient. Killed in action at Iwo Jima, February 1945.", "notes": "Received Medal of Honor for actions at Guadalcanal.", "source_url": null },
+      { "name": "Kyle Carpenter", "years_served": "2009–2013", "notable_for": "Medal of Honor recipient for actions in Marjah, Afghanistan, November 2010 — shielded a fellow Marine from a grenade.", "notes": "Youngest living Medal of Honor recipient at the time of award.", "source_url": null },
+      { "name": "Drew Carey", "years_served": "1980–1986 (Reserve)", "notable_for": "Comedian, actor, game show host.", "notes": "Served in the Marine Corps Reserve.", "source_url": null }
+    ],
+    "promotion_speed": {
+      "typical_to_e4_years": "2–4 years",
+      "typical_to_e5_years": "4–6 years",
+      "typical_to_e7_years": "10–14 years",
+      "fast_promote_notes": "Meritorious promotions, strong fitness reports, successful B-billets, and completion of additional schools (Scout Sniper, MARSOC, etc.) accelerate advancement. Composite score on PFT/CFT + rifle score is heavily weighted.",
+      "slow_promote_notes": "Infantry can be a competitive MOS for promotion; cutting scores vary by year. Non-promotion boards (Perform-to-Serve equivalents) can affect retention at E-4 and E-5.",
+      "cutting_score_note": "USMC promotion to E-4 and E-5 is via composite score that combines PFT/CFT, rifle score, PME completion, and command ratings. MOS-specific cutting scores are published monthly by Manpower Management."
+    },
     "career_path": {
       "standard_progression": [
         { "paygrade": "E-1", "rank_name": "Private", "rank_abbreviation": "Pvt", "typical_years_in_service": "0–6 months", "typical_billets": ["Rifleman"], "notes": "Entry rank if no promotion meritoriously earned in recruit training or shipping with no prior service benefit." },

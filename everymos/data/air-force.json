@@ -25,11 +25,45 @@
     "duty_station_types": ["base", "conus", "oconus"],
     "common_duty_stations": ["Joint Base San Antonio, TX", "Scott AFB, IL", "Hickam AFB, HI", "Ramstein AB, Germany"],
     "civilian_equivalents": [
-      { "title": "Information Security Analyst", "industry": "Information Technology", "onet_code": "15-1212.00" },
-      { "title": "Cybersecurity Analyst", "industry": "Information Technology", "onet_code": "15-1299.04" }
+      {
+        "title": "Information Security Analyst",
+        "industry": "Information Technology",
+        "onet_code": "15-1212.00",
+        "salary_range_usd": { "low": 75000, "median": 120000, "high": 175000, "source": "BLS OES May 2024 (illustrative)", "notes": "High-paying civilian field with strong demand; TS/SCI clearance adds a 20-40% premium." }
+      },
+      {
+        "title": "Cybersecurity Analyst (SOC / IR)",
+        "industry": "Information Technology",
+        "onet_code": "15-1299.04",
+        "salary_range_usd": { "low": 70000, "median": 105000, "high": 155000, "source": "BLS OES May 2024 (illustrative)", "notes": null }
+      },
+      {
+        "title": "Penetration Tester",
+        "industry": "Information Technology",
+        "onet_code": "15-1299.04",
+        "salary_range_usd": { "low": 85000, "median": 135000, "high": 200000, "source": "Industry surveys (illustrative)", "notes": "Requires offensive cyber training beyond defensive 1D7X1 baseline." }
+      }
     ],
     "transferable_certifications": ["CompTIA Security+", "CompTIA CySA+", "CCNA Security", "CEH", "CISSP (via DoD COOL)"],
     "branch_specific": { "shredouts": ["1D7X1A (Network Operations)", "1D7X1B (Systems Operations)", "1D7X1X (Client Systems)"] },
+    "daily_life": "Mostly office / SCIF work. You're watching network telemetry, hunting for anomalies, responding to security events, and writing reports. Rotating shifts are common for 24/7 SOC coverage. Classified work means you're in a SCIF (secure facility) without personal devices. Less physical than most AFSCs — pipeline is classroom-heavy.",
+    "faq": [
+      { "question": "How long is the tech school?", "answer": "Keesler cyber tech training runs approximately 6-9 months of block instruction depending on the specific pipeline and current course length. Verify current length in the AFECD." },
+      { "question": "What clearance do I need?", "answer": "Top Secret (TS) minimum. Many billets require TS/SCI. The background investigation starts during tech school and typically takes 6-18 months; you may be assigned interim access during processing." },
+      { "question": "Can I take DoD COOL certs on active duty?", "answer": "Yes. DoD COOL funds CompTIA (Security+, CySA+, CASP+), ISACA (CISM), (ISC)² (CISSP), and others. Many airmen stack 3-5 certs during a 4-year term." },
+      { "question": "Does the Air Force let me work remote cyber?", "answer": "Limited. Classified networks require in-person work at a cleared facility. Unclassified work can occasionally be remote, but the default is on-site." }
+    ],
+    "notable_holders": [
+      { "name": "General Timothy D. Haugh", "years_served": "1991–present (Air Force)", "notable_for": "Commander of U.S. Cyber Command and Director of NSA (representative cyber leadership role; not necessarily 1D7X1).", "notes": "Included as an example of Air Force cyber career pinnacle.", "source_url": null }
+    ],
+    "promotion_speed": {
+      "typical_to_e4_years": "~3 years (Senior Airman)",
+      "typical_to_e5_years": "4–6 years (Staff Sergeant)",
+      "typical_to_e7_years": "12–16 years (Master Sergeant)",
+      "fast_promote_notes": "Cert stacking, Community College of the Air Force (CCAF) degree, and strong EPRs accelerate promotion in Air Force. Cyber field has historically had lower E-5/E-6 cutoff scores than oversubscribed AFSCs.",
+      "slow_promote_notes": "Air Force promotion uses WAPS (Weighted Airman Promotion System) — heavy emphasis on PFE/SKT scores plus time-in-service.",
+      "cutting_score_note": "WAPS combines test scores, decorations, time-in-grade, time-in-service, and EPR ratings. AFSC-specific cutoffs published annually."
+    },
     "sources": [{ "name": "AFECD — Air Force Enlisted Classification Directory (DRAFT reference)", "url": "https://www.afpc.af.mil", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify current AFSC structure, shredouts, and tech school length.",

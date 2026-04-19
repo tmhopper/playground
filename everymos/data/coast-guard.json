@@ -25,11 +25,37 @@
     "duty_station_types": ["ship", "shore", "afloat", "conus"],
     "common_duty_stations": ["Cape May, NJ", "Charleston, SC", "Honolulu, HI", "San Diego, CA", "Key West, FL"],
     "civilian_equivalents": [
-      { "title": "Federal Law Enforcement Officer (CBP, HSI, DEA, etc.)", "industry": "Public Safety", "onet_code": "33-3021.00" },
-      { "title": "Police Officer", "industry": "Public Safety", "onet_code": "33-3051.00" }
+      {
+        "title": "Federal Law Enforcement Officer (CBP, HSI, DEA)",
+        "industry": "Federal Law Enforcement",
+        "onet_code": "33-3021.00",
+        "salary_range_usd": { "low": 58000, "median": 95000, "high": 145000, "source": "OPM GL-5 through GS-13 (illustrative)", "notes": "CG MEs are heavily recruited by CBP and other federal agencies." }
+      },
+      {
+        "title": "Police Officer",
+        "industry": "Public Safety",
+        "onet_code": "33-3051.00",
+        "salary_range_usd": { "low": 48000, "median": 72000, "high": 110000, "source": "BLS OES May 2024 (illustrative)", "notes": null }
+      }
     ],
     "transferable_certifications": ["FLETC certification (federal law enforcement preparation)"],
     "branch_specific": { "cutter_types": ["WMEC", "WHEC", "FRC", "Sector shore stations"] },
+    "daily_life": "Boardings at sea, port security patrols ashore, watch-standing, qualification training. MEs assigned to cutters go to sea on patrols (counter-drug, migrant interdiction, fisheries); MEs ashore work port security, vehicle patrols, and criminal investigations. Law-enforcement posture every day.",
+    "faq": [
+      { "question": "Do CG MEs deploy?", "answer": "Cutter-based MEs deploy on Coast Guard patrols (weeks to months at sea). Some MEs deploy in joint operations with DoD. Not the same deployment tempo as Navy/Marine/Army." },
+      { "question": "Is FLETC certification automatic?", "answer": "You complete portions of FLETC training as part of ME A-School; full federal law-enforcement officer certification typically requires additional training or hire by a federal agency." }
+    ],
+    "notable_holders": [
+      { "name": "Douglas Munro", "years_served": "1939–1942", "notable_for": "Only Coast Guardsman to receive the Medal of Honor; killed while evacuating Marines at Guadalcanal.", "notes": "Served in a signalman role, not ME — included as a CG historical reference.", "source_url": null }
+    ],
+    "promotion_speed": {
+      "typical_to_e4_years": "2–4 years (BM3/ME3)",
+      "typical_to_e5_years": "5–8 years",
+      "typical_to_e7_years": "12–17 years (Chief)",
+      "fast_promote_notes": "CG is the smallest service — small rating pools mean faster promotion in some ratings and slower in others depending on force structure.",
+      "slow_promote_notes": "Coast Guard is smaller and has tighter promotion windows than larger services; advancement follows Servicewide Exam results.",
+      "cutting_score_note": "CG uses Servicewide Exam (SWE) score + performance evaluations + awards combined into advancement multiple. Cutoffs published semiannually."
+    },
     "sources": [{ "name": "Coast Guard Rating Information Cards (DRAFT reference)", "url": "https://www.gocoastguard.com", "accessed_date": "2026-04-17" }],
     "confidence": "uncertain",
     "notes": "DRAFT — verify.",

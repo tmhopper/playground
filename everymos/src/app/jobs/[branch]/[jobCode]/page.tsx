@@ -68,12 +68,16 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
 
   const sections: { id: string; label: string; show: boolean }[] = [
     { id: "overview", label: "Overview", show: true },
+    { id: "daily-life", label: "Daily life", show: !!job.daily_life },
     { id: "requirements", label: "Requirements", show: true },
     { id: "training", label: "Training pipeline", show: true },
     { id: "career-roadmap", label: "Career roadmap", show: !!job.career_path },
+    { id: "promotion", label: "Promotion speed", show: !!job.promotion_speed },
     { id: "compensation", label: "Compensation", show: true },
     { id: "duty-stations", label: "Duty stations", show: true },
     { id: "civilian", label: "Civilian crosswalk", show: true },
+    { id: "notable", label: "Notable holders", show: !!job.notable_holders && job.notable_holders.length > 0 },
+    { id: "faq", label: "FAQ", show: !!job.faq && job.faq.length > 0 },
     { id: "sources", label: "Sources", show: true },
   ];
 
@@ -104,11 +108,26 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
     ],
   };
 
+  const faqLd = job.faq && job.faq.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: job.faq.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
+
   return (
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {faqLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      )}
       <main id="main" className="mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-12">
         <nav className="mono mb-6 text-xs uppercase tracking-wide opacity-60" aria-label="Breadcrumb">
           <Link href="/">Home</Link> / <Link href="/jobs">Jobs</Link> /{" "}
@@ -211,14 +230,43 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
               </div>
             </section>
 
+            {/* DAILY LIFE */}
+            {job.daily_life && (
+              <section id="daily-life" className="scroll-mt-8">
+                <h2>Daily life</h2>
+                <p className="mt-4 rounded-lg border border-[color:var(--color-rule)] bg-white p-5 text-base leading-relaxed">
+                  {job.daily_life}
+                </p>
+              </section>
+            )}
+
             {/* REQUIREMENTS */}
             <section id="requirements" className="scroll-mt-8">
               <h2>Requirements</h2>
               <dl className="mt-6 grid gap-6 sm:grid-cols-2">
-                <Req label="ASVAB">
+                <Req label="ASVAB — primary">
                   <span className="mono">{job.asvab.raw_requirement}</span>
                   {job.asvab.notes && <p className="mt-2 text-xs opacity-70">{job.asvab.notes}</p>}
                 </Req>
+                {Object.keys(job.asvab.composites).length > 0 && (
+                  <Req label="ASVAB — all composites">
+                    <ul className="mono flex flex-wrap gap-2 text-xs">
+                      {Object.entries(job.asvab.composites).map(([k, v]) => (
+                        <li
+                          key={k}
+                          className="rounded border border-[color:var(--color-rule)] bg-[color:var(--color-paper)] px-2 py-1"
+                        >
+                          {k} ≥ {v}
+                        </li>
+                      ))}
+                      {job.asvab.afqt_minimum && (
+                        <li className="rounded border border-[color:var(--color-rule)] bg-[color:var(--color-paper)] px-2 py-1">
+                          AFQT ≥ {job.asvab.afqt_minimum}
+                        </li>
+                      )}
+                    </ul>
+                  </Req>
+                )}
                 <Req label="Security clearance">
                   <span>{job.security_clearance.replace("_", " ")}</span>
                 </Req>
@@ -347,6 +395,43 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
               </section>
             )}
 
+            {/* PROMOTION SPEED */}
+            {job.promotion_speed && (
+              <section id="promotion" className="scroll-mt-8">
+                <h2>How fast can you pick up rank?</h2>
+                <p className="mt-2 text-sm opacity-70">
+                  Typical time-in-service ranges. Real promotion depends on cutting scores,
+                  PFT/CFT, PME completion, and command evaluations.
+                </p>
+                <dl className="mt-6 grid gap-4 sm:grid-cols-3">
+                  <Req label="To E-4 (first NCO)">{job.promotion_speed.typical_to_e4_years ?? "—"}</Req>
+                  <Req label="To E-5">{job.promotion_speed.typical_to_e5_years ?? "—"}</Req>
+                  <Req label="To E-7">{job.promotion_speed.typical_to_e7_years ?? "—"}</Req>
+                </dl>
+                {job.promotion_speed.fast_promote_notes && (
+                  <div className="mt-6 rounded-lg border-l-4 border-[color:var(--color-ok)] bg-white p-4 text-sm">
+                    <p className="mono text-xs uppercase tracking-wide opacity-60">
+                      What accelerates promotion
+                    </p>
+                    <p className="mt-1">{job.promotion_speed.fast_promote_notes}</p>
+                  </div>
+                )}
+                {job.promotion_speed.slow_promote_notes && (
+                  <div className="mt-3 rounded-lg border-l-4 border-[color:var(--color-warn)] bg-white p-4 text-sm">
+                    <p className="mono text-xs uppercase tracking-wide opacity-60">
+                      What can slow it down
+                    </p>
+                    <p className="mt-1">{job.promotion_speed.slow_promote_notes}</p>
+                  </div>
+                )}
+                {job.promotion_speed.cutting_score_note && (
+                  <p className="mono mt-4 text-xs opacity-60">
+                    {job.promotion_speed.cutting_score_note}
+                  </p>
+                )}
+              </section>
+            )}
+
             {/* COMPENSATION */}
             <section id="compensation" className="scroll-mt-8">
               <h2>Compensation</h2>
@@ -410,14 +495,50 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
             <section id="civilian" className="scroll-mt-8">
               <h2>Civilian crosswalk</h2>
               <p className="mt-2 text-sm opacity-70">
-                Civilian roles that translate from this MOS. O*NET codes link to Department of Labor occupational data.
+                Civilian roles that translate from this MOS, with salary ranges where available.
+                O*NET codes link to Department of Labor occupational data.
               </p>
-              <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+              <ul className="mt-6 grid gap-4 md:grid-cols-2">
                 {job.civilian_equivalents.map((c, i) => (
-                  <li key={i} className="rounded-lg border border-[color:var(--color-rule)] bg-white p-4 text-sm">
-                    <strong className="text-[color:var(--color-ink-900)]">{c.title}</strong>
+                  <li key={i} className="rounded-lg border border-[color:var(--color-rule)] bg-white p-5 text-sm">
+                    <div className="flex items-start justify-between gap-3">
+                      <strong className="text-[color:var(--color-ink-900)]">{c.title}</strong>
+                      {c.salary_range_usd && (
+                        <span
+                          className="mono shrink-0 rounded border px-2 py-0.5 text-xs"
+                          style={{ borderColor: theme.accent, color: theme.accentDark }}
+                          title={`${c.salary_range_usd.source}${c.salary_range_usd.notes ? " — " + c.salary_range_usd.notes : ""}`}
+                        >
+                          ${Math.round(c.salary_range_usd.low / 1000)}k–${Math.round(c.salary_range_usd.high / 1000)}k
+                        </span>
+                      )}
+                    </div>
                     <p className="opacity-70">{c.industry}</p>
-                    {c.onet_code && <p className="mono mt-1 text-xs opacity-60">O*NET {c.onet_code}</p>}
+                    {c.salary_range_usd && (
+                      <div className="mt-3">
+                        <div className="flex justify-between text-xs opacity-70">
+                          <span>${c.salary_range_usd.low.toLocaleString()}</span>
+                          <span className="mono">median ${c.salary_range_usd.median.toLocaleString()}</span>
+                          <span>${c.salary_range_usd.high.toLocaleString()}</span>
+                        </div>
+                        <div className="mt-1 h-2 overflow-hidden rounded-full bg-[color:var(--color-rule)]">
+                          <div
+                            className="h-full"
+                            style={{
+                              background: theme.accent,
+                              marginLeft: "0%",
+                              width: `${Math.min(100, Math.round(((c.salary_range_usd.median - c.salary_range_usd.low) / (c.salary_range_usd.high - c.salary_range_usd.low)) * 100))}%`,
+                            }}
+                          />
+                        </div>
+                        <p className="mono mt-1 text-[10px] opacity-60">
+                          Source: {c.salary_range_usd.source}
+                        </p>
+                      </div>
+                    )}
+                    {c.onet_code && (
+                      <p className="mono mt-3 text-xs opacity-60">O*NET {c.onet_code}</p>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -432,6 +553,64 @@ export default async function JobDetail({ params }: { params: Promise<Params> })
                 </>
               )}
             </section>
+
+            {/* NOTABLE HOLDERS */}
+            {job.notable_holders && job.notable_holders.length > 0 && (
+              <section id="notable" className="scroll-mt-8">
+                <h2>Notable holders</h2>
+                <p className="mt-2 text-sm opacity-70">
+                  Historical and well-known figures who held this MOS. Illustrative; verify
+                  service records against primary sources.
+                </p>
+                <ul className="mt-6 grid gap-4 md:grid-cols-2">
+                  {job.notable_holders.map((h, i) => (
+                    <li
+                      key={i}
+                      className="rounded-lg border border-[color:var(--color-rule)] bg-white p-5 text-sm"
+                    >
+                      <div className="flex items-baseline justify-between gap-3">
+                        <strong className="text-[color:var(--color-ink-900)]">{h.name}</strong>
+                        {h.years_served && (
+                          <span className="mono text-xs opacity-60">{h.years_served}</span>
+                        )}
+                      </div>
+                      <p className="mt-2">{h.notable_for}</p>
+                      {h.notes && <p className="mt-2 text-xs opacity-70">{h.notes}</p>}
+                      {h.source_url && (
+                        <a
+                          href={h.source_url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="mono mt-2 inline-block text-xs"
+                        >
+                          Source ↗
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {/* FAQ */}
+            {job.faq && job.faq.length > 0 && (
+              <section id="faq" className="scroll-mt-8">
+                <h2>Common questions</h2>
+                <dl className="mt-6 space-y-4">
+                  {job.faq.map((item, i) => (
+                    <div
+                      key={i}
+                      className="rounded-lg border border-[color:var(--color-rule)] bg-white p-5"
+                    >
+                      <dt className="font-semibold text-[color:var(--color-ink-900)]">
+                        {item.question}
+                      </dt>
+                      <dd className="mt-2 text-sm">{item.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            )}
 
             {/* RELATED */}
             {(() => {
