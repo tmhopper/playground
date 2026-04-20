@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Roboto+Slab:wght@400;600;700;900&display=swap");
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background-color: #f4ede0;
+  color: #2c2018;
+  font-family: "Roboto Slab", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-hazard {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-hazard px-5 py-3 font-display uppercase tracking-wide text-dirt-800 shadow-jobsite transition hover:bg-hazard-dark hover:text-bone;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-dirt-700 px-5 py-3 font-display uppercase tracking-wide text-dirt-700 transition hover:bg-dirt-700 hover:text-bone;
+  }
+
+  .badge-hazard {
+    @apply inline-block rounded bg-hazard/20 px-2 py-0.5 font-marker text-xs uppercase text-hazard-dark;
+  }
+
+  .caution-strip {
+    @apply h-2 w-full bg-caution-tape;
+  }
+
+  .section {
+    @apply mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8;
+  }
+}
