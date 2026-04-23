@@ -1,0 +1,357 @@
+// Prisma schema for the job search app.
+// SQLite for local dev; switch provider to "postgresql" for Neon deploy.
+// JSON fields are stored as TEXT (JSON-stringified) for SQLite compatibility.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  profile        Profile?
+  writingSamples WritingSample[]
+  companies      Company[]
+  jobs           Job[]
+  contacts       Contact[]
+  templates      Template[]
+  promptTemplates PromptTemplate[]
+  resources      Resource[]
+  events         Event[]
+  chatThreads    ChatThread[]
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Freeform "about me" block for AI context.
+  background String @default("")
+  skills     String @default("") // comma-separated or markdown list
+  goals      String @default("")
+
+  // Salary / location prefs.
+  salaryMin    Int?
+  salaryMax    Int?
+  currency     String @default("USD")
+  locations    String @default("") // preferred locations, comma-separated
+  workModes    String @default("") // remote,hybrid,onsite
+
+  // Résumé.
+  resumeFileName String?
+  resumeText     String @default("") // extracted plain text used in AI context
+
+  // Portfolio links (JSON array of {label, url}).
+  portfolioLinks String @default("[]")
+
+  // Auto-generated voice rules (markdown bullet list).
+  voiceRules          String @default("")
+  voiceRulesUpdatedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model WritingSample {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  title         String
+  content       String
+  source        String @default("") // where it's from (blog, email, etc.)
+  isVoicePinned Boolean @default(false) // used in cached profile block
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Company {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name         String
+  website      String?
+  careersUrls  String @default("[]") // JSON array of {label, url}
+  ats          String @default("other") // greenhouse|lever|ashby|workday|workable|smartrecruiters|other
+
+  // Watchlist cadence flags (maps your Numbers checkboxes).
+  watchFrequency String @default("none") // none|alert|fast|daily
+  lastCheckedAt  DateTime?
+
+  rating             Int @default(0) // 0-5 personal rating
+  notes              String @default("")
+  isDisqualified     Boolean @default(false)
+  disqualifiedReason String?
+
+  jobs     Job[]
+  contactLinks ContactLink[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model Job {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  companyId String
+  company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  title       String
+  reqNumber   String?
+  location    String?
+  workMode    String? // remote|hybrid|onsite
+  salaryMin   Int?
+  salaryMax   Int?
+  url         String?
+  description String @default("")
+
+  // Stage + dated booleans (your Numbers has both).
+  stage       String @default("Saved") // Saved|Interested|Applied|FollowingUp|Interview|Offer|Rejected|Forget
+  appliedAt   DateTime?
+  followupAt  DateTime?
+  interviewAt DateTime?
+  forgetAt    DateTime?
+
+  rating           Int @default(0) // 0-5 personal rating
+  nextAction       String @default("") // freeform "Apply and Email", "Linkedin Shelly", etc.
+  nextActionDueAt  DateTime?
+  reference        String @default("")
+  deadline         DateTime?
+  notes            String @default("")
+  source           String @default("manual") // paste|greenhouse|lever|bulk|careerFair|manual
+
+  eventId String?
+  event   Event?   @relation(fields: [eventId], references: [id], onDelete: SetNull)
+
+  matchScore    MatchScore?
+  coverLetters  CoverLetter[]
+  resumeVariants ResumeVariant[]
+  contactLinks  ContactLink[]
+  trackerEvents TrackerEvent[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([companyId])
+  @@index([stage])
+}
+
+model MatchScore {
+  id        String   @id @default(cuid())
+  jobId     String   @unique
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  overall      Int // 0-100
+  skills       Int // 0-100
+  experience   Int
+  domain       Int
+  culture      Int
+  logistics    Int
+  reasoning    String @default("{}") // JSON {skills: "...", experience: "...", ...}
+  gaps         String @default("[]") // JSON array of strings
+  strengths    String @default("[]") // JSON array of strings
+
+  model     String @default("claude-opus-4-7")
+  inputTokens  Int @default(0)
+  outputTokens Int @default(0)
+  cacheReadTokens Int @default(0)
+  cacheCreationTokens Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name        String
+  role        String? // "Recruiter", "Hiring Manager", etc.
+  email       String?
+  phone       String?
+  linkedinUrl String?
+  address     String?
+  notes       String @default("")
+  rating      Int @default(0)
+  source      String @default("manual") // manual|apollo|rocketreach|careerFair|linkedin
+
+  links ContactLink[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model ContactLink {
+  id        String   @id @default(cuid())
+  contactId String
+  contact   Contact  @relation(fields: [contactId], references: [id], onDelete: Cascade)
+
+  companyId String?
+  company   Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  jobId String?
+  job   Job?    @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  relationship String @default("") // "recruiter for role", "warm intro", etc.
+  createdAt    DateTime @default(now())
+
+  @@index([contactId])
+  @@index([companyId])
+  @@index([jobId])
+}
+
+model Attachment {
+  id        String   @id @default(cuid())
+  entityType String // "job" | "contact" | "company" | "event"
+  entityId   String
+
+  fileName String
+  fileType String // mime
+  url      String // blob url or data: for tiny files
+  caption  String @default("")
+
+  createdAt DateTime @default(now())
+
+  @@index([entityType, entityId])
+}
+
+model Template {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name     String
+  type     String // coverLetter|coldEmail|linkedinDM|followup
+  subject  String @default("")
+  body     String @default("")
+  isDefault Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PromptTemplate {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name    String
+  purpose String @default("")
+  content String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Resource {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  label    String
+  url      String?
+  category String @default("") // careerCenter|peopleGrove|interviewDb|atsNotes|other
+  notes    String @default("")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Event {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name     String
+  date     DateTime?
+  location String?
+  notes    String @default("")
+
+  jobs Job[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CoverLetter {
+  id        String   @id @default(cuid())
+  jobId     String
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  version   Int @default(1)
+  text      String
+  edited    Boolean @default(false)
+  templateId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ResumeVariant {
+  id        String   @id @default(cuid())
+  jobId     String
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  version         Int @default(1)
+  structuredJson  String // JSON résumé structure
+  renderedText    String @default("")
+  diffFromBase    String @default("[]") // JSON array of {section, before, after, reason}
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ChatThread {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  title String @default("New chat")
+
+  messages ChatMessage[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  threadId  String
+  thread    ChatThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+
+  role    String // user|assistant|tool
+  content String
+  toolUse String @default("") // JSON of tool calls/results
+
+  createdAt DateTime @default(now())
+}
+
+model TrackerEvent {
+  id        String   @id @default(cuid())
+  jobId     String
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  kind    String // stageChange|noteAdded|scoreGenerated|coverGenerated|resumeGenerated
+  payload String @default("{}") // JSON
+
+  createdAt DateTime @default(now())
+}
