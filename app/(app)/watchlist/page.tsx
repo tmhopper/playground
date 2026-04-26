@@ -5,14 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, CheckCircle } from "lucide-react";
 import { markChecked } from "../companies/actions";
+import { RescanButton } from "./RescanButton";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
 const CADENCES = [
-  { key: "daily", label: "Daily", hint: "Check every day" },
-  { key: "fast", label: "Fast", hint: "Check every 2–3 days" },
-  { key: "alert", label: "Alert", hint: "Watch for any new posting" },
+  { key: "daily", label: "Daily", hint: "Check every day", staleDays: 1 },
+  { key: "fast", label: "Fast", hint: "Check every 2–3 days", staleDays: 3 },
+  { key: "alert", label: "Alert", hint: "Watch for any new posting", staleDays: 7 },
 ];
 
 export default async function WatchlistPage() {
@@ -27,7 +28,7 @@ export default async function WatchlistPage() {
       <div>
         <h1 className="text-2xl font-semibold">Watchlist</h1>
         <p className="text-sm text-zinc-500">
-          Companies you want to check regularly for new postings. (Phase 2 will auto-scan these.)
+          Companies to check regularly. Hit <strong>Rescan</strong> to pull fresh listings and see what&apos;s new since last check.
         </p>
       </div>
 
@@ -42,12 +43,13 @@ export default async function WatchlistPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                 {rows.map((c) => {
                   const last = c.lastCheckedAt ? c.lastCheckedAt.toLocaleDateString() : null;
                   const stale =
                     !c.lastCheckedAt ||
-                    Date.now() - c.lastCheckedAt.getTime() > (cad.key === "daily" ? 1 : cad.key === "fast" ? 3 : 7) * 86400_000;
+                    Date.now() - c.lastCheckedAt.getTime() > cad.staleDays * 86_400_000;
+                  const hasCareers = c.careersUrls !== "[]";
                   return (
                     <div
                       key={c.id}
@@ -78,6 +80,23 @@ export default async function WatchlistPage() {
                           </Button>
                         </form>
                       </div>
+                      {hasCareers ? (
+                        <div className="mt-2 border-t border-zinc-100 pt-2 dark:border-zinc-800">
+                          <RescanButton
+                            companyId={c.id}
+                            companyName={c.name}
+                            careersUrls={c.careersUrls}
+                          />
+                        </div>
+                      ) : (
+                        <p className="mt-2 text-xs text-zinc-400">
+                          Add a careers URL on the{" "}
+                          <Link href="/companies" className="text-blue-600 hover:underline">
+                            Companies
+                          </Link>{" "}
+                          page to enable rescan.
+                        </p>
+                      )}
                     </div>
                   );
                 })}

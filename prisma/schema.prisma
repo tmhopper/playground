@@ -88,6 +88,7 @@ model Company {
   // Watchlist cadence flags (maps your Numbers checkboxes).
   watchFrequency String @default("none") // none|alert|fast|daily
   lastCheckedAt  DateTime?
+  seenJobUrls    String @default("[]") // JSON array of job URLs seen on last scan
 
   rating             Int @default(0) // 0-5 personal rating
   notes              String @default("")

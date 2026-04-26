@@ -13,12 +13,16 @@ import {
   UserCircle,
   LogOut,
   Sparkles,
+  Search,
+  ClipboardList,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const nav = [
   { href: "/today", label: "Today", icon: CalendarCheck },
   { href: "/match", label: "Match", icon: Sparkles },
+  { href: "/discover", label: "Discover", icon: Search },
+  { href: "/bulk", label: "Bulk Import", icon: ClipboardList },
   { href: "/jobs", label: "Jobs", icon: Briefcase },
   { href: "/companies", label: "Companies", icon: Building2 },
   { href: "/watchlist", label: "Watchlist", icon: Eye },

@@ -11,6 +11,7 @@ import { StageSelector } from "./StageSelector";
 import { CoverLetterPanel } from "./CoverLetterPanel";
 import { ResumePanel } from "./ResumePanel";
 import { ScoreButton } from "./ScoreButton";
+import { SaveContactModal } from "./SaveContactModal";
 import { MatchCard } from "@/components/MatchCard";
 import type { MatchScore } from "@/lib/ai/schemas";
 import { ExternalLink } from "lucide-react";
@@ -119,16 +120,36 @@ export default async function JobDetail({ params }: { params: Promise<{ id: stri
           </Card>
 
           <Card>
-            <CardHeader><CardTitle>Find contacts</CardTitle></CardHeader>
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle>Find contacts</CardTitle>
+                <SaveContactModal
+                  jobId={job.id}
+                  companyId={job.companyId}
+                  companyName={job.company.name}
+                />
+              </div>
+            </CardHeader>
             <CardContent className="space-y-1 text-sm">
               {searchLinks.map((l) => (
                 <a key={l.url} href={l.url} target="_blank" rel="noopener" className="block text-blue-600 hover:underline">
                   {l.label} ↗
                 </a>
               ))}
-              <div className="pt-2 text-xs text-zinc-500">
-                {job.contactLinks.length} contact{job.contactLinks.length === 1 ? "" : "s"} linked to this job.
-              </div>
+              {job.contactLinks.length > 0 && (
+                <div className="pt-2 space-y-1">
+                  <div className="text-xs font-medium text-zinc-500">Linked contacts</div>
+                  {job.contactLinks.map((cl) => (
+                    <div key={cl.id} className="text-xs text-zinc-700 dark:text-zinc-300">
+                      {cl.contact.name}{cl.contact.role ? ` — ${cl.contact.role}` : ""}
+                      {cl.relationship ? <span className="text-zinc-400"> ({cl.relationship})</span> : null}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {job.contactLinks.length === 0 && (
+                <p className="pt-1 text-xs text-zinc-400">No contacts saved yet.</p>
+              )}
             </CardContent>
           </Card>
         </div>
