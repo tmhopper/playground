@@ -1,4 +1,6 @@
 import { signIn } from "@/lib/auth";
+import { AuthError } from "next-auth";
+import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,10 +11,18 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ er
       <form
         action={async (formData) => {
           "use server";
-          await signIn("credentials", {
-            password: formData.get("password") as string,
-            redirectTo: "/today",
-          });
+          try {
+            await signIn("credentials", {
+              password: formData.get("password") as string,
+              redirect: false,
+            });
+          } catch (error) {
+            if (error instanceof AuthError) {
+              redirect("/login?error=1");
+            }
+            throw error;
+          }
+          redirect("/today");
         }}
         className="w-full max-w-sm space-y-5 rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
       >
