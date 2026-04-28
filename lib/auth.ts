@@ -1,12 +1,14 @@
-import NextAuth, { type NextAuthConfig } from "next-auth";
+import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/db";
+import { authConfig } from "@/lib/auth.config";
 
 const APP_PASSWORD = process.env.APP_PASSWORD ?? "changeme";
 const APP_USER_EMAIL = process.env.APP_USER_EMAIL ?? "you@example.com";
 
-const authConfig: NextAuthConfig = {
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  ...authConfig,
   providers: [
     Credentials({
       name: "password",
@@ -19,7 +21,6 @@ const authConfig: NextAuthConfig = {
         const ok = await bcrypt.compare(input, expectedHash);
         if (!ok) return null;
 
-        // Ensure single app user exists.
         const user = await prisma.user.upsert({
           where: { email: APP_USER_EMAIL },
           update: {},
@@ -29,25 +30,7 @@ const authConfig: NextAuthConfig = {
       },
     }),
   ],
-  session: { strategy: "jwt" },
-  pages: { signIn: "/login" },
-  callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id as string;
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      if (session.user && token.id) {
-        (session.user as { id?: string }).id = token.id as string;
-      }
-      return session;
-    },
-  },
-};
-
-export const { handlers, auth, signIn, signOut } = NextAuth(authConfig);
+});
 
 export async function requireUserId(): Promise<string> {
   const session = await auth();
